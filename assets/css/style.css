@@ -1909,6 +1909,7 @@ button {
   color: var(--color-navy);
   max-width: 28.5rem;
   margin: 4px 0 0;
+  padding-bottom: 4px;
 }
 
 @media (max-width: 767px) {
@@ -29651,6 +29652,7 @@ body.newsletter-success-open {
     font-size: clamp(0.9rem, 3.6cqi, 1.05rem) !important;
     line-height: 1.55 !important;
     margin-bottom: 0 !important;
+    padding-bottom: 4px !important;
   }
 
   .home-page .page-hero.home-welcome-hero .home-hero__copy-break,
