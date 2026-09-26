@@ -1949,7 +1949,7 @@ button {
   gap: 0.65rem;
   width: auto;
   max-width: 100%;
-  margin-top: 4px;
+  margin-top: 4px !important;
 }
 
 .home-hero__actions--inline .btn {
@@ -29650,6 +29650,7 @@ body.newsletter-success-open {
     max-width: 28.5rem !important;
     font-size: clamp(0.9rem, 3.6cqi, 1.05rem) !important;
     line-height: 1.55 !important;
+    margin-bottom: 0 !important;
   }
 
   .home-page .page-hero.home-welcome-hero .home-hero__copy-break,
@@ -29658,7 +29659,11 @@ body.newsletter-success-open {
   }
 
   .home-page .page-hero.home-welcome-hero .home-hero__actions--inline,
-  .home-page .page-hero.home-hero .home-hero__actions--inline {
+  .home-page .page-hero.home-hero .home-hero__actions--inline,
+  .home-page .page-hero.home-welcome-hero .home-hero__actions,
+  .home-page .page-hero.home-hero .home-hero__actions,
+  .home-page .page-hero.home-welcome-hero .page-hero__actions,
+  .home-page .page-hero.home-hero .page-hero__actions {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
@@ -29668,6 +29673,7 @@ body.newsletter-success-open {
     width: max-content !important;
     max-width: 100% !important;
     grid-template-columns: none !important;
+    margin-top: 4px !important;
   }
 
   .home-page .page-hero.home-welcome-hero .home-hero__actions--inline .btn,
