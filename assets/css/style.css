@@ -30031,3 +30031,22 @@ body.newsletter-success-open {
     margin-top: -20px !important;
   }
 }
+
+/* Desktop banner images — slightly shorter (layout / columns unchanged) */
+@media (min-width: 1024px) {
+  #main-content > section.page-hero [class*='__banner'],
+  .page-hero [class*='__banner'],
+  .page-hero picture img[class*='__banner'] {
+    max-height: min(380px, 48vh) !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+  }
+
+  .our-vision-page .page-hero.vision-hero:not(.partners-hero) .about-hero__banner,
+  .our-vision-page .page-hero.vision-hero:not(.partners-hero) picture img.about-hero__banner {
+    max-height: min(560px, 66vh) !important;
+  }
+}
