@@ -30422,8 +30422,8 @@ body.newsletter-success-open {
     text-align: left !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    /* Nudge 4px in so text left edge matches logo wordmark */
-    padding-left: 4px !important;
+    /* Nudge 6px in so text left edge matches logo wordmark */
+    padding-left: 6px !important;
     padding-right: 0 !important;
   }
 
