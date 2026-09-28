@@ -1213,6 +1213,40 @@ button {
   flex-shrink: 0;
 }
 
+/* Desktop: equal side slots so logo↔Home gap matches Contact↔Donate */
+@media (min-width: 1201px) {
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    --header-side-slot: max(var(--header-logo-box-width), 15.75rem);
+  }
+
+  .site-header__logo {
+    flex: 0 0 var(--header-side-slot);
+    width: var(--header-side-slot);
+  }
+
+  .site-header__logo img {
+    width: calc(var(--header-logo-box-width) * 0.8);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .site-nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .site-header__actions {
+    flex: 0 0 var(--header-side-slot);
+    width: var(--header-side-slot);
+    justify-content: flex-end;
+  }
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -10293,7 +10327,7 @@ img.lazy-img.loaded {
 
   .page-hero.about-hero .page-hero__inner,
   .about-page .page-hero.about-hero .page-hero__inner {
-    grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+    grid-template-columns: minmax(0, 36%) minmax(0, 64%) !important;
   }
 
   .page-hero.about-hero .page-hero__content,
@@ -19816,14 +19850,14 @@ body.newsletter-success-open {
 
   .page-hero.about-hero .hero-headline {
     font-family: var(--font-heading);
-    font-size: 28px;
+    font-size: clamp(17px, 4.85vw, 20px);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: 1.28;
+    letter-spacing: -0.03em;
     margin: 0 0 14px;
     color: var(--color-navy);
     text-align: center;
-    max-width: 340px;
+    max-width: 100%;
   }
 
   .page-hero.about-hero .hero-headline .about-hero__title-line--navy {
@@ -20241,10 +20275,11 @@ body.newsletter-success-open {
   }
 
   #main-content > section.about-hero.page-hero .hero-headline {
-    font-size: 28px;
-    line-height: 1.2;
+    font-size: clamp(17px, 4.85vw, 20px);
+    line-height: 1.28;
+    letter-spacing: -0.03em;
     margin-bottom: 14px;
-    max-width: 340px;
+    max-width: 100%;
   }
 
   #main-content > section.about-hero.page-hero .hero-copy {
@@ -24015,10 +24050,10 @@ body.newsletter-success-open {
 
   .about-page .page-hero.about-hero .hero-headline {
     font-family: var(--font-heading) !important;
-    font-size: clamp(28px, 7.5vw, 32px) !important;
+    font-size: clamp(17px, 4.85vw, 20px) !important;
     font-weight: 700 !important;
-    line-height: 1.2 !important;
-    letter-spacing: -0.02em !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.03em !important;
     text-align: left !important;
     max-width: 100% !important;
     width: 100% !important;
@@ -24032,11 +24067,13 @@ body.newsletter-success-open {
     text-align: left !important;
     white-space: nowrap !important;
     margin: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 
   .about-page .page-hero.about-hero .hero-headline .about-hero__title-line--navy {
     color: var(--color-navy) !important;
-    margin-bottom: 0.15rem !important;
+    margin-bottom: 0.2rem !important;
   }
 
   .about-page .page-hero.about-hero .hero-headline .about-hero__title-line--pink {
@@ -28382,6 +28419,15 @@ body.newsletter-success-open {
   .page-hero.get-involved-hero .hero-headline {
     font-size: var(--mobile-hero-headline-size) !important;
     line-height: 1.15 !important;
+  }
+
+  .about-page .page-hero.about-hero .hero-headline,
+  .page-hero.about-hero .hero-headline,
+  #main-content > section.page-hero.about-hero .hero-headline {
+    font-size: clamp(17px, 4.85vw, 20px) !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.03em !important;
+    max-width: 100% !important;
   }
 
   .page-hero.home-hero .hero-copy,
