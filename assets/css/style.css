@@ -6784,6 +6784,12 @@ img.lazy-img.loaded {
   margin-bottom: 0;
 }
 
+/* Impact cards — keep heads/tops in frame under cover crop */
+.explore-impact-card__photo,
+.explore-impact-card > .lazy-img-wrap--cover img.lazy-img {
+  object-position: center top;
+}
+
 .explore-impact-card__title {
   font-family: var(--font-heading);
   font-weight: 700;
