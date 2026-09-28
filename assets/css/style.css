@@ -6955,13 +6955,14 @@ img.lazy-img.loaded {
 .explore-dream__grid {
   display: grid;
   grid-template-columns:
-    minmax(0, 1fr)
     auto
-    minmax(0, 1fr)
     auto
-    minmax(0, 1.05fr);
+    auto
+    auto
+    minmax(0, 1.1fr);
   align-items: center;
-  column-gap: clamp(0.85rem, 1.4vw, 1.35rem);
+  /* Match left card pad so title↔photo gap equals edge↔title */
+  column-gap: var(--explore-dream-pad);
   row-gap: clamp(0.65rem, 1.15vw, 1.1rem);
 }
 
@@ -6973,7 +6974,7 @@ img.lazy-img.loaded {
   letter-spacing: -0.02em;
   color: var(--color-navy);
   margin: 0;
-  justify-self: end;
+  justify-self: start;
   width: max-content;
   max-width: 100%;
   text-align: left;
@@ -7011,13 +7012,13 @@ img.lazy-img.loaded {
 }
 
 .explore-dream__list {
+  --explore-dream-list-gap: clamp(0.28rem, 0.45vw, 0.38rem);
   list-style: none;
   margin: 0;
-  margin-left: 20px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.28rem, 0.45vw, 0.38rem);
+  gap: var(--explore-dream-list-gap);
   justify-self: start;
   width: max-content;
   max-width: 100%;
@@ -7026,7 +7027,7 @@ img.lazy-img.loaded {
 .explore-dream__list li {
   display: flex;
   align-items: center;
-  gap: 0.42rem;
+  gap: var(--explore-dream-list-gap);
   font-family: var(--font-body);
   font-size: clamp(0.72rem, 0.8vw, 0.82rem);
   line-height: 1.35;
