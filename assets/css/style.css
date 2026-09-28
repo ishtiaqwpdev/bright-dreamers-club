@@ -6603,6 +6603,13 @@ img.lazy-img.loaded {
   background: transparent;
 }
 
+/* Give lockup sits smaller in-canvas — nudge to match sibling stage height */
+.explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__photo,
+.explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__layout > .lazy-img-wrap .explore-grow-stage__photo {
+  transform: scale(1.12);
+  transform-origin: center center;
+}
+
 .explore-grow-stage__body {
   min-width: 0;
   padding: clamp(0.15rem, 0.35vw, 0.35rem) clamp(0.1rem, 0.3vw, 0.25rem)
@@ -9032,7 +9039,8 @@ img.lazy-img.loaded {
 
 .panel-card--journey {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  overflow: visible;
   background-color: var(--panel-cream);
   background-image: none;
 }
@@ -9047,7 +9055,7 @@ img.lazy-img.loaded {
   flex: 1 1 0;
   width: auto;
   min-width: 0;
-  max-width: calc(100% - var(--panel-council-figure-width) - clamp(0.5rem, 1vw, 0.85rem));
+  max-width: calc(100% - clamp(200px, 24vw, 280px) - clamp(0.5rem, 1vw, 0.85rem));
   box-sizing: border-box;
 }
 
@@ -9075,11 +9083,26 @@ img.lazy-img.loaded {
 
 .panel-card--journey .panel-card__figure {
   background-color: transparent;
+  overflow: visible;
+  max-height: none;
 }
 
 .panel-card--journey .panel-card__figure-img,
 .panel-card--journey .panel-card__figure .lazy-img-wrap {
   background-color: transparent;
+  max-height: none;
+}
+
+.panel-card--journey .panel-card__figure-img {
+  width: clamp(200px, 24vw, 280px);
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.panel-card--journey .panel-card__figure .lazy-img-wrap {
+  width: clamp(200px, 24vw, 280px);
+  max-width: 100%;
 }
 
 .panel-card--council .panel-card__figure {
