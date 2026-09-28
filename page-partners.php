@@ -95,7 +95,7 @@ if ( $partners_hero_banner_mobile_ver ) {
 }
 $partners_hero_banner_alt = bdc_get_acf_text(
 	'partners_hero_banner_alt',
-	'Children stacking hands with signs for Ideas People Change and Stronger Communities',
+	'Four Bright Dreamers stacking hands with notebooks reading Ideas People Change and Stronger Communities',
 	$partners_page_id
 );
 
