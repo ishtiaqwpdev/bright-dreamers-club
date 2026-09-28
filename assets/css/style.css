@@ -9074,7 +9074,12 @@ img.lazy-img.loaded {
 }
 
 .panel-card--journey .panel-card__figure {
-  background-color: var(--panel-cream);
+  background-color: transparent;
+}
+
+.panel-card--journey .panel-card__figure-img,
+.panel-card--journey .panel-card__figure .lazy-img-wrap {
+  background-color: transparent;
 }
 
 .panel-card--council .panel-card__figure {

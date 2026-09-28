@@ -148,7 +148,7 @@ $about_panel_journey_defaults = array(
 	'paragraph_1'  => 'At Bright Dreamers, children are not just participants. They are creators. Dreamers. Problem solvers. Idea makers.',
 	'paragraph_2'  => 'Many of our projects begin with children\'s own ideas. Adults guide, encourage, and provide a safe environmentâ€”but we believe the best ideas often come from children themselves.',
 	'paragraph_3'  => 'Together we turn imagination into real projects that help others.',
-	'figure'       => bdc_theme_asset_url( 'assets/images/panel-journey-girl-removebg-preview.png' ),
+	'figure'       => bdc_theme_asset_url( 'assets/images/panel-journey-girl.png' ),
 	'figure_alt'   => 'A Bright Dreamer holding a sign that says My idea Can Help Others',
 );
 $about_panel_journey        = bdc_get_acf_group( 'about_panel_journey', $about_panel_journey_defaults, $about_page_id );

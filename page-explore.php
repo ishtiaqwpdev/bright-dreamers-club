@@ -156,7 +156,7 @@ $explore_ways_cards_defaults = array(
 		'icon'       => bdc_theme_asset_url( 'assets/images/explore-way-lead-icon.jpeg' ),
 		'title'      => 'Lead Together',
 		'icon_boost' => false,
-		'photo'      => bdc_theme_asset_url( 'assets/images/home-ideas-photo.jpeg' ),
+		'photo'      => bdc_theme_asset_url( 'assets/images/explore-way-lead-photo.png' ),
 		'photo_alt'  => 'Children collaborating around a table',
 		'text'       => 'Share ideas, vote on projects, help shape Bright Dreamers, and lead with your voice.',
 	),
@@ -330,7 +330,7 @@ $explore_grow_stages_defaults = array(
 	),
 	array(
 		'style_slug'  => 'create',
-		'photo'       => bdc_theme_asset_url( 'assets/images/WhatsApp_Image_2026-09-24_at_11.14.47_AM__2_-removebg-preview.png' ),
+		'photo'       => bdc_theme_asset_url( 'assets/images/explore-grow-create-lockup.png' ),
 		'photo_alt'   => 'Create — I can build something amazing! Practice, create, and bring ideas to life.',
 		'icon'        => bdc_theme_asset_url( 'assets/images/explore-grow-create-icon.png' ),
 		'label'       => 'Create',
@@ -340,7 +340,7 @@ $explore_grow_stages_defaults = array(
 	),
 	array(
 		'style_slug'  => 'share',
-		'photo'       => bdc_theme_asset_url( 'assets/images/WhatsApp_Image_2026-09-24_at_11.14.47_AM__3_-removebg-preview.png' ),
+		'photo'       => bdc_theme_asset_url( 'assets/images/explore-grow-share-lockup.png' ),
 		'photo_alt'   => 'Share — I can inspire others. Share ideas and celebrate creations.',
 		'icon'        => bdc_theme_asset_url( 'assets/images/explore-grow-share-icon.png' ),
 		'label'       => 'Share',
