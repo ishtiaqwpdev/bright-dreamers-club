@@ -252,8 +252,8 @@ $image_class   = trim( 'lazy-img ' . (string) $hero['image_class'] );
                   class="<?php echo esc_attr( $banner_class ); ?>"
                   src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                   alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
-                  width="1200"
-                  height="900"
+                  width="1024"
+                  height="555"
                   decoding="async"
                 />
               </picture>
@@ -263,8 +263,8 @@ $image_class   = trim( 'lazy-img ' . (string) $hero['image_class'] );
                 src="<?php echo esc_attr( $hero['hero_image_placeholder'] ); ?>"
                 data-src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                 alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
-                width="1200"
-                height="900"
+                width="1024"
+                height="555"
                 decoding="async"
               />
               <?php endif; ?>

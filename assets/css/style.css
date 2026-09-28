@@ -28767,7 +28767,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page ? desktop hero banner (same size behavior as home) */
+/* Partners page ? desktop hero banner: natural aspect, never stretch */
 @media (min-width: 1024px) {
   .partners-page #main-content > section.page-hero.partners-hero .about-hero__banner,
   .partners-page #main-content > section.page-hero.partners-hero picture img.about-hero__banner,
@@ -28779,6 +28779,8 @@ body.newsletter-success-open {
     max-width: 100% !important;
     height: auto !important;
     max-height: none !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
     object-fit: contain !important;
     object-position: left center !important;
     margin-left: 0 !important;
@@ -28791,14 +28793,17 @@ body.newsletter-success-open {
     justify-content: flex-start !important;
     align-items: center !important;
     width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   .partners-page .page-hero.partners-hero .about-hero__media picture,
   .partners-page .page-hero.partners-hero .about-hero__media .lazy-img-wrap {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    line-height: 0 !important;
   }
 }
 
