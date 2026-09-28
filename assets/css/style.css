@@ -30809,14 +30809,14 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Get Involved hero banner ? black artwork, match bg 100%, never stretch
+   Get Involved hero banner ? white artwork, match bg 100%, never stretch
    ========================================================================== */
 .get-involved-page .page-hero.get-involved-hero .about-hero__media,
 .get-involved-page .page-hero.get-involved-hero .hero-image-wrap,
 .get-involved-page .page-hero.get-involved-hero .about-hero__media .lazy-img-wrap,
 .get-involved-page .page-hero.get-involved-hero .about-hero__media picture {
-  background: #000 !important;
-  background-color: #000 !important;
+  background: #fff !important;
+  background-color: #fff !important;
   overflow: visible !important;
 }
 
@@ -30834,8 +30834,8 @@ body.newsletter-success-open {
   object-position: center center !important;
   filter: none !important;
   transform: none !important;
-  background: #000 !important;
-  background-color: #000 !important;
+  background: #fff !important;
+  background-color: #fff !important;
   margin: 0 !important;
 }
 
