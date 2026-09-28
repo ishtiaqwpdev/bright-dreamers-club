@@ -26,12 +26,10 @@ $about_hero_eyebrow = bdc_get_acf_text(
 	'ABOUT US',
 	$post_id
 );
-/* Theme lockup — 4 short lines so title stays clear of the banner photo. */
+/* Theme lockup — 2 lines; size capped in CSS so it stays clear of the banner photo. */
 $about_hero_title_underline_word = 'Every';
-$about_hero_title_navy_line_1_rest = 'Child';
-$about_hero_title_navy_line_2     = 'Has a Dream';
-$about_hero_title_pink_line_1     = 'We\'re Here to';
-$about_hero_title_pink_line_2     = 'Help It Grow';
+$about_hero_title_navy_rest      = 'Child Has a Dream';
+$about_hero_title_pink           = 'We\'re Here to Help It Grow';
 $about_hero_title_underline_url  = bdc_get_acf_image_url(
 	'about_hero_title_underline',
 	bdc_theme_asset_url( 'assets/images/heading-underline.jpeg' ),
@@ -90,11 +88,9 @@ if ( $about_hero_banner_mobile_ver ) {
 
 $about_headline_html  = '<span class="about-hero__title-line about-hero__title-line--navy">';
 $about_headline_html .= '<span class="heading-underline">' . esc_html( $about_hero_title_underline_word ) . '<img class="heading-underline__img" src="' . esc_url( $about_hero_title_underline_url ) . '" alt="" width="120" height="12" /></span>';
-$about_headline_html .= ' ' . esc_html( $about_hero_title_navy_line_1_rest );
+$about_headline_html .= ' ' . esc_html( $about_hero_title_navy_rest );
 $about_headline_html .= '</span>';
-$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--navy">' . esc_html( $about_hero_title_navy_line_2 ) . '</span>';
-$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--pink">' . esc_html( $about_hero_title_pink_line_1 ) . '</span>';
-$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--pink">' . esc_html( $about_hero_title_pink_line_2 ) . '</span>';
+$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--pink">' . esc_html( $about_hero_title_pink ) . '</span>';
 
 get_template_part(
 	'template-parts/page-hero',

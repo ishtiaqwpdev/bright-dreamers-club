@@ -409,7 +409,7 @@ if ( empty( $partners_founding_cards ) ) {
           $partners_headline_html .= '<span class="heading-underline heading-underline--partners">' . esc_html( $partners_hero_title_underline_word ) . '<img class="heading-underline__img" src="' . esc_url( $partners_hero_title_underline_url ) . '" alt="" width="140" height="12" decoding="async" aria-hidden="true" /></span>';
         }
         if ( '' !== trim( $partners_hero_title_line_2_suffix ) ) {
-          $partners_headline_html .= esc_html( $partners_hero_title_line_2_suffix );
+          $partners_headline_html .= ' ' . esc_html( $partners_hero_title_line_2_suffix );
         }
         $partners_headline_html .= '</span>';
       }

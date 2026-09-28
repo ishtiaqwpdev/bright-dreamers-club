@@ -30334,6 +30334,8 @@ body.newsletter-success-open {
 
   .about-page {
     --about-header-hero-gap: var(--page-header-hero-gap);
+    /* Smaller than shared hero title so 2 long lines fit beside the photo */
+    --about-hero-title-size: clamp(1.55rem, 2.35vw, 2.35rem);
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
@@ -30472,6 +30474,52 @@ body.newsletter-success-open {
     margin-top: -30px !important;
   }
 
+  .for-parents-page .page-hero.for-parents-hero .page-hero__content {
+    margin-top: -100px !important;
+  }
+
+  .our-vision-page .page-hero.vision-hero .page-hero__content {
+    margin-top: 30px !important;
+  }
+
+  .get-involved-page .page-hero.get-involved-hero .page-hero__content {
+    margin-top: -110px !important;
+    padding-left: 6px !important;
+  }
+
+  .partners-page .page-hero.partners-hero .page-hero__content {
+    align-items: flex-start !important;
+    text-align: left !important;
+    justify-self: start !important;
+    padding-left: 6px !important;
+    margin-left: 0 !important;
+  }
+
+  .partners-page .page-hero.partners-hero .hero-headline,
+  .partners-page .page-hero.partners-hero .hero-copy,
+  .partners-page .page-hero.partners-hero .page-hero__actions,
+  .partners-page .page-hero.partners-hero .hero-ctas {
+    text-align: left !important;
+    align-self: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Keep Partners title as exactly 2 lines: Stronger Together / Brighter Futures */
+  .partners-page .page-hero.partners-hero .hero-headline .vision-hero__title-line,
+  .partners-page .page-hero.partners-hero .hero-headline .vision-hero__title-line--navy,
+  .partners-page .page-hero.partners-hero .hero-headline .vision-hero__title-line--pink {
+    display: block !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .partners-page .page-hero.partners-hero .heading-underline--partners {
+    display: inline !important;
+  }
+
   .home-page .page-hero.home-hero .hero-label,
   .home-page .page-hero.home-welcome-hero .hero-label,
   .home-page .page-hero.home-hero .hero-headline,
@@ -30526,12 +30574,18 @@ body.newsletter-success-open {
   letter-spacing: var(--page-hero-title-letter-spacing) !important;
 }
 
-/* About hero — 4 short title lines stay inside the text column (no image overlap) */
+/* About hero — 2 title lines, reduced size, no image overlap; 6px logo align */
+.about-page .page-hero.about-hero .page-hero__content,
+#main-content > section.page-hero.about-hero .page-hero__content {
+  padding-left: 6px !important;
+}
+
 .about-page .page-hero.about-hero .hero-headline,
 .about-page .page-hero.about-hero .about-hero__title,
 #main-content > section.page-hero.about-hero .hero-headline {
   max-width: 100% !important;
   overflow: visible !important;
+  font-size: var(--about-hero-title-size, clamp(1.55rem, 2.35vw, 2.35rem)) !important;
 }
 
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
@@ -30544,4 +30598,5 @@ body.newsletter-success-open {
   width: max-content !important;
   max-width: 100% !important;
   white-space: nowrap !important;
+  font-size: inherit !important;
 }
