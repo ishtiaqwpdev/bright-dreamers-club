@@ -7129,6 +7129,7 @@ img.lazy-img.loaded {
 /* ??? Contact hero content ??? */
 .contact-hero__title-line {
   display: block;
+  text-align: left;
 }
 
 .contact-hero__title-line--navy {
@@ -27869,17 +27870,25 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners + Contact ? desktop: center heading/CTAs; left-align paragraph under heading */
+/* Partners + Contact ? desktop: Partners center heading/CTAs; Contact left-align */
 @media (min-width: 1024px) {
-  .page-hero.partners-hero .page-hero__content,
-  .page-hero.contact-hero .page-hero__content {
+  .page-hero.partners-hero .page-hero__content {
     align-items: center;
     text-align: center;
   }
 
-  .page-hero.partners-hero .hero-headline,
-  .page-hero.contact-hero .hero-headline {
+  .page-hero.contact-hero .page-hero__content {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .page-hero.partners-hero .hero-headline {
     text-align: center;
+  }
+
+  .page-hero.contact-hero .hero-headline,
+  .page-hero.contact-hero .hero-headline [class*='__title-line'] {
+    text-align: left !important;
   }
 
   .page-hero.partners-hero .hero-copy,
@@ -27888,18 +27897,18 @@ body.newsletter-success-open {
     align-self: stretch;
   }
 
-  .page-hero.partners-hero .hero-headline [class*='__title-line'],
-  .page-hero.contact-hero .hero-headline [class*='__title-line'],
-  .page-hero.contact-hero .hero-headline .contact-hero__contact-word,
-  .page-hero.contact-hero .hero-headline .contact-hero__us-word {
+  .page-hero.partners-hero .hero-headline [class*='__title-line'] {
     text-align: center;
   }
 
   .page-hero.partners-hero .page-hero__actions,
-  .page-hero.partners-hero .hero-ctas,
+  .page-hero.partners-hero .hero-ctas {
+    justify-content: center;
+  }
+
   .page-hero.contact-hero .page-hero__actions,
   .page-hero.contact-hero .hero-ctas {
-    justify-content: center;
+    justify-content: flex-start !important;
   }
 
   .page-hero.partners-hero .heading-underline--partners,
@@ -30498,11 +30507,11 @@ body.newsletter-success-open {
 
   .home-page .page-hero.home-hero .page-hero__content,
   .home-page .page-hero.home-welcome-hero .page-hero__content {
-    margin-top: -75px !important;
+    margin-top: 0 !important;
   }
 
   .explore-page .page-hero.explore-hero .page-hero__content {
-    margin-top: -100px !important;
+    margin-top: -110px !important;
   }
 
   .for-parents-page .page-hero.for-parents-hero .page-hero__content {
@@ -30519,7 +30528,23 @@ body.newsletter-success-open {
   }
 
   .contact-page .page-hero.contact-hero .page-hero__content {
-    margin-top: -270px !important;
+    margin-top: -90px !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    justify-self: start !important;
+  }
+
+  .contact-page .page-hero.contact-hero .hero-label,
+  .contact-page .page-hero.contact-hero .hero-headline,
+  .contact-page .page-hero.contact-hero .hero-headline [class*='__title-line'],
+  .contact-page .page-hero.contact-hero .hero-copy {
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+
+  .contact-page .page-hero.contact-hero .page-hero__actions,
+  .contact-page .page-hero.contact-hero .hero-ctas {
+    justify-content: flex-start !important;
   }
 
   .partners-page .page-hero.partners-hero .page-hero__content {
