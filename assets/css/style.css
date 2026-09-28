@@ -1213,18 +1213,19 @@ button {
   flex-shrink: 0;
 }
 
-/* Desktop: equal side slots so logo↔Home gap matches Contact↔Donate */
+/* Desktop: equal gaps — logo↔Home matches Contact↔Donate */
 @media (min-width: 1201px) {
   .site-header__inner {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    --header-side-slot: max(var(--header-logo-box-width), 15.75rem);
+    justify-content: space-between;
+    gap: 0;
   }
 
   .site-header__logo {
-    flex: 0 0 var(--header-side-slot);
-    width: var(--header-side-slot);
+    flex: 0 0 auto;
+    width: auto;
+    max-width: var(--header-logo-box-width);
   }
 
   .site-header__logo img {
@@ -1234,15 +1235,15 @@ button {
   }
 
   .site-nav {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     min-width: 0;
   }
 
   .site-header__actions {
-    flex: 0 0 var(--header-side-slot);
-    width: var(--header-side-slot);
+    flex: 0 0 auto;
+    width: auto;
     justify-content: flex-end;
   }
 }
