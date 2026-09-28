@@ -3408,7 +3408,7 @@ img.lazy-img.loaded {
   object-fit: contain;
   object-position: left center;
   filter: none;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .about-hero__eyebrow {
@@ -5928,6 +5928,17 @@ img.lazy-img.loaded {
 .contact-page .page-hero.contact-hero picture img.about-hero__banner,
 .partners-page .page-hero.partners-hero .about-hero__banner,
 .partners-page .page-hero.partners-hero picture img.about-hero__banner {
+  background: #fff !important;
+  background-color: #fff !important;
+}
+
+/* Explore hero ? white artwork bg, match container */
+.page-hero.explore-hero .explore-hero__media,
+.page-hero.explore-hero .hero-image-wrap,
+.page-hero.explore-hero .explore-hero__media .lazy-img-wrap,
+.page-hero.explore-hero .explore-hero__media picture,
+.explore-page .page-hero.explore-hero .explore-hero__banner,
+.explore-page .page-hero.explore-hero picture img.explore-hero__banner {
   background: #fff !important;
   background-color: #fff !important;
 }
@@ -30798,7 +30809,7 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Get Involved hero banner — black artwork, match bg 100%, never stretch
+   Get Involved hero banner ? black artwork, match bg 100%, never stretch
    ========================================================================== */
 .get-involved-page .page-hero.get-involved-hero .about-hero__media,
 .get-involved-page .page-hero.get-involved-hero .hero-image-wrap,
@@ -30836,7 +30847,7 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Our Vision hero banner — black artwork, match bg 100%, never stretch
+   Our Vision hero banner ? black artwork, match bg 100%, never stretch
    ========================================================================== */
 .our-vision-page .page-hero.vision-hero:not(.partners-hero) .about-hero__media,
 .our-vision-page .page-hero.vision-hero:not(.partners-hero) .hero-image-wrap,
