@@ -24481,7 +24481,7 @@ body.newsletter-success-open {
 
   .explore-page .page-hero.explore-hero .hero-label {
     display: inline-block !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     padding: 0 !important;
     font-family: var(--font-body) !important;
     font-size: 11px !important;
@@ -28190,6 +28190,12 @@ body.newsletter-success-open {
     text-align: left !important;
   }
 
+  .explore-page .page-hero .hero-label,
+  .explore-page .page-hero.explore-hero .hero-label,
+  .explore-page #main-content > section.page-hero.explore-hero .hero-label {
+    margin-top: 10px !important;
+  }
+
   .about-page .page-hero .hero-headline,
   .explore-page .page-hero .hero-headline,
   .for-parents-page .page-hero .hero-headline,
@@ -28851,6 +28857,11 @@ body.newsletter-success-open {
     padding: 0 var(--container-padding) !important;
     margin: 0 !important;
     text-align: left !important;
+  }
+
+  .explore-page #main-content .page-hero.explore-hero .hero-label,
+  .explore-page #main-content > section.page-hero.explore-hero .hero-label {
+    margin-top: 10px !important;
   }
 
   #main-content .page-hero:not(.home-welcome-hero) .hero-headline,
