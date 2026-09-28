@@ -7000,6 +7000,7 @@ img.lazy-img.loaded {
 .explore-dream__list {
   list-style: none;
   margin: 0;
+  margin-left: 20px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -11105,6 +11106,7 @@ img.lazy-img.loaded {
     width: 100%;
     max-width: 100%;
     margin-inline: 0;
+    margin-left: 0;
     justify-self: start;
   }
 
