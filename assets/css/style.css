@@ -6603,18 +6603,6 @@ img.lazy-img.loaded {
   background: transparent;
 }
 
-/* Give lockup subject reads smaller in-frame — match visual size of other stages */
-.explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__layout > .lazy-img-wrap,
-.explore-grow-stage--give .explore-grow-stage__layout > .lazy-img-wrap {
-  transform: scale(1.22);
-  transform-origin: center center;
-}
-
-.explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__photo,
-.explore-grow-stage--give .explore-grow-stage__layout > .lazy-img-wrap .explore-grow-stage__photo {
-  max-height: none;
-}
-
 .explore-grow-stage__body {
   min-width: 0;
   padding: clamp(0.15rem, 0.35vw, 0.35rem) clamp(0.1rem, 0.3vw, 0.25rem)
