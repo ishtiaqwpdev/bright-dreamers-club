@@ -1219,7 +1219,7 @@ button {
   flex-shrink: 0;
 }
 
-/* Desktop: equal gaps — logo↔Home matches Contact↔Donate */
+/* Desktop: equal gaps ? logo?Home matches Contact?Donate */
 @media (min-width: 1201px) {
   .site-header__inner {
     display: flex;
@@ -1809,7 +1809,7 @@ button {
   margin: 0;
 }
 
-/* Home hero — reference lockup: stacked wordmark + colored tagline + path banner */
+/* Home hero ? reference lockup: stacked wordmark + colored tagline + path banner */
 .home-hero {
   background-color: #fff;
   min-height: 0;
@@ -2006,7 +2006,7 @@ button {
   height: 1.25rem;
 }
 
-/* Home welcome hero — force CTAs side-by-side (grid beats legacy column overrides) */
+/* Home welcome hero ? force CTAs side-by-side (grid beats legacy column overrides) */
 .home-hero__actions--inline {
   display: grid !important;
   grid-template-columns: auto auto;
@@ -2039,7 +2039,7 @@ button {
   }
 }
 
-/* Desktop side-by-side (≥1201px): shared hero container + tighter columns.
+/* Desktop side-by-side (?1201px): shared hero container + tighter columns.
    Header and hero both use .site-container (same max-width + --container-padding).
    Text starts on the logo edge; banner stays on the Apply-to-Join edge. */
 @media (min-width: 1201px) {
@@ -3218,7 +3218,7 @@ img.lazy-img.loaded {
   overflow: visible;
 }
 
-/* Align with hamburger breakpoint (≤1200) — do not force 2-col hero while nav is collapsed */
+/* Align with hamburger breakpoint (?1200) ? do not force 2-col hero while nav is collapsed */
 @media (min-width: 1201px) {
   .about-hero .page-hero__inner,
   .home-hero .page-hero__inner,
@@ -3266,7 +3266,7 @@ img.lazy-img.loaded {
   }
 }
 
-/* Per-page hero grids — desktop only (≤1200 uses stacked flex from responsive block) */
+/* Per-page hero grids ? desktop only (?1200 uses stacked flex from responsive block) */
 @media (min-width: 1201px) {
   .contact-hero .page-hero__inner {
     display: grid;
@@ -3575,7 +3575,7 @@ img.lazy-img.loaded {
   max-width: 100%;
 }
 
-/* Our Vision hero — desktop left stack matches reference spacing */
+/* Our Vision hero ? desktop left stack matches reference spacing */
 @media (min-width: 1201px) {
   .our-vision-page .page-hero.vision-hero .page-hero__content {
     display: flex !important;
@@ -6243,7 +6243,7 @@ img.lazy-img.loaded {
 }
 
 @media (min-width: 1201px) {
-  /* Explore hero — reference lockup: 3 heading lines + 4 copy lines; image 66% */
+  /* Explore hero ? reference lockup: 3 heading lines + 4 copy lines; image 66% */
   .explore-page {
     --bdc-hero-text-col-percent: 34;
     --bdc-hero-banner-col-percent: 66;
@@ -6520,7 +6520,7 @@ img.lazy-img.loaded {
   margin-bottom: 0;
 }
 
-/* Explore ways cards — keep heads/tops in frame under 4:3 cover crop */
+/* Explore ways cards ? keep heads/tops in frame under 4:3 cover crop */
 .explore-ways__grid .explore-way-card__photo,
 .explore-ways__grid .lazy-img-wrap--cover img.lazy-img {
   object-position: center top;
@@ -6686,7 +6686,7 @@ img.lazy-img.loaded {
   background: transparent;
 }
 
-/* Give lockup sits smaller in-canvas — nudge to match sibling stage height */
+/* Give lockup sits smaller in-canvas ? nudge to match sibling stage height */
 .explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__photo,
 .explore-grow-stage--give.explore-grow-stage--lockup .explore-grow-stage__layout > .lazy-img-wrap .explore-grow-stage__photo {
   transform: scale(1.12);
@@ -6874,7 +6874,7 @@ img.lazy-img.loaded {
   margin-bottom: 0;
 }
 
-/* Impact cards — keep heads/tops in frame under cover crop */
+/* Impact cards ? keep heads/tops in frame under cover crop */
 .explore-impact-card__photo,
 .explore-impact-card > .lazy-img-wrap--cover img.lazy-img {
   object-position: center top;
@@ -6978,7 +6978,7 @@ img.lazy-img.loaded {
     auto
     minmax(0, 1.1fr);
   align-items: center;
-  /* Match left card pad so title↔photo gap equals edge↔title */
+  /* Match left card pad so title?photo gap equals edge?title */
   column-gap: var(--explore-dream-pad);
   row-gap: clamp(0.65rem, 1.15vw, 1.1rem);
 }
@@ -8738,7 +8738,7 @@ img.lazy-img.loaded {
   }
 }
 
-/* Creative Makers hero — mobile banner centered (match Home 20px inset) */
+/* Creative Makers hero ? mobile banner centered (match Home 20px inset) */
 @media (max-width: 768px) {
   .creative-makers-page #main-content > section.page-hero.creative-makers-hero .creative-makers-hero__media,
   .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
@@ -8790,7 +8790,7 @@ img.lazy-img.loaded {
   }
 }
 
-/* Create for a Cause hero — mobile banner centered */
+/* Create for a Cause hero ? mobile banner centered */
 @media (max-width: 768px) {
   .create-for-cause-page #main-content > section.page-hero.create-for-cause-hero .creative-makers-hero__media,
   .create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__media,
@@ -10139,7 +10139,7 @@ img.lazy-img.loaded {
   }
 }
 
-/* Desktop hero (≥1024px): text block + image vertically centered as whole units */
+/* Desktop hero (?1024px): text block + image vertically centered as whole units */
 @media (min-width: 1024px) {
   :root {
     --page-hero-balanced-content-col: 0.34fr;
@@ -10212,7 +10212,7 @@ img.lazy-img.loaded {
     align-items: center !important;
   }
 
-  /* About page — tight top on laptop at 70–100% zoom (no tall empty band) */
+  /* About page ? tight top on laptop at 70?100% zoom (no tall empty band) */
   .about-page #main-content > section.page-hero.about-hero,
   .about-page #main-content > section.about-hero.page-hero,
   .about-page .page-hero.about-hero {
@@ -12326,7 +12326,7 @@ img.lazy-img.loaded {
     justify-content: center;
   }
 
-  /* Home spotlight — tight gap between highlight lines on mobile */
+  /* Home spotlight ? tight gap between highlight lines on mobile */
   .home-spotlight .spotlight-card__copy p.spotlight-card__highlight {
     line-height: 1.05;
     margin: 0;
@@ -19590,7 +19590,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Shared compact mobile hero: label → headline → copy → CTAs → image */
+/* Shared compact mobile hero: label ? headline ? copy ? CTAs ? image */
 @media (max-width: 767px) {
   #main-content > section.page-hero,
   .page-hero {
@@ -19884,7 +19884,7 @@ body.newsletter-success-open {
     overflow: visible !important;
   }
 
-  /* About + Home hero — mobile content spacing (reference layout) */
+  /* About + Home hero ? mobile content spacing (reference layout) */
   .page-hero.about-hero .page-hero__content,
   .page-hero.home-hero .page-hero__content {
     gap: 0;
@@ -20298,7 +20298,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All page heroes — phone layout (≤430px): full-width banners, image contain. */
+/* All page heroes ? phone layout (?430px): full-width banners, image contain. */
 @media (max-width: 430px) {
   #main-content > section.page-hero,
   .page-hero {
@@ -20461,7 +20461,7 @@ body.newsletter-success-open {
     transform: none !important;
   }
 
-  /* Our Vision — disable desktop scale transform that clips mural text on mobile */
+  /* Our Vision ? disable desktop scale transform that clips mural text on mobile */
   #main-content > section.page-hero.vision-hero .about-hero__banner,
   #main-content > section.vision-hero.page-hero .about-hero__banner {
     transform: none !important;
@@ -22365,7 +22365,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Mobile/tablet hero — unified stack + left align (7 main pages, ≤1023px) */
+/* Mobile/tablet hero ? unified stack + left align (7 main pages, ?1023px) */
 @media (max-width: 1023px) {
   .page-hero.home-hero,
   .page-hero.about-hero,
@@ -22525,7 +22525,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Override shared compact mobile hero centering — 7 main pages stay left-aligned (≤767px) */
+/* Override shared compact mobile hero centering ? 7 main pages stay left-aligned (?767px) */
 @media (max-width: 767px) {
   #main-content > section.page-hero.home-hero,
   #main-content > section.page-hero.about-hero,
@@ -22761,7 +22761,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All page heroes — desktop layout (matches home hero, ≥1201px — same as desktop nav) */
+/* All page heroes ? desktop layout (matches home hero, ?1201px ? same as desktop nav) */
 @media (min-width: 1201px) {
   #main-content > section.page-hero,
   .page-hero {
@@ -22900,7 +22900,7 @@ body.newsletter-success-open {
 
 }
 
-/* Mobile/tablet reset — restore pre-desktop hero spacing on all pages (≤1023px) */
+/* Mobile/tablet reset ? restore pre-desktop hero spacing on all pages (?1023px) */
 @media (max-width: 1023px) {
   #main-content > section.page-hero,
   .page-hero {
@@ -23010,7 +23010,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Phone — image below content/buttons, centered banner (≤767px) */
+/* Phone ? image below content/buttons, centered banner (?767px) */
 @media (max-width: 767px) {
   .page-hero .hero-image-wrap,
   .page-hero [class*='__media'],
@@ -23044,7 +23044,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision + For Parents — desktop: cropped banner, right flush (≥1201px) */
+/* Our Vision + For Parents ? desktop: cropped banner, right flush (?1201px) */
 @media (min-width: 1201px) {
   .page-hero.vision-hero:not(.partners-hero) .page-hero__inner,
   .our-vision-page .page-hero.vision-hero:not(.partners-hero) .page-hero__inner,
@@ -23174,7 +23174,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home pillars — 20px top space below hero (desktop/tablet) */
+/* Home pillars ? 20px top space below hero (desktop/tablet) */
 #main-content > section.home-hero + section.home-pillars {
   padding-top: 20px;
 }
@@ -23185,7 +23185,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Mobile/tablet — hero image always below content + buttons (all pages, ≤1023px) */
+/* Mobile/tablet ? hero image always below content + buttons (all pages, ?1023px) */
 @media (max-width: 1023px) {
   .page-hero .page-hero__inner {
     display: flex !important;
@@ -23205,7 +23205,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — mobile: hide decorative icons below heading (≤767px) */
+/* About page ? mobile: hide decorative icons below heading (?767px) */
 @media (max-width: 767px) {
   .page-hero.about-hero .about-hero__deco {
     display: none !important;
@@ -23217,7 +23217,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Creative Makers — desktop: match home hero lockup (≥1201px) */
+/* Creative Makers ? desktop: match home hero lockup (?1201px) */
 @media (min-width: 1201px) {
   .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__deco--star,
   .page-hero.creative-makers-hero .creative-makers-hero__deco--star {
@@ -23331,7 +23331,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore hero — mobile/tablet: 0px top spacing on banner image (≤1023px) */
+/* Explore hero ? mobile/tablet: 0px top spacing on banner image (?1023px) */
 @media (max-width: 1023px) {
   #main-content > section.page-hero.explore-hero .page-hero__inner,
   .page-hero.explore-hero .page-hero__inner {
@@ -23365,7 +23365,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About — mobile hero: label → headline → copy → banner → CTAs (≤768px) */
+/* About ? mobile hero: label ? headline ? copy ? banner ? CTAs (?768px) */
 @media (max-width: 768px) {
   .about-page #main-content > section.page-hero.about-hero,
   #main-content > section.page-hero.about-hero:not(.contact-hero):not(.vision-hero):not(.for-parents-hero):not(.get-involved-hero):not(.partners-hero):not(.apply-hero),
@@ -23551,7 +23551,7 @@ body.newsletter-success-open {
     display: none !important;
   }
 
-  /* Our Story — mobile reference card */
+  /* Our Story ? mobile reference card */
   .about-page .our-story {
     padding-top: 0;
   }
@@ -23606,7 +23606,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About — Our Story photo: full-width stack on tablet */
+/* About ? Our Story photo: full-width stack on tablet */
 @media (min-width: 768px) and (max-width: 991px) {
   .about-page .our-story__inner {
     flex-direction: column !important;
@@ -23656,7 +23656,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — We Believe: 3-column grid on mobile (replaces slider) */
+/* About page ? We Believe: 3-column grid on mobile (replaces slider) */
 @media (max-width: 991px) {
   .about-page .we-believe__row,
   .about-page .we-believe__row.bdc-mobile-carousel-parent {
@@ -23719,7 +23719,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home page — mobile: unified 20px left/right alignment (hero image → footer) */
+/* Home page ? mobile: unified 20px left/right alignment (hero image ? footer) */
 @media (max-width: 768px) {
   .home-page {
     --container-padding: 20px;
@@ -23781,7 +23781,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home hero — tablet/mobile: logo + description same width (≤1023px) */
+/* Home hero ? tablet/mobile: logo + description same width (?1023px) */
 @media (max-width: 1023px) {
   .page-hero.home-hero .home-hero__intro {
     display: flex;
@@ -23815,7 +23815,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home page — What Makes Bright Dreamers Different: 3-column grid on mobile (replaces slider) */
+/* Home page ? What Makes Bright Dreamers Different: 3-column grid on mobile (replaces slider) */
 @media (max-width: 991px) {
   .home-page .home-different__grid,
   .home-page .home-different__grid.bdc-mobile-carousel,
@@ -23885,7 +23885,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home page — How Ideas Become Reality: 3-column grid on mobile (replaces slider) */
+/* Home page ? How Ideas Become Reality: 3-column grid on mobile (replaces slider) */
 @media (max-width: 991px) {
   .home-page .home-reality__inner {
     padding-inline: clamp(0.5rem, 2vw, 0.85rem) !important;
@@ -23959,7 +23959,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home page — pillars: stacked cards on mobile (replaces slider) */
+/* Home page ? pillars: stacked cards on mobile (replaces slider) */
 @media (max-width: 991px) {
   .home-page .home-pillars__row,
   .home-page .home-pillars__row.bdc-mobile-carousel,
@@ -24001,7 +24001,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home page — Explore Experiences heading left-aligned on mobile */
+/* Home page ? Explore Experiences heading left-aligned on mobile */
 @media (max-width: 991px) {
   .home-page .home-explore__title {
     justify-content: flex-start !important;
@@ -24009,7 +24009,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — banner section: 100% reference layout on mobile (≤767px) */
+/* About page ? banner section: 100% reference layout on mobile (?767px) */
 @media (max-width: 767px) {
   .about-page #main-content > section.page-hero.about-hero,
   .about-page .page-hero.about-hero {
@@ -24190,7 +24190,7 @@ body.newsletter-success-open {
   }
 
   .about-page .page-hero.about-hero .page-hero__actions .btn--solid::after {
-    content: '→';
+    content: '?';
     margin-left: 0.35em;
     font-weight: 400;
   }
@@ -24230,7 +24230,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — Our Role: single row on mobile/tablet (replaces slider) */
+/* About page ? Our Role: single row on mobile/tablet (replaces slider) */
 @media (max-width: 991px) {
   .about-page .panel-card--role {
     overflow: visible !important;
@@ -24303,7 +24303,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — Our Approach: single row on mobile/tablet (replaces slider) */
+/* About page ? Our Approach: single row on mobile/tablet (replaces slider) */
 @media (max-width: 991px) {
   .about-page .panel-card--approach {
     overflow: visible !important;
@@ -24390,7 +24390,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore page — banner section: same mobile layout as About page (≤767px) */
+/* Explore page ? banner section: same mobile layout as About page (?767px) */
 @media (max-width: 767px) {
   .explore-page #main-content > section.page-hero.explore-hero,
   .explore-page .page-hero.explore-hero {
@@ -24601,7 +24601,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore page — Ways / Skills / Grow carousels: left/right arrows (reference layout) */
+/* Explore page ? Ways / Skills / Grow carousels: left/right arrows (reference layout) */
 @media (max-width: 991px) {
   .explore-ways .site-container.bdc-mobile-carousel-parent,
   .explore-ways .site-container.bdc-mobile-carousel-host,
@@ -24701,7 +24701,7 @@ body.newsletter-success-open {
     margin-bottom: 0.35rem;
   }
 
-  /* Explore ways — one full card per view (no peek of next slide) */
+  /* Explore ways ? one full card per view (no peek of next slide) */
   .explore-ways .explore-ways__grid.bdc-mobile-carousel,
   .explore-ways .explore-ways__grid.bdc-mobile-carousel--solo,
   .explore-ways .explore-ways__grid.bdc-mobile-carousel--full {
@@ -24743,7 +24743,7 @@ body.newsletter-success-open {
     box-sizing: border-box !important;
   }
 
-  /* Explore skills — one full card per view (no peek of next slide) */
+  /* Explore skills ? one full card per view (no peek of next slide) */
   .explore-skills .explore-skills__grid.bdc-mobile-carousel,
   .explore-skills .explore-skills__grid.bdc-mobile-carousel--solo,
   .explore-skills .explore-skills__grid.bdc-mobile-carousel--full {
@@ -24802,7 +24802,7 @@ body.newsletter-success-open {
     overflow: hidden !important;
   }
 
-  /* Explore grow — one full card per view (no peek of next slide) */
+  /* Explore grow ? one full card per view (no peek of next slide) */
   .explore-grow .explore-grow__track.bdc-mobile-carousel,
   .explore-grow .explore-grow__track.bdc-mobile-carousel--solo,
   .explore-grow .explore-grow__track.bdc-mobile-carousel--full {
@@ -24894,7 +24894,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore page — Dream CTA section: mobile heading + image sizing */
+/* Explore page ? Dream CTA section: mobile heading + image sizing */
 @media (max-width: 991px) {
   .explore-page .explore-dream.section-padding {
     padding-top: 0 !important;
@@ -24947,7 +24947,7 @@ body.newsletter-success-open {
   }
 }
 
-/* For Parents page — banner section: 100% reference layout on mobile (≤767px) */
+/* For Parents page ? banner section: 100% reference layout on mobile (?767px) */
 @media (max-width: 767px) {
   .for-parents-page #main-content > section.page-hero.for-parents-hero,
   .for-parents-page .page-hero.for-parents-hero {
@@ -25127,7 +25127,7 @@ body.newsletter-success-open {
   }
 }
 
-/* For Parents page — What Parents Can Expect: vertical stacked cards on mobile (no slider) */
+/* For Parents page ? What Parents Can Expect: vertical stacked cards on mobile (no slider) */
 @media (max-width: 991px) {
   .for-parents-page .for-parents-expect {
     overflow: visible !important;
@@ -25246,7 +25246,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — banner section: 100% reference layout on mobile (≤767px) */
+/* Our Vision page ? banner section: 100% reference layout on mobile (?767px) */
 @media (max-width: 767px) {
   .our-vision-page #main-content > section.page-hero.vision-hero,
   .our-vision-page .page-hero.vision-hero {
@@ -25517,7 +25517,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — Our Vision pillars: vertical stacked cards on mobile (no slider) */
+/* Our Vision page ? Our Vision pillars: vertical stacked cards on mobile (no slider) */
 @media (max-width: 991px) {
   .our-vision-page .vision-pillars {
     overflow: visible !important;
@@ -25636,7 +25636,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — Journey steps: one card + left/right arrows on mobile */
+/* Our Vision page ? Journey steps: one card + left/right arrows on mobile */
 @media (max-width: 991px) {
   .our-vision-page .vision-roadmap__journey {
     overflow: visible !important;
@@ -25790,7 +25790,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — Moments gallery: one image + arrows (reference mobile layout) */
+/* Our Vision page ? Moments gallery: one image + arrows (reference mobile layout) */
 @media (max-width: 991px) {
   .our-vision-page .vision-moments {
     overflow: visible !important;
@@ -26077,7 +26077,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — Become a Founding Partner: 2-col static layout on mobile (reference 2) */
+/* Our Vision page ? Become a Founding Partner: 2-col static layout on mobile (reference 2) */
 @media (max-width: 991px) {
   .our-vision-page .vision-partner {
     overflow: visible !important;
@@ -26237,7 +26237,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision page — Together section: jar + title row + stacked buttons (reference 2 mobile) */
+/* Our Vision page ? Together section: jar + title row + stacked buttons (reference 2 mobile) */
 @media (max-width: 991px) {
   .our-vision-page .vision-together {
     overflow: visible !important;
@@ -26353,7 +26353,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Get Involved page — banner section: 100% reference layout on mobile (≤991px) */
+/* Get Involved page ? banner section: 100% reference layout on mobile (?991px) */
 @media (max-width: 991px) {
   .get-involved-page #main-content > section.page-hero.get-involved-hero,
   .get-involved-page .page-hero.get-involved-hero {
@@ -26594,7 +26594,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Get Involved page — How You Can Get Involved: vertical stacked cards on mobile (no slider) */
+/* Get Involved page ? How You Can Get Involved: vertical stacked cards on mobile (no slider) */
 @media (max-width: 991px) {
   .get-involved-page .get-involved-ways {
     overflow: visible !important;
@@ -26764,7 +26764,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Get Involved page — Help Us Make: center bottom illustration on mobile */
+/* Get Involved page ? Help Us Make: center bottom illustration on mobile */
 @media (max-width: 991px) {
   .get-involved-page .get-involved-impact__visual {
     justify-items: center !important;
@@ -26792,7 +26792,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page — banner section: 100% reference layout on mobile (≤768px) */
+/* Partners page ? banner section: 100% reference layout on mobile (?768px) */
 @media (max-width: 768px) {
   .partners-page {
     --container-padding: 20px;
@@ -27033,7 +27033,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page — Ways to Partner: vertical stacked cards on mobile (reference 2) */
+/* Partners page ? Ways to Partner: vertical stacked cards on mobile (reference 2) */
 @media (max-width: 991px) {
   .partners-page .partners-ways {
     overflow: visible !important;
@@ -27156,7 +27156,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page — Impact cards: one card + left/right arrows on mobile */
+/* Partners page ? Impact cards: one card + left/right arrows on mobile */
 @media (max-width: 991px) {
   .partners-page .partners-impact {
     overflow: visible !important;
@@ -27318,7 +27318,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page — Share an Opportunity CTA: reference mobile layout */
+/* Partners page ? Share an Opportunity CTA: reference mobile layout */
 @media (max-width: 991px) {
   .partners-page .partners-opportunity-cta {
     padding-top: 0 !important;
@@ -27433,7 +27433,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Arrow carousels — vertically center nav buttons on the active image/visual */
+/* Arrow carousels ? vertically center nav buttons on the active image/visual */
 @media (max-width: 991px) {
   .bdc-carousel-shell--arrows .bdc-carousel-arrows {
     position: absolute;
@@ -27447,7 +27447,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Global mobile hero banner — match Home page layout/spacing (exclude already-updated pages) */
+/* Global mobile hero banner ? match Home page layout/spacing (exclude already-updated pages) */
 @media (max-width: 991px) {
   body:not(.get-involved-page):not(.partners-page):not(.our-vision-page) #main-content > section.page-hero:not(.home-hero),
   body:not(.get-involved-page):not(.partners-page):not(.our-vision-page) .page-hero:not(.home-hero) {
@@ -27576,7 +27576,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All pages — hero banner image centered in page (≤991px, single global fix) */
+/* All pages ? hero banner image centered in page (?991px, single global fix) */
 @media (max-width: 991px) {
   #main-content > section.page-hero,
   .page-hero {
@@ -27635,7 +27635,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Program pages — mobile hero stack matches home (≤767px) */
+/* Program pages ? mobile hero stack matches home (?767px) */
 @media (max-width: 767px) {
   .program-detail-page #main-content > section.page-hero .page-hero__inner,
   .creative-makers-page #main-content > section.page-hero.creative-makers-hero .page-hero__inner,
@@ -27753,7 +27753,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore hero — desktop: vertically center left content vs right image */
+/* Explore hero ? desktop: vertically center left content vs right image */
 @media (min-width: 1024px) {
   #main-content > section.page-hero.explore-hero .page-hero__inner,
   .page-hero.explore-hero .page-hero__inner {
@@ -27783,7 +27783,7 @@ body.newsletter-success-open {
   }
 }
 
-/* For Parents hero — desktop: vertically center left content vs right image (no horizontal change) */
+/* For Parents hero ? desktop: vertically center left content vs right image (no horizontal change) */
 @media (min-width: 1024px) {
   #main-content > section.page-hero.for-parents-hero .page-hero__inner,
   .page-hero.for-parents-hero .page-hero__inner {
@@ -27805,7 +27805,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Hero eyebrow — hidden on desktop except Home and About */
+/* Hero eyebrow ? hidden on desktop except Home and About */
 @media (min-width: 1024px) {
   .page-hero:not(.home-hero) .hero-label,
   .page-hero:not(.home-hero) [class*='__eyebrow'] {
@@ -27834,7 +27834,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision — 10px space between checklist and CTA buttons (desktop) */
+/* Our Vision ? 10px space between checklist and CTA buttons (desktop) */
 @media (min-width: 1024px) {
   .page-hero.vision-hero .page-hero__extra + .page-hero__actions,
   .page-hero.vision-hero .page-hero__extra + .hero-ctas {
@@ -27842,7 +27842,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners + Contact — desktop: center heading/CTAs; left-align paragraph under heading */
+/* Partners + Contact ? desktop: center heading/CTAs; left-align paragraph under heading */
 @media (min-width: 1024px) {
   .page-hero.partners-hero .page-hero__content,
   .page-hero.contact-hero .page-hero__content {
@@ -27881,7 +27881,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home spotlight — center ideas photo on mobile */
+/* Home spotlight ? center ideas photo on mobile */
 @media (max-width: 768px) {
   .spotlight-card--ideas .spotlight-card__figure {
     justify-content: center;
@@ -27911,7 +27911,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore full-banner hero — edge-to-edge width on all breakpoints */
+/* Explore full-banner hero ? edge-to-edge width on all breakpoints */
 #main-content > section.page-hero.explore-hero.explore-hero--full-banner,
 .page-hero.explore-hero.explore-hero--full-banner {
   padding-left: 0 !important;
@@ -27937,7 +27937,7 @@ body.newsletter-success-open {
   object-position: center center !important;
 }
 
-/* Home hero banner — same display size as About page (desktop nav widths only) */
+/* Home hero banner ? same display size as About page (desktop nav widths only) */
 @media (min-width: 1201px) {
   .home-page .page-hero.home-welcome-hero .about-hero__media,
   .home-page .page-hero.home-welcome-hero .hero-image-wrap {
@@ -27964,7 +27964,7 @@ body.newsletter-success-open {
     background-color: transparent !important;
   }
 
-  /* Welcome hero — match About: row CTAs, smaller logo, vertical center vs banner */
+  /* Welcome hero ? match About: row CTAs, smaller logo, vertical center vs banner */
   .home-page #main-content > section.page-hero.home-hero .page-hero__inner,
   .home-page .page-hero.home-welcome-hero .page-hero__inner {
     align-items: center !important;
@@ -27999,7 +27999,7 @@ body.newsletter-success-open {
     justify-content: flex-end !important;
   }
 
-  /* Home hero — 34/66 (image at 66%) */
+  /* Home hero ? 34/66 (image at 66%) */
   .home-page .page-hero.home-hero .page-hero__inner,
   .home-page .page-hero.home-welcome-hero .page-hero__inner {
     grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important;
@@ -28069,7 +28069,7 @@ body.newsletter-success-open {
 }
 
 @media (max-width: 767px) {
-  /* Home welcome — mobile stack: logo → copy → banner → CTAs (reference layout) */
+  /* Home welcome ? mobile stack: logo ? copy ? banner ? CTAs (reference layout) */
   .home-page .page-hero.home-welcome-hero .page-hero__inner {
     display: flex !important;
     flex-direction: column !important;
@@ -28170,7 +28170,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Main nav pages — mobile/tablet hero stack matches home: text → banner → CTAs (≤1023px) */
+/* Main nav pages ? mobile/tablet hero stack matches home: text ? banner ? CTAs (?1023px) */
 @media (max-width: 1023px) {
   .about-page .page-hero .page-hero__inner,
   .explore-page .page-hero .page-hero__inner,
@@ -28359,7 +28359,7 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  /* Contact banner is squarer — keep a firm height cap */
+  /* Contact banner is squarer ? keep a firm height cap */
   .contact-page .page-hero .about-hero__banner,
   .contact-page .page-hero picture img.about-hero__banner,
   .contact-page .page-hero picture img[class*='__banner'],
@@ -28447,7 +28447,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Mobile hero spec (320–480px): single column, type scale, image below text, full-width CTAs */
+/* Mobile hero spec (320?480px): single column, type scale, image below text, full-width CTAs */
 @media (max-width: 480px) {
   :root {
     --mobile-hero-headline-size: clamp(28px, 8.5vw, 32px);
@@ -28587,7 +28587,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home hero — feathered PNG: no box, clip, or filter edge (match About) */
+/* Home hero ? feathered PNG: no box, clip, or filter edge (match About) */
 .home-page .page-hero.home-welcome-hero .about-hero__media,
 .home-page .page-hero.home-welcome-hero .hero-image-wrap,
 .home-page .page-hero.home-welcome-hero .about-hero__media .lazy-img-wrap,
@@ -28630,7 +28630,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home full-banner hero — full width, natural height, no crop or upscale blur */
+/* Home full-banner hero ? full width, natural height, no crop or upscale blur */
 #main-content > section.page-hero.home-hero.home-hero--full-banner,
 .page-hero.home-hero.home-hero--full-banner {
   min-height: 0 !important;
@@ -28666,7 +28666,7 @@ body.newsletter-success-open {
   transform: none !important;
 }
 
-/* Home full-banner — mobile/tablet: same left/right inset as header */
+/* Home full-banner ? mobile/tablet: same left/right inset as header */
 @media (max-width: 1023px) {
   #main-content > section.page-hero.home-hero.home-hero--full-banner,
   .page-hero.home-hero.home-hero--full-banner {
@@ -28677,7 +28677,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Cropped hero banners — Our Vision + For Parents (desktop, wins over shared hero caps) */
+/* Cropped hero banners ? Our Vision + For Parents (desktop, wins over shared hero caps) */
 @media (min-width: 1024px) {
   .our-vision-page #main-content > section.page-hero.vision-hero:not(.partners-hero) .page-hero__inner,
   .our-vision-page .page-hero.vision-hero:not(.partners-hero) .page-hero__inner,
@@ -28731,7 +28731,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners page — desktop hero banner (same size behavior as home) */
+/* Partners page ? desktop hero banner (same size behavior as home) */
 @media (min-width: 1024px) {
   .partners-page #main-content > section.page-hero.partners-hero .about-hero__banner,
   .partners-page #main-content > section.page-hero.partners-hero picture img.about-hero__banner,
@@ -28766,7 +28766,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore hub + program sub-pages — desktop hero banner (shared size) */
+/* Explore hub + program sub-pages ? desktop hero banner (shared size) */
 @media (min-width: 1024px) {
   .explore-page,
   .program-detail-page {
@@ -28882,7 +28882,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All pages — mobile/tablet hero matches home: text → full-width banner → CTAs (≤1023px) */
+/* All pages ? mobile/tablet hero matches home: text ? full-width banner ? CTAs (?1023px) */
 @media (max-width: 1023px) {
   #main-content > section.page-hero:not(.home-welcome-hero),
   #main-content .page-hero:not(.home-welcome-hero) {
@@ -29047,7 +29047,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Program detail heroes — beat legacy banner-first overrides (≤1023px) */
+/* Program detail heroes ? beat legacy banner-first overrides (?1023px) */
 @media (max-width: 1023px) {
   .program-detail-page #main-content > section.page-hero.creative-makers-hero .creative-makers-hero__media,
   .program-detail-page #main-content > section.page-hero .hero-image-wrap,
@@ -29095,7 +29095,7 @@ body.newsletter-success-open {
   }
 }
 
-/* About page — mobile: text → banner → CTAs (home layout, final override ≤767px) */
+/* About page ? mobile: text ? banner ? CTAs (home layout, final override ?767px) */
 @media (max-width: 767px) {
   .about-page #main-content > section.page-hero.about-hero .page-hero__inner {
     display: flex !important;
@@ -29146,7 +29146,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision — mobile/tablet: left-align hero checklist above banner (≤1023px) */
+/* Our Vision ? mobile/tablet: left-align hero checklist above banner (?1023px) */
 @media (max-width: 1023px) {
   .our-vision-page #main-content .page-hero.vision-hero .page-hero__extra {
     align-self: stretch !important;
@@ -29176,7 +29176,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners — mobile/tablet: text → banner → CTAs (home layout, ≤1023px) */
+/* Partners ? mobile/tablet: text ? banner ? CTAs (home layout, ?1023px) */
 @media (max-width: 1023px) {
   .partners-page #main-content > section.page-hero.partners-hero .page-hero__inner {
     display: flex !important;
@@ -29230,7 +29230,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Mobile/tablet hero banners — flush left/right (all pages) */
+/* Mobile/tablet hero banners ? flush left/right (all pages) */
 @media (max-width: 1023px) {
   #main-content > section.page-hero .about-hero__media,
   #main-content > section.page-hero .hero-image-wrap,
@@ -29281,7 +29281,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Desktop (≥1201px): sitewide hero 34/66 — same breakpoint as full desktop nav */
+/* Desktop (?1201px): sitewide hero 34/66 ? same breakpoint as full desktop nav */
 @media (min-width: 1201px) {
   :root {
     --bdc-hero-text-col-percent: 34;
@@ -29310,7 +29310,7 @@ body.newsletter-success-open {
     --page-hero-balanced-content-col: auto;
     --page-hero-balanced-media-col: minmax(0, 1fr);
     display: grid !important;
-    /* Fixed 34/66 — never max-content (collapses on narrow / zoomed viewports) */
+    /* Fixed 34/66 ? never max-content (collapses on narrow / zoomed viewports) */
     grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important;
     column-gap: 0 !important;
     gap: 0 !important;
@@ -29382,7 +29382,7 @@ body.newsletter-success-open {
     object-position: left center !important;
   }
 
-  /* Explore — flush image to header Apply edge; kill center gap */
+  /* Explore ? flush image to header Apply edge; kill center gap */
   .explore-page {
     --bdc-hero-text-col-percent: 34;
     --bdc-hero-banner-col-percent: 66;
@@ -29423,7 +29423,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Mobile/tablet (≤1023px): 0px gap between hero copy and banner (all pages) */
+/* Mobile/tablet (?1023px): 0px gap between hero copy and banner (all pages) */
 @media (max-width: 1023px) {
   .page-hero .hero-copy {
     margin-bottom: 0 !important;
@@ -29540,7 +29540,7 @@ body.newsletter-success-open {
     margin-bottom: 0 !important;
   }
 
-  /* Win over legacy #main-content … { margin-top: 0 !important } (Contact, About, etc.) */
+  /* Win over legacy #main-content ? { margin-top: 0 !important } (Contact, About, etc.) */
   #main-content > section.page-hero .about-hero__media,
   #main-content > section.page-hero .hero-image-wrap,
   #main-content > section.page-hero .explore-hero__media,
@@ -29573,7 +29573,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Final mobile hero banner — ALL pages: full bleed, -10px top, 0 left/right (wins in Inspector) */
+/* Final mobile hero banner ? ALL pages: full bleed, -10px top, 0 left/right (wins in Inspector) */
 @media (max-width: 1023px) {
   #main-content > section.page-hero .hero-image-wrap,
   #main-content > section.page-hero .about-hero__media,
@@ -29645,7 +29645,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Explore — mobile hero banner only: 15px top margin (overrides sitewide -10px) */
+/* Explore ? mobile hero banner only: 15px top margin (overrides sitewide -10px) */
 @media (max-width: 1023px) {
   .explore-page #main-content > section.page-hero.explore-hero .explore-hero__media,
   .explore-page #main-content > section.page-hero.explore-hero .hero-image-wrap,
@@ -29659,7 +29659,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Our Vision — mobile hero banner only: 5px top margin (overrides sitewide -10px) */
+/* Our Vision ? mobile hero banner only: 5px top margin (overrides sitewide -10px) */
 @media (max-width: 1023px) {
   .our-vision-page #main-content > section.page-hero.vision-hero .about-hero__media,
   .our-vision-page #main-content > section.page-hero.vision-hero .hero-image-wrap,
@@ -29673,7 +29673,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Partners — mobile hero banner: 90% width, 20px left margin (overrides full-bleed) */
+/* Partners ? mobile hero banner: 90% width, 20px left margin (overrides full-bleed) */
 @media (max-width: 1023px) {
   .partners-page #main-content > section.page-hero.partners-hero .about-hero__media,
   .partners-page #main-content > section.page-hero.partners-hero .hero-image-wrap,
@@ -29701,7 +29701,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Home hero — mobile stack: eyebrow → Bright/Dreamers+star → tagline → copy → image → CTAs */
+/* Home hero ? mobile stack: eyebrow ? Bright/Dreamers+star ? tagline ? copy ? image ? CTAs */
 @media (max-width: 767px) {
   .home-page #main-content > section.page-hero.home-welcome-hero .page-hero__inner,
   .home-page .page-hero.home-welcome-hero .page-hero__inner {
@@ -29849,11 +29849,11 @@ body.newsletter-success-open {
 }
 
 /* --------------------------------------------------------------------------
-   Home welcome hero — zoom-stable lockup (70% / 80% / 90% / 100%)
+   Home welcome hero ? zoom-stable lockup (70% / 80% / 90% / 100%)
    Keep text + banner proportions identical across browser zoom by using a
    fixed grid and container-relative type (not max-content / raw vw).
    Gap is already 0; image column locked at 66%.
-   Breakpoint matches desktop nav (≥1201) so tablets keep the stacked hero.
+   Breakpoint matches desktop nav (?1201) so tablets keep the stacked hero.
    -------------------------------------------------------------------------- */
 @media (min-width: 1201px) {
   .home-page #main-content > section.page-hero.home-welcome-hero,
@@ -30270,7 +30270,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All page hero banners — pull up under transparent header (desktop ≥1024px).
+/* All page hero banners ? pull up under transparent header (desktop ?1024px).
    Match page-class + #main-content specificity so older margin-top: 0 !important cannot win. */
 @media (min-width: 1024px) {
   .home-page #main-content > section.page-hero.home-hero,
@@ -30312,34 +30312,34 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Home + About — reference lockup (menu + hero spacing)
-   Equal L/R inset, logo↔hero text on one left edge, menu centred,
+   Home + About ? reference lockup (menu + hero spacing)
+   Equal L/R inset, logo?hero text on one left edge, menu centred,
    equal space above/below logo, shared banner spacing.
    ========================================================================== */
 @media (min-width: 1201px) {
   .home-page,
   .about-page {
     --header-pad-y: 16px;
-    /* Bottom gap (logo→banner text) = top gap (announce→logo) */
+    /* Bottom gap (logo?banner text) = top gap (announce?logo) */
     --page-header-hero-gap: var(--header-pad-y);
   }
 
   .home-page {
     /* Shared banner title size/font (Bitter) */
     --home-hero-title-size: var(--page-hero-title-size);
-    /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
+    /* Logo render size: box � 80% width � intrinsic aspect (1659�948) */
     --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
     --home-header-hero-gap: var(--page-header-hero-gap);
   }
 
   .about-page {
     --about-header-hero-gap: var(--page-header-hero-gap);
-    /* Smaller than shared hero title so 2 long lines fit beside the photo */
-    --about-hero-title-size: clamp(1.55rem, 2.35vw, 2.35rem);
+    /* Fixed 42px ? holds at 80% / 90% browser zoom */
+    --about-hero-title-size: 42px;
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
-     → logo↔Home gap === Contact↔Donate gap (always) */
+     ? logo?Home gap === Contact?Donate gap (always) */
   .home-page .site-header__inner,
   .about-page .site-header__inner {
     display: flex !important;
@@ -30347,7 +30347,7 @@ body.newsletter-success-open {
     justify-content: flex-start !important;
     gap: 0 !important;
     padding-top: var(--header-pad-y) !important;
-    /* Zero bottom pad so hero padding-top IS the full logo→eyebrow gap */
+    /* Zero bottom pad so hero padding-top IS the full logo?eyebrow gap */
     padding-bottom: 0 !important;
     min-height: 0 !important;
   }
@@ -30409,7 +30409,7 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  /* logo-bottom → banner text = announce→logo top gap */
+  /* logo-bottom ? banner text = announce?logo top gap */
   .home-page #main-content > section.page-hero.home-hero,
   .home-page #main-content > section.page-hero.home-welcome-hero,
   .home-page #main-content > section.home-hero.page-hero,
@@ -30559,7 +30559,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All page-hero titles — one shared size + Bitter heading font */
+/* All page-hero titles ? one shared size + Bitter heading font */
 .page-hero .hero-headline,
 .page-hero .home-hero__title,
 .page-hero .about-hero__title,
@@ -30579,7 +30579,7 @@ body.newsletter-success-open {
   letter-spacing: var(--page-hero-title-letter-spacing) !important;
 }
 
-/* About hero — 2 title lines, reduced size, no image overlap; 6px logo align */
+/* About hero ? 2 title lines, reduced size, no image overlap; 6px logo align */
 .about-page .page-hero.about-hero .page-hero__content,
 #main-content > section.page-hero.about-hero .page-hero__content {
   padding-left: 6px !important;
@@ -30590,7 +30590,7 @@ body.newsletter-success-open {
 #main-content > section.page-hero.about-hero .hero-headline {
   max-width: 100% !important;
   overflow: visible !important;
-  font-size: var(--about-hero-title-size, clamp(1.55rem, 2.35vw, 2.35rem)) !important;
+  font-size: var(--about-hero-title-size, 42px) !important;
 }
 
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
@@ -30604,4 +30604,134 @@ body.newsletter-success-open {
   max-width: 100% !important;
   white-space: nowrap !important;
   font-size: inherit !important;
+}
+
+/* ==========================================================================
+   All page heroes ? match Home banner top/bottom breathing room (desktop)
+   Same section pad, no min-height stretch, no per-page max-height caps.
+   Text content margins (pull-ups) stay untouched.
+   ========================================================================== */
+@media (min-width: 1201px) {
+  :root {
+    --page-header-hero-gap: 16px;
+    --page-hero-banner-pad-bottom: 1rem;
+  }
+
+  .explore-page,
+  .for-parents-page,
+  .our-vision-page,
+  .get-involved-page,
+  .partners-page,
+  .contact-page,
+  .creative-makers-page,
+  .young-ideas-lab-page,
+  .create-for-cause-page,
+  .community-adventures-page,
+  .apply-page,
+  .faq-page {
+    --page-header-hero-gap: 16px;
+  }
+
+  /* Section: same top gap as Home (logo?hero), no tall empty band */
+  .explore-page #main-content > section.page-hero.explore-hero,
+  .explore-page .page-hero.explore-hero,
+  .for-parents-page #main-content > section.page-hero.for-parents-hero,
+  .for-parents-page .page-hero.for-parents-hero,
+  .our-vision-page #main-content > section.page-hero.vision-hero,
+  .our-vision-page .page-hero.vision-hero,
+  .get-involved-page #main-content > section.page-hero.get-involved-hero,
+  .get-involved-page .page-hero.get-involved-hero,
+  .partners-page #main-content > section.page-hero.partners-hero,
+  .partners-page .page-hero.partners-hero,
+  .contact-page #main-content > section.page-hero.contact-hero,
+  .contact-page .page-hero.contact-hero,
+  .creative-makers-page #main-content > section.page-hero.creative-makers-hero,
+  .creative-makers-page .page-hero.creative-makers-hero,
+  .young-ideas-lab-page #main-content > section.page-hero.young-ideas-lab-hero,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero,
+  .create-for-cause-page #main-content > section.page-hero.create-for-cause-hero,
+  .create-for-cause-page .page-hero.create-for-cause-hero,
+  .community-adventures-page #main-content > section.page-hero.community-adventures-hero,
+  .community-adventures-page .page-hero.community-adventures-hero,
+  .apply-page #main-content > section.page-hero.apply-hero,
+  .apply-page .page-hero.apply-hero,
+  .faq-page #main-content > section.page-hero.faq-hero,
+  .faq-page .page-hero.faq-hero {
+    margin-top: 0 !important;
+    padding-top: var(--page-header-hero-gap) !important;
+    padding-bottom: var(--page-hero-banner-pad-bottom) !important;
+    min-height: 0 !important;
+  }
+
+  .home-page #main-content > section.page-hero.home-hero,
+  .home-page #main-content > section.page-hero.home-welcome-hero,
+  .home-page .page-hero.home-hero,
+  .home-page .page-hero.home-welcome-hero,
+  .about-page #main-content > section.page-hero.about-hero,
+  .about-page .page-hero.about-hero {
+    padding-bottom: var(--page-hero-banner-pad-bottom) !important;
+    min-height: 0 !important;
+  }
+
+  /* Media column: vertically center like Home */
+  .explore-page .page-hero.explore-hero .explore-hero__media,
+  .explore-page .page-hero.explore-hero .hero-image-wrap,
+  .for-parents-page .page-hero.for-parents-hero .about-hero__media,
+  .for-parents-page .page-hero.for-parents-hero .hero-image-wrap,
+  .our-vision-page .page-hero.vision-hero .about-hero__media,
+  .our-vision-page .page-hero.vision-hero .hero-image-wrap,
+  .get-involved-page .page-hero.get-involved-hero .about-hero__media,
+  .get-involved-page .page-hero.get-involved-hero .hero-image-wrap,
+  .partners-page .page-hero.partners-hero .about-hero__media,
+  .partners-page .page-hero.partners-hero .hero-image-wrap,
+  .contact-page .page-hero.contact-hero .about-hero__media,
+  .contact-page .page-hero.contact-hero .hero-image-wrap,
+  .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
+  .creative-makers-page .page-hero.creative-makers-hero .hero-image-wrap,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__media,
+  .create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__media,
+  .community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+  .apply-page .page-hero.apply-hero .about-hero__media,
+  .apply-page .page-hero.apply-hero .hero-image-wrap,
+  .faq-page .page-hero.faq-hero .faq-hero__media,
+  .faq-page .page-hero.faq-hero .hero-image-wrap {
+    align-items: center !important;
+    align-self: center !important;
+  }
+
+  /* Banner image: same size behavior as Home (natural height, no caps) */
+  .explore-page .page-hero.explore-hero .explore-hero__banner,
+  .explore-page .page-hero.explore-hero picture img.explore-hero__banner,
+  .for-parents-page .page-hero.for-parents-hero .about-hero__banner,
+  .for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner,
+  .our-vision-page .page-hero.vision-hero .about-hero__banner,
+  .our-vision-page .page-hero.vision-hero picture img.about-hero__banner,
+  .get-involved-page .page-hero.get-involved-hero .about-hero__banner,
+  .get-involved-page .page-hero.get-involved-hero picture img.about-hero__banner,
+  .partners-page .page-hero.partners-hero .about-hero__banner,
+  .partners-page .page-hero.partners-hero picture img.about-hero__banner,
+  .contact-page .page-hero.contact-hero .about-hero__banner,
+  .contact-page .page-hero.contact-hero picture img.about-hero__banner,
+  .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__banner,
+  .creative-makers-page .page-hero.creative-makers-hero picture img.creative-makers-hero__banner,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__banner,
+  .create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__banner,
+  .community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__banner,
+  .apply-page .page-hero.apply-hero .about-hero__banner,
+  .apply-page .page-hero.apply-hero picture img.about-hero__banner,
+  .faq-page .page-hero.faq-hero .faq-hero__banner,
+  .faq-page .page-hero.faq-hero picture img.faq-hero__banner,
+  .about-page .page-hero.about-hero .about-hero__banner,
+  .about-page .page-hero.about-hero picture img.about-hero__banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    transform: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 }
