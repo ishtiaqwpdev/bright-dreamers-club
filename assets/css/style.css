@@ -6971,7 +6971,7 @@ img.lazy-img.loaded {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: clamp(0.55rem, 0.85vw, 0.7rem);
+  gap: 5px;
   min-width: 0;
 }
 
