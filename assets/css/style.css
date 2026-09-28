@@ -6942,13 +6942,14 @@ img.lazy-img.loaded {
 .explore-dream__grid {
   display: grid;
   grid-template-columns:
-    minmax(0, 1.12fr)
-    minmax(0, 0.92fr)
-    minmax(0, 1.05fr)
-    minmax(0, 0.72fr)
-    minmax(0, 1fr);
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1.05fr);
   align-items: center;
-  gap: clamp(0.65rem, 1.15vw, 1.1rem);
+  column-gap: clamp(0.85rem, 1.4vw, 1.35rem);
+  row-gap: clamp(0.65rem, 1.15vw, 1.1rem);
 }
 
 .explore-dream__title {
@@ -6959,6 +6960,10 @@ img.lazy-img.loaded {
   letter-spacing: -0.02em;
   color: var(--color-navy);
   margin: 0;
+  justify-self: end;
+  width: max-content;
+  max-width: 100%;
+  text-align: left;
 }
 
 .explore-dream__accent {
@@ -6971,11 +6976,13 @@ img.lazy-img.loaded {
   align-items: center;
   justify-content: center;
   min-width: 0;
+  justify-self: center;
 }
 
 .explore-dream__photo {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   max-height: var(--explore-dream-photo-max-h);
   height: auto;
   object-fit: contain;
@@ -6983,7 +6990,8 @@ img.lazy-img.loaded {
 
 .explore-dream__jar {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   max-height: var(--explore-dream-jar-max-h);
   height: auto;
   object-fit: contain;
@@ -6996,6 +7004,9 @@ img.lazy-img.loaded {
   display: flex;
   flex-direction: column;
   gap: clamp(0.28rem, 0.45vw, 0.38rem);
+  justify-self: start;
+  width: max-content;
+  max-width: 100%;
 }
 
 .explore-dream__list li {
@@ -11084,12 +11095,22 @@ img.lazy-img.loaded {
 
   .explore-dream__title {
     text-align: left;
+    justify-self: start;
+    width: auto;
+    max-width: 100%;
   }
 
   .explore-dream__list {
     align-items: flex-start;
     width: 100%;
+    max-width: 100%;
     margin-inline: 0;
+    justify-self: start;
+  }
+
+  .explore-dream__photo-wrap,
+  .explore-dream__jar-wrap {
+    justify-self: center;
   }
 
   .explore-dream__actions {
