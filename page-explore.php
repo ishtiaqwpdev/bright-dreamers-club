@@ -84,7 +84,7 @@ if ( $explore_hero_banner_ver ) {
 }
 $explore_hero_banner_alt = bdc_get_acf_text(
 	'explore_hero_banner_alt',
-	'Illustration of children creating together with the message together we create brighter communities',
+	'Diverse youth creating together around the message together we create brighter communities',
 	$explore_page_id
 );
 $explore_hero_banner_mobile_theme_path = 'assets/images/explore-banner-mobile.jpg';

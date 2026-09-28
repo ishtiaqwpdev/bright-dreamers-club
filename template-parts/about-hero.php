@@ -76,7 +76,7 @@ if ( $about_hero_banner_ver ) {
 }
 $about_hero_banner_alt = bdc_get_acf_text(
 	'about_hero_banner_alt',
-	'Four smiling girls with backpacks and school supplies',
+	'Four smiling schoolgirls with backpacks and notebooks against colorful doodles and paint splashes',
 	$post_id
 );
 $about_hero_banner_mobile_theme_path = 'assets/images/about-banner-mobile.jpg';
