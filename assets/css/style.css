@@ -6995,16 +6995,25 @@ img.lazy-img.loaded {
 
 .explore-dream__grid {
   display: grid;
+  /* Lead (title+girls) | checklist | jar | actions ? lead is one block */
   grid-template-columns:
-    auto
     auto
     auto
     auto
     minmax(0, 1.1fr);
   align-items: center;
-  /* Match left card pad so title?photo gap equals edge?title */
-  column-gap: var(--explore-dream-pad);
+  /* Larger gap separates title+girls from checklist block */
+  column-gap: clamp(1.75rem, 3.5vw, 3.25rem);
   row-gap: clamp(0.65rem, 1.15vw, 1.1rem);
+}
+
+.explore-dream__lead {
+  display: flex;
+  align-items: center;
+  /* Equal left/right gap around title?girls (= card pad) */
+  gap: var(--explore-dream-pad);
+  min-width: 0;
+  justify-self: start;
 }
 
 .explore-dream__title {
@@ -7015,10 +7024,15 @@ img.lazy-img.loaded {
   letter-spacing: -0.02em;
   color: var(--color-navy);
   margin: 0;
-  justify-self: start;
-  width: max-content;
-  max-width: 100%;
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 12.5em;
   text-align: left;
+  white-space: normal;
+}
+
+.explore-dream__title-break {
+  display: block;
 }
 
 .explore-dream__accent {
@@ -7032,6 +7046,11 @@ img.lazy-img.loaded {
   justify-content: center;
   min-width: 0;
   justify-self: center;
+}
+
+.explore-dream__lead .explore-dream__photo-wrap {
+  flex: 0 0 auto;
+  justify-self: auto;
 }
 
 .explore-dream__photo {
@@ -11176,6 +11195,13 @@ img.lazy-img.loaded {
     text-align: left;
   }
 
+  .explore-dream__lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(0.85rem, 2vw, 1.15rem);
+    width: 100%;
+  }
+
   .explore-dream__title {
     text-align: left;
     justify-self: start;
@@ -11195,6 +11221,11 @@ img.lazy-img.loaded {
   .explore-dream__photo-wrap,
   .explore-dream__jar-wrap {
     justify-self: center;
+  }
+
+  .explore-dream__lead .explore-dream__photo-wrap {
+    align-self: center;
+    width: 100%;
   }
 
   .explore-dream__actions {
@@ -24948,6 +24979,13 @@ body.newsletter-success-open {
 
   .explore-page .explore-dream__grid {
     text-align: left !important;
+  }
+
+  .explore-page .explore-dream__lead {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: clamp(0.85rem, 2vw, 1.15rem) !important;
   }
 
   .explore-page .explore-dream__title {

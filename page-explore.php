@@ -766,29 +766,34 @@ $explore_dream_secondary_btn_link = bdc_get_acf_link(
           <div class="site-container">
             <div class="explore-dream__card">
               <div class="explore-dream__grid">
-                <h2 class="explore-dream__title" id="explore-dream-title">
-                  <?php if ( '' !== trim( $explore_dream_title ) ) : ?>
-                  <?php echo esc_html( $explore_dream_title ); ?>
-                  <?php endif; ?>
-                  <?php if ( '' !== trim( $explore_dream_title_accent ) ) : ?>
-                  <span class="explore-dream__accent"><?php echo esc_html( $explore_dream_title_accent ); ?></span>
-                  <?php endif; ?>
-                  <?php if ( '' !== trim( $explore_dream_title_suffix ) ) : ?>
-                  <?php echo esc_html( $explore_dream_title_suffix ); ?>
-                  <?php endif; ?>
-                </h2>
+                <div class="explore-dream__lead">
+                  <h2 class="explore-dream__title" id="explore-dream-title">
+                    <?php if ( '' !== trim( $explore_dream_title ) ) : ?>
+                    <?php echo esc_html( $explore_dream_title ); ?>
+                    <?php endif; ?>
+                    <?php if ( '' !== trim( $explore_dream_title_accent ) || '' !== trim( $explore_dream_title_suffix ) ) : ?>
+                    <br class="explore-dream__title-break" />
+                    <?php endif; ?>
+                    <?php if ( '' !== trim( $explore_dream_title_accent ) ) : ?>
+                    <span class="explore-dream__accent"><?php echo esc_html( $explore_dream_title_accent ); ?></span>
+                    <?php endif; ?>
+                    <?php if ( '' !== trim( $explore_dream_title_suffix ) ) : ?>
+                    <?php echo ' ' . esc_html( $explore_dream_title_suffix ); ?>
+                    <?php endif; ?>
+                  </h2>
 
-                <div class="explore-dream__photo-wrap">
-                  <div class="lazy-img-wrap">
-                    <img
-                      class="explore-dream__photo lazy-img"
-                      src="<?php echo esc_attr( $explore_hero_lazy_placeholder ); ?>"
-                      data-src="<?php echo esc_url( $explore_dream_photo_url ); ?>"
-                      alt="<?php echo esc_attr( $explore_dream_photo_alt ); ?>"
-                      width="420"
-                      height="320"
-                      decoding="async"
-                    />
+                  <div class="explore-dream__photo-wrap">
+                    <div class="lazy-img-wrap">
+                      <img
+                        class="explore-dream__photo lazy-img"
+                        src="<?php echo esc_attr( $explore_hero_lazy_placeholder ); ?>"
+                        data-src="<?php echo esc_url( $explore_dream_photo_url ); ?>"
+                        alt="<?php echo esc_attr( $explore_dream_photo_alt ); ?>"
+                        width="420"
+                        height="320"
+                        decoding="async"
+                      />
+                    </div>
                   </div>
                 </div>
 
