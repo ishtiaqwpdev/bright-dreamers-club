@@ -30490,7 +30490,7 @@ body.newsletter-success-open {
   }
 
   .explore-page .page-hero.explore-hero .page-hero__content {
-    margin-top: -70px !important;
+    margin-top: -100px !important;
   }
 
   .for-parents-page .page-hero.for-parents-hero .page-hero__content {
@@ -30504,6 +30504,10 @@ body.newsletter-success-open {
   .get-involved-page .page-hero.get-involved-hero .page-hero__content {
     margin-top: -110px !important;
     padding-left: 6px !important;
+  }
+
+  .contact-page .page-hero.contact-hero .page-hero__content {
+    margin-top: -290px !important;
   }
 
   .partners-page .page-hero.partners-hero .page-hero__content {
