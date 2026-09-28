@@ -175,7 +175,7 @@
   --home-reality-box-radius: 20px;
   --spotlight-card-radius: 16px;
   --logo-bg-filter: brightness(1.14) contrast(1.12) saturate(1.02);
-  --contact-hero-pad-top: 30px;
+  --contact-hero-pad-top: 0;
   --contact-hero-title-size: var(--page-hero-title-size);
   --contact-hero-star-size: clamp(24px, 2.6vw, 34px);
   --contact-hero-heart-size: clamp(24px, 2.4vw, 30px);
@@ -183,7 +183,7 @@
   --contact-hero-copy-max-w: 26.5rem;
   --contact-hero-content-col: 0.34fr;
   --contact-hero-media-col: 0.66fr;
-  --contact-hero-banner-max-h: min(300px, 40vh);
+  --contact-hero-banner-max-h: none;
   --for-parents-hero-title-size: var(--page-hero-title-size);
   --for-parents-hero-star-size: clamp(22px, 2.4vw, 30px);
   --get-involved-hero-title-size: var(--page-hero-title-size);
@@ -3374,11 +3374,11 @@ img.lazy-img.loaded {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: var(--contact-hero-banner-max-h);
+  max-height: none;
   min-height: 0;
   object-fit: contain;
-  object-position: center;
-  filter: brightness(1.1);
+  object-position: left center;
+  filter: none;
   background-color: transparent;
 }
 
@@ -7204,9 +7204,11 @@ img.lazy-img.loaded {
 .contact-page .page-hero.contact-hero .about-hero__banner,
 .contact-page .page-hero.contact-hero picture img.about-hero__banner,
 .page-hero.contact-hero .about-hero__banner {
-  max-height: var(--contact-hero-banner-max-h) !important;
+  max-height: none !important;
   height: auto !important;
+  width: 100% !important;
   object-fit: contain !important;
+  object-position: left center !important;
 }
 
 /* ??? Contact form section ??? */
@@ -28376,7 +28378,7 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  /* Contact banner is squarer ? keep a firm height cap */
+  /* Contact banner ? match Home (no height cap) */
   .contact-page .page-hero .about-hero__banner,
   .contact-page .page-hero picture img.about-hero__banner,
   .contact-page .page-hero picture img[class*='__banner'],
@@ -28384,7 +28386,7 @@ body.newsletter-success-open {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    max-height: var(--contact-hero-banner-max-h) !important;
+    max-height: none !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: center center !important;

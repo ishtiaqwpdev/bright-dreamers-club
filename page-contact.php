@@ -76,7 +76,7 @@ if ( $contact_hero_banner_mobile_ver ) {
 }
 $contact_hero_banner_alt = bdc_get_acf_text(
 	'contact_hero_banner_alt',
-	'A Bright Dreamer writing a thank-you card',
+	'Two Bright Dreamers writing a colorful Thank You note with markers, books, and playful doodles',
 	$contact_page_id
 );
 
