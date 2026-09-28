@@ -4,6 +4,23 @@
   (Elements ? <html> ? Styles ? :root).
 */
 
+/* Headings ? Georgia Custom (same .woff for 400 + 700 to avoid fake-bold) */
+@font-face {
+  font-family: 'Georgia Custom';
+  src: url('../fonts/Georgia-PersonalUse.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia Custom';
+  src: url('../fonts/Georgia-PersonalUse.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-pink: #ee1d78;
   --color-navy: #001b66;
@@ -48,7 +65,7 @@
   --panel-bg-position: right center;
   --panel-journey-content-max: 54%;
   --panel-council-figure-width: 185px;
-  --font-heading: 'Bitter', serif;
+  --font-heading: 'Georgia Custom', Georgia, 'Bitter', serif;
   --font-body: 'Outfit', sans-serif;
   --believe-icon-height: clamp(48px, 4.8vw, 58px);
   --believe-deco-size: clamp(40px, 3.6vw, 56px);
@@ -30325,9 +30342,9 @@ body.newsletter-success-open {
   }
 
   .home-page {
-    /* Shared banner title size/font (Bitter) */
+    /* Shared banner title size/font (Georgia Custom) */
     --home-hero-title-size: var(--page-hero-title-size);
-    /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
+    /* Logo render size: box ? 80% width ? intrinsic aspect (1659?948) */
     --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
     --home-header-hero-gap: var(--page-header-hero-gap);
   }
@@ -30559,7 +30576,7 @@ body.newsletter-success-open {
   }
 }
 
-/* All page-hero titles ? one shared size + Bitter heading font */
+/* All page-hero titles ? one shared size + Georgia Custom (previous heading font) */
 .page-hero .hero-headline,
 .page-hero .home-hero__title,
 .page-hero .about-hero__title,
@@ -30571,9 +30588,11 @@ body.newsletter-success-open {
 .page-hero .apply-hero__title,
 .page-hero .apply-hero__title-line,
 .page-hero .creative-makers-hero__title,
-.page-hero .faq-hero__title-line {
-  font-family: var(--page-hero-title-font) !important;
+.page-hero .faq-hero__title-line,
+.page-hero .hero-headline [class*='__title-line'] {
+  font-family: 'Georgia Custom', Georgia, 'Bitter', serif !important;
   font-weight: var(--page-hero-title-weight) !important;
+  font-style: normal !important;
   font-size: var(--page-hero-title-size) !important;
   line-height: var(--page-hero-title-line-height) !important;
   letter-spacing: var(--page-hero-title-letter-spacing) !important;
