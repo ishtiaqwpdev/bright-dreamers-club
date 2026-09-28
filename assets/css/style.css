@@ -30465,6 +30465,10 @@ body.newsletter-success-open {
     padding-right: 0 !important;
   }
 
+  .about-page .page-hero.about-hero .page-hero__content {
+    margin-top: -150px !important;
+  }
+
   .home-page .page-hero.home-hero .page-hero__content,
   .home-page .page-hero.home-welcome-hero .page-hero__content {
     margin-top: -75px !important;
@@ -30493,6 +30497,7 @@ body.newsletter-success-open {
     justify-self: start !important;
     padding-left: 6px !important;
     margin-left: 0 !important;
+    margin-top: -150px !important;
   }
 
   .partners-page .page-hero.partners-hero .hero-headline,
