@@ -30516,3 +30516,23 @@ body.newsletter-success-open {
   line-height: var(--page-hero-title-line-height) !important;
   letter-spacing: var(--page-hero-title-letter-spacing) !important;
 }
+
+/* About hero — 4 short title lines stay inside the text column (no image overlap) */
+.about-page .page-hero.about-hero .hero-headline,
+.about-page .page-hero.about-hero .about-hero__title,
+#main-content > section.page-hero.about-hero .hero-headline {
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
+.about-page .page-hero.about-hero .hero-headline .about-hero__title-line--navy,
+.about-page .page-hero.about-hero .hero-headline .about-hero__title-line--pink,
+#main-content > section.page-hero.about-hero .hero-headline .about-hero__title-line,
+#main-content > section.page-hero.about-hero .hero-headline .about-hero__title-line--navy,
+#main-content > section.page-hero.about-hero .hero-headline .about-hero__title-line--pink {
+  display: block !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+}
