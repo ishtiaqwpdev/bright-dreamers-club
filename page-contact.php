@@ -18,48 +18,57 @@ $contact_hero_aria_label = bdc_get_acf_text(
 	'Contact Bright Dreamers',
 	$contact_page_id
 );
-$contact_hero_title_underline_word = bdc_get_acf_text(
-	'contact_hero_title_underline_word',
-	'Contact',
+$contact_hero_eyebrow = bdc_get_acf_text(
+	'contact_hero_eyebrow',
+	'CONTACT US',
 	$contact_page_id
 );
-$contact_hero_title_underline_url = bdc_get_acf_image_url(
-	'contact_hero_title_underline',
-	bdc_theme_asset_url( 'assets/images/heading-underline.jpeg' ),
+$contact_hero_title_line_1 = bdc_get_acf_text(
+	'contact_hero_title_line_1',
+	"Let's Connect",
 	$contact_page_id
 );
-$contact_hero_title_underline_ver = bdc_asset_version( 'assets/images/heading-underline.jpeg' );
-if ( $contact_hero_title_underline_ver && false !== strpos( $contact_hero_title_underline_url, 'heading-underline.jpeg' ) ) {
-	$contact_hero_title_underline_url = add_query_arg( 'v', $contact_hero_title_underline_ver, $contact_hero_title_underline_url );
-}
-$contact_hero_title_suffix = bdc_get_acf_text(
-	'contact_hero_title_suffix',
-	'Us',
+$contact_hero_title_line_2 = bdc_get_acf_text(
+	'contact_hero_title_line_2',
+	'for a Brighter',
 	$contact_page_id
 );
-$contact_hero_text_intro = bdc_get_acf_text(
-	'contact_hero_text_intro',
-	'We\'d love to hear from you. Whether you have a question, an idea, or want to learn more about Bright Dreamers, please reach out. Your message helps us build a ',
+$contact_hero_title_line_3 = bdc_get_acf_text(
+	'contact_hero_title_line_3',
+	'Tomorrow.',
 	$contact_page_id
 );
-$contact_hero_text_accent_purple = bdc_get_acf_text(
-	'contact_hero_text_accent_purple',
-	'brighter',
+$contact_hero_text = bdc_get_acf_text(
+	'contact_hero_text',
+	'We\'d love to hear from you! Whether you have a question, an idea, or want to learn more about Bright Dreamers, please reach out. Your message helps us build a brighter future for kids with ideas.',
 	$contact_page_id
 );
-$contact_hero_text_mid = bdc_get_acf_text(
-	'contact_hero_text_mid',
-	' future for kids with ',
+$contact_hero_primary_btn_text = bdc_get_acf_text(
+	'contact_hero_primary_btn_text',
+	'Send Us a Message',
 	$contact_page_id
 );
-$contact_hero_text_accent_pink = bdc_get_acf_text(
-	'contact_hero_text_accent_pink',
-	'ideas',
+$contact_hero_primary_btn_link = bdc_get_acf_link(
+	'contact_hero_primary_btn_link',
+	array(
+		'title'  => 'Send Us a Message',
+		'url'    => '#contact-form',
+		'target' => '',
+	),
 	$contact_page_id
 );
-$contact_hero_text_outro = bdc_get_acf_text(
-	'contact_hero_text_outro',
-	'.',
+$contact_hero_secondary_btn_text = bdc_get_acf_text(
+	'contact_hero_secondary_btn_text',
+	'See Our Vision',
+	$contact_page_id
+);
+$contact_hero_secondary_btn_link = bdc_get_acf_link(
+	'contact_hero_secondary_btn_link',
+	array(
+		'title'  => 'See Our Vision',
+		'url'    => bdc_page_url( 'our-vision.html' ),
+		'target' => '',
+	),
 	$contact_page_id
 );
 $contact_hero_banner_theme_path = 'assets/images/contact-hero-banner.jpeg';
@@ -177,37 +186,32 @@ $contact_cta_btn_link = bdc_get_acf_link(
 ?>
     <main id="main-content">
       <?php
-      $contact_headline_html = '';
-      if ( '' !== trim( $contact_hero_title_underline_word ) ) {
-        $contact_headline_html .= '<span class="heading-underline contact-hero__contact-word">' . esc_html( $contact_hero_title_underline_word ) . '<img class="heading-underline__img" src="' . esc_url( $contact_hero_title_underline_url ) . '" alt="" width="120" height="12" /></span>';
-      }
-      if ( '' !== trim( $contact_hero_title_suffix ) ) {
-        $contact_headline_html .= ' <span class="contact-hero__us-word">' . esc_html( $contact_hero_title_suffix ) . '</span>';
-      }
-
-      $contact_copy_html  = esc_html( $contact_hero_text_intro );
-      if ( '' !== trim( $contact_hero_text_accent_purple ) ) {
-        $contact_copy_html .= ' <span class="contact-hero__accent contact-hero__accent--purple">' . esc_html( $contact_hero_text_accent_purple ) . '</span>';
-      }
-      $contact_copy_html .= esc_html( $contact_hero_text_mid );
-      if ( '' !== trim( $contact_hero_text_accent_pink ) ) {
-        $contact_copy_html .= ' <span class="contact-hero__accent contact-hero__accent--pink">' . esc_html( $contact_hero_text_accent_pink ) . '</span>';
-      }
-      $contact_copy_html .= esc_html( $contact_hero_text_outro );
-
       get_template_part(
         'template-parts/page-hero',
         null,
         array(
-          'section_class'        => 'contact-hero about-hero',
-          'aria_label'           => $contact_hero_aria_label,
-          'headline_html'        => $contact_headline_html,
-          'supporting_copy_html' => $contact_copy_html,
-          'hero_image'           => $contact_hero_banner_url,
-          'hero_image_mobile'    => $contact_hero_banner_mobile_url,
-          'hero_image_alt'       => $contact_hero_banner_alt,
-          'media_class'          => 'about-hero__media',
-          'image_class'          => 'about-hero__banner',
+          'section_class'            => 'contact-hero about-hero',
+          'aria_label'               => $contact_hero_aria_label,
+          'section_label'            => $contact_hero_eyebrow,
+          'headline_html'            => bdc_hero_lines_html(
+            array(
+              array( 'text' => $contact_hero_title_line_1, 'class' => 'contact-hero__title-line contact-hero__title-line--navy' ),
+              array( 'text' => $contact_hero_title_line_2, 'class' => 'contact-hero__title-line contact-hero__title-line--pink' ),
+              array( 'text' => $contact_hero_title_line_3, 'class' => 'contact-hero__title-line contact-hero__title-line--pink' ),
+            )
+          ),
+          'supporting_copy'          => $contact_hero_text,
+          'primary_cta_text'         => $contact_hero_primary_btn_text,
+          'primary_cta_link'         => $contact_hero_primary_btn_link,
+          'secondary_cta_text'       => $contact_hero_secondary_btn_text,
+          'secondary_cta_link'       => $contact_hero_secondary_btn_link,
+          'hero_image'               => $contact_hero_banner_url,
+          'hero_image_mobile'        => $contact_hero_banner_mobile_url,
+          'hero_image_alt'           => $contact_hero_banner_alt,
+          'media_class'              => 'about-hero__media',
+          'image_class'              => 'about-hero__banner',
+          'primary_cta_show_icon'    => true,
+          'secondary_cta_show_heart' => true,
         )
       );
       ?>

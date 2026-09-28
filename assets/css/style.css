@@ -7127,6 +7127,18 @@ img.lazy-img.loaded {
 }
 
 /* ??? Contact hero content ??? */
+.contact-hero__title-line {
+  display: block;
+}
+
+.contact-hero__title-line--navy {
+  color: var(--color-navy);
+}
+
+.contact-hero__title-line--pink {
+  color: var(--color-pink);
+}
+
 .contact-hero__title {
   font-family: var(--page-hero-title-font);
   font-weight: var(--page-hero-title-weight);
