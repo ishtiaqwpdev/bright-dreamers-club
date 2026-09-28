@@ -30315,14 +30315,8 @@ body.newsletter-success-open {
     /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
     --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
     --header-pad-y: 16px;
-    /*
-      page-top → logo vertical-center = padY + logoH/2
-      logo-bottom → eyebrow must equal that exact distance.
-    */
-    --home-top-to-logo-center: calc(
-      var(--header-pad-y) + (var(--home-logo-render-h) * 0.5)
-    );
-    --home-header-hero-gap: var(--home-top-to-logo-center);
+    /* Logo→eyebrow gap = red-mark height (~Dreamers wordmark), not half-logo */
+    --home-header-hero-gap: 28px;
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
