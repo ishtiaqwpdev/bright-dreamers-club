@@ -28,8 +28,8 @@ $about_hero_eyebrow = bdc_get_acf_text(
 );
 /* Theme lockup — two lines matching the About hero reference. */
 $about_hero_title_underline_word = 'Every';
-$about_hero_title_navy_rest      = 'Child Has a Dream.';
-$about_hero_title_pink           = 'We\'re Here to Help It Grow.';
+$about_hero_title_navy_rest      = 'Child Has a Dream';
+$about_hero_title_pink           = 'We\'re Here to Help It Grow';
 $about_hero_title_underline_url  = bdc_get_acf_image_url(
 	'about_hero_title_underline',
 	bdc_theme_asset_url( 'assets/images/heading-underline.jpeg' ),

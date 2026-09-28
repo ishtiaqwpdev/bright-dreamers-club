@@ -20,7 +20,7 @@ $partners_hero_eyebrow = bdc_get_acf_text(
 );
 $partners_hero_title_line_1 = bdc_get_acf_text(
 	'partners_hero_title_line_1',
-	'Stronger Together.',
+	'Stronger Together',
 	$partners_page_id
 );
 $partners_hero_title_underline_word = bdc_get_acf_text(
@@ -35,7 +35,7 @@ $partners_hero_title_underline_url = bdc_get_acf_image_url(
 );
 $partners_hero_title_line_2_suffix = bdc_get_acf_text(
 	'partners_hero_title_line_2_suffix',
-	'Futures.',
+	'Futures',
 	$partners_page_id
 );
 $partners_hero_text_intro = bdc_get_acf_text(

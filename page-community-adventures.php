@@ -53,7 +53,7 @@ $community_adventures_hero_title = bdc_get_acf_text(
 );
 $community_adventures_hero_tagline = bdc_get_acf_text(
 	'community_adventures_hero_tagline',
-	'Explore. Discover. Connect.',
+	'Explore. Discover. Connect',
 	$community_adventures_page_id
 );
 $community_adventures_hero_text = bdc_get_acf_text(

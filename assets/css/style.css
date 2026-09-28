@@ -90,7 +90,12 @@
   --home-hero-col-gap: clamp(0.25rem, 0.6vw, 0.65rem);
   --home-hero-content-max: 36rem;
   --home-hero-content-share: 44%;
-  --home-hero-title-size: clamp(2.85rem, 4.2vw + 1.1rem, 5.5rem);
+  --page-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
+  --page-hero-title-font: var(--font-heading);
+  --page-hero-title-weight: 700;
+  --page-hero-title-line-height: 1.12;
+  --page-hero-title-letter-spacing: -0.02em;
+  --home-hero-title-size: var(--page-hero-title-size);
   --home-hero-banner-max: none;
   /* Shared desktop hero: same inset as header, tighter text/image pairing */
   --page-hero-balanced-content-col: 0.34fr;
@@ -154,7 +159,7 @@
   --spotlight-card-radius: 16px;
   --logo-bg-filter: brightness(1.14) contrast(1.12) saturate(1.02);
   --contact-hero-pad-top: 30px;
-  --contact-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
+  --contact-hero-title-size: var(--page-hero-title-size);
   --contact-hero-star-size: clamp(24px, 2.6vw, 34px);
   --contact-hero-heart-size: clamp(24px, 2.4vw, 30px);
   --contact-hero-heart-offset-x: clamp(0.35rem, 0.8vw, 0.65rem);
@@ -162,9 +167,9 @@
   --contact-hero-content-col: 0.34fr;
   --contact-hero-media-col: 0.66fr;
   --contact-hero-banner-max-h: min(300px, 40vh);
-  --for-parents-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
+  --for-parents-hero-title-size: var(--page-hero-title-size);
   --for-parents-hero-star-size: clamp(22px, 2.4vw, 30px);
-  --get-involved-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
+  --get-involved-hero-title-size: var(--page-hero-title-size);
   --get-involved-hero-content-col: 0.34fr;
   --get-involved-hero-media-col: 0.66fr;
   --get-involved-ways-icon-size: clamp(68px, 6.5vw, 84px);
@@ -1762,17 +1767,17 @@ button {
 }
 
 .page-hero:not(.home-hero) .hero-headline {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.65rem, 2.75vw, 2.75rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 1.1rem;
   color: var(--color-navy);
 }
 
 .page-hero.about-hero .hero-headline {
-  font-size: clamp(1.35rem, 2vw, 2.2rem);
+  font-size: var(--page-hero-title-size);
   max-width: 100%;
   overflow: visible;
 }
@@ -1852,11 +1857,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: var(--font-body);
-  font-weight: 800;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
   font-size: var(--home-hero-title-size);
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 0.7rem;
 }
 
@@ -3148,11 +3153,11 @@ img.lazy-img.loaded {
 .home-hero__title {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-body);
-  font-weight: 800;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
   font-size: var(--home-hero-title-size);
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 0.7rem;
 }
 
@@ -3417,11 +3422,11 @@ img.lazy-img.loaded {
 }
 
 .about-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.35rem, 2vw, 2.2rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 1.1rem;
 }
 
@@ -3483,11 +3488,11 @@ img.lazy-img.loaded {
 }
 
 .vision-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.65rem, 2.75vw, 2.75rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0;
 }
 
@@ -4584,11 +4589,11 @@ img.lazy-img.loaded {
 }
 
 .for-parents-hero__title {
-  font-family: var(--font-body);
-  font-weight: 700;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
   font-size: var(--for-parents-hero-title-size);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0;
 }
 
@@ -4684,11 +4689,11 @@ img.lazy-img.loaded {
 }
 
 .get-involved-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
   font-size: var(--get-involved-hero-title-size);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 clamp(0.85rem, 1.2vw, 1.05rem);
 }
 
@@ -6200,11 +6205,11 @@ img.lazy-img.loaded {
 }
 
 .explore-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.7rem, 2.85vw, 2.85rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0;
 }
 
@@ -7110,11 +7115,11 @@ img.lazy-img.loaded {
 
 /* ??? Contact hero content ??? */
 .contact-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
   font-size: var(--contact-hero-title-size);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 0.95rem;
   color: inherit;
 }
@@ -7588,11 +7593,11 @@ img.lazy-img.loaded {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.45rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(2.35rem, 4.2vw, 3.35rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   color: var(--color-pink);
   margin: 0 0 0.55rem;
 }
@@ -10019,12 +10024,12 @@ img.lazy-img.loaded {
 
   .about-hero__title,
   .explore-hero__title {
-    font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+    font-size: var(--page-hero-title-size);
   }
 
   .page-hero.about-hero .hero-headline,
   .about-hero__title {
-    font-size: clamp(1.35rem, 2vw, 2.2rem);
+    font-size: var(--page-hero-title-size);
   }
 
   .contact-form__wrap {
@@ -10385,7 +10390,7 @@ img.lazy-img.loaded {
 
   .page-hero.about-hero .hero-headline,
   .about-page .page-hero.about-hero .hero-headline {
-    font-size: clamp(1.35rem, 2vw, 2.2rem) !important;
+    font-size: var(--page-hero-title-size) !important;
     max-width: 100% !important;
     overflow: visible !important;
   }
@@ -12629,25 +12634,27 @@ img.lazy-img.loaded {
 }
 
 .apply-hero__title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
   margin: 0 0 clamp(0.85rem, 1.2vw, 1rem);
 }
 
 .apply-hero__title-line {
   display: block;
+  font-size: inherit;
 }
 
 .apply-hero__title-line--pink {
   color: var(--color-pink);
-  font-size: clamp(2rem, 4vw, 64px);
+  font-size: inherit;
 }
 
 .apply-hero__title-line--navy {
   color: var(--color-navy);
-  font-size: clamp(2.1rem, 4.2vw, 68px);
+  font-size: inherit;
 }
 
 .apply-hero__text {
@@ -16210,10 +16217,11 @@ body.newsletter-success-open {
 }
 
 .faq-hero__title-line {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.85rem, 3.2vw, 3rem);
-  line-height: 1.12;
+  font-family: var(--page-hero-title-font);
+  font-weight: var(--page-hero-title-weight);
+  font-size: var(--page-hero-title-size);
+  line-height: var(--page-hero-title-line-height);
+  letter-spacing: var(--page-hero-title-letter-spacing);
 }
 
 .faq-hero__title-line--navy {
@@ -30317,8 +30325,8 @@ body.newsletter-success-open {
   }
 
   .home-page {
-    /* Match category banner title size (Contact / For Parents / Get Involved) */
-    --home-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
+    /* Shared banner title size/font (Bitter) */
+    --home-hero-title-size: var(--page-hero-title-size);
     /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
     --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
     --home-header-hero-gap: var(--page-header-hero-gap);
@@ -30481,6 +30489,30 @@ body.newsletter-success-open {
   .home-page .page-hero.home-welcome-hero .home-hero__title,
   .home-page .page-hero.home-hero .hero-headline,
   .home-page .page-hero.home-welcome-hero .hero-headline {
+    font-family: var(--page-hero-title-font) !important;
+    font-weight: var(--page-hero-title-weight) !important;
     font-size: var(--home-hero-title-size) !important;
+    line-height: var(--page-hero-title-line-height) !important;
+    letter-spacing: var(--page-hero-title-letter-spacing) !important;
   }
+}
+
+/* All page-hero titles — one shared size + Bitter heading font */
+.page-hero .hero-headline,
+.page-hero .home-hero__title,
+.page-hero .about-hero__title,
+.page-hero .vision-hero__title,
+.page-hero .explore-hero__title,
+.page-hero .for-parents-hero__title,
+.page-hero .get-involved-hero__title,
+.page-hero .contact-hero__title,
+.page-hero .apply-hero__title,
+.page-hero .apply-hero__title-line,
+.page-hero .creative-makers-hero__title,
+.page-hero .faq-hero__title-line {
+  font-family: var(--page-hero-title-font) !important;
+  font-weight: var(--page-hero-title-weight) !important;
+  font-size: var(--page-hero-title-size) !important;
+  line-height: var(--page-hero-title-line-height) !important;
+  letter-spacing: var(--page-hero-title-letter-spacing) !important;
 }

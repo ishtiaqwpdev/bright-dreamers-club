@@ -695,7 +695,7 @@ acf_add_local_field_group(
 				'label'         => 'Heading line 1 (navy)',
 				'name'          => 'about_hero_title_line_1',
 				'type'          => 'text',
-				'default_value' => 'Every Child Has a Dream.',
+				'default_value' => 'Every Child Has a Dream',
 			),
 			array(
 				'key'           => 'field_about_hero_title_accent',
@@ -720,7 +720,7 @@ acf_add_local_field_group(
 				'label'         => 'Heading line 2 (pink, after accent)',
 				'name'          => 'about_hero_title_line_2',
 				'type'          => 'text',
-				'default_value' => 'Here to Help It Grow.',
+				'default_value' => 'Here to Help It Grow',
 			),
 			array(
 				'key'           => 'field_about_hero_text',
