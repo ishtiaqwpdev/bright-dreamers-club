@@ -1723,13 +1723,14 @@ button {
 }
 
 .page-hero.about-hero .hero-headline {
-  font-size: clamp(1.2rem, 1.65vw, 1.8rem);
+  font-size: clamp(1.35rem, 2vw, 2.2rem);
   max-width: 100%;
+  overflow: visible;
 }
 
 .page-hero.about-hero .page-hero__content {
   min-width: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .page-hero:not(.home-hero) .hero-headline [class*='__title-line'] {
@@ -3358,7 +3359,7 @@ img.lazy-img.loaded {
 .about-hero__title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(1.2rem, 1.65vw, 1.8rem);
+  font-size: clamp(1.35rem, 2vw, 2.2rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin: 0 0 1.1rem;
@@ -9942,7 +9943,7 @@ img.lazy-img.loaded {
 
   .page-hero.about-hero .hero-headline,
   .about-hero__title {
-    font-size: clamp(1.2rem, 1.65vw, 1.8rem);
+    font-size: clamp(1.35rem, 2vw, 2.2rem);
   }
 
   .contact-form__wrap {
@@ -10288,6 +10289,24 @@ img.lazy-img.loaded {
     max-width: var(--container-max-width);
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
+  }
+
+  .page-hero.about-hero .page-hero__inner,
+  .about-page .page-hero.about-hero .page-hero__inner {
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+  }
+
+  .page-hero.about-hero .page-hero__content,
+  .about-page .page-hero.about-hero .page-hero__content {
+    max-width: min(560px, 100%) !important;
+    overflow: visible !important;
+  }
+
+  .page-hero.about-hero .hero-headline,
+  .about-page .page-hero.about-hero .hero-headline {
+    font-size: clamp(1.35rem, 2vw, 2.2rem) !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 
   .page-hero.home-hero .page-hero__content,

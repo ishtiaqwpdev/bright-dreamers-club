@@ -26,24 +26,13 @@ $about_hero_eyebrow = bdc_get_acf_text(
 	'ABOUT US',
 	$post_id
 );
-$about_hero_title_line_1 = bdc_get_acf_text(
-	'about_hero_title_line_1',
-	'Every Child Has a Dream.',
-	$post_id
-);
-$about_hero_title_accent = bdc_get_acf_text(
-	'about_hero_title_accent',
-	'We\'re',
-	$post_id
-);
-$about_hero_title_underline_url = bdc_get_acf_image_url(
+/* Theme lockup — two lines matching the About hero reference. */
+$about_hero_title_underline_word = 'Every';
+$about_hero_title_navy_rest      = 'Child Has a Dream.';
+$about_hero_title_pink           = 'We\'re Here to Help It Grow.';
+$about_hero_title_underline_url  = bdc_get_acf_image_url(
 	'about_hero_title_underline',
 	bdc_theme_asset_url( 'assets/images/heading-underline.jpeg' ),
-	$post_id
-);
-$about_hero_title_line_2 = bdc_get_acf_text(
-	'about_hero_title_line_2',
-	'Here to Help It Grow.',
 	$post_id
 );
 $about_hero_text = bdc_get_acf_text(
@@ -97,21 +86,11 @@ if ( $about_hero_banner_mobile_ver ) {
 	$about_hero_banner_mobile_url = add_query_arg( 'v', $about_hero_banner_mobile_ver, $about_hero_banner_mobile_url );
 }
 
-$about_headline_html = bdc_hero_lines_html(
-	array(
-		array( 'text' => $about_hero_title_line_1, 'class' => 'about-hero__title-line about-hero__title-line--navy' ),
-	)
-);
-if ( '' !== trim( $about_hero_title_accent ) || '' !== trim( $about_hero_title_line_2 ) ) {
-	$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--pink">';
-	if ( '' !== trim( $about_hero_title_accent ) ) {
-		$about_headline_html .= '<span class="heading-underline">' . esc_html( $about_hero_title_accent ) . '<img class="heading-underline__img" src="' . esc_url( $about_hero_title_underline_url ) . '" alt="" width="120" height="12" /></span>';
-	}
-	if ( '' !== trim( $about_hero_title_line_2 ) ) {
-		$about_headline_html .= ( '' !== trim( $about_hero_title_accent ) ? ' ' : '' ) . esc_html( $about_hero_title_line_2 );
-	}
-	$about_headline_html .= '</span>';
-}
+$about_headline_html  = '<span class="about-hero__title-line about-hero__title-line--navy">';
+$about_headline_html .= '<span class="heading-underline">' . esc_html( $about_hero_title_underline_word ) . '<img class="heading-underline__img" src="' . esc_url( $about_hero_title_underline_url ) . '" alt="" width="120" height="12" /></span>';
+$about_headline_html .= ' ' . esc_html( $about_hero_title_navy_rest );
+$about_headline_html .= '</span>';
+$about_headline_html .= '<span class="about-hero__title-line about-hero__title-line--pink">' . esc_html( $about_hero_title_pink ) . '</span>';
 
 get_template_part(
 	'template-parts/page-hero',
