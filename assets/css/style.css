@@ -23446,7 +23446,7 @@ body.newsletter-success-open {
     padding: 0 var(--container-padding) !important;
     display: inline-block !important;
     text-align: left !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
   }
 
   .about-page .page-hero.about-hero .hero-label::after,
@@ -24064,7 +24064,7 @@ body.newsletter-success-open {
 
   .about-page .page-hero.about-hero .hero-label {
     display: inline-block !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     padding: 0 !important;
     font-family: var(--font-body) !important;
     font-size: 11px !important;
@@ -25318,7 +25318,7 @@ body.newsletter-success-open {
 
   .our-vision-page .page-hero.vision-hero .hero-label {
     display: inline-block !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     padding: 0 !important;
     font-family: var(--font-body) !important;
     font-size: 11px !important;
@@ -26426,7 +26426,7 @@ body.newsletter-success-open {
   .get-involved-page .page-hero.get-involved-hero .hero-label {
     display: inline-flex !important;
     align-items: center !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     font-family: var(--font-body) !important;
     font-size: clamp(0.68rem, 2.2vw, 0.78rem) !important;
     font-weight: 700 !important;
@@ -26870,7 +26870,7 @@ body.newsletter-success-open {
     padding: 0 var(--container-padding) !important;
     display: inline-flex !important;
     align-items: center !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     font-family: var(--font-body) !important;
     font-size: clamp(0.68rem, 2.2vw, 0.78rem) !important;
     font-weight: 700 !important;
@@ -28186,13 +28186,25 @@ body.newsletter-success-open {
     box-sizing: border-box !important;
     width: 100% !important;
     padding: 0 var(--container-padding) !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     text-align: left !important;
   }
 
+  .about-page .page-hero .hero-label,
+  .about-page .page-hero.about-hero .hero-label,
+  .about-page #main-content > section.page-hero.about-hero .hero-label,
   .explore-page .page-hero .hero-label,
   .explore-page .page-hero.explore-hero .hero-label,
-  .explore-page #main-content > section.page-hero.explore-hero .hero-label {
+  .explore-page #main-content > section.page-hero.explore-hero .hero-label,
+  .for-parents-page .page-hero .hero-label,
+  .our-vision-page .page-hero .hero-label,
+  .get-involved-page .page-hero .hero-label,
+  .partners-page .page-hero .hero-label,
+  .contact-page .page-hero .hero-label,
+  .creative-makers-page .page-hero .hero-label,
+  .young-ideas-lab-page .page-hero .hero-label,
+  .create-for-cause-page .page-hero .hero-label,
+  .community-adventures-page .page-hero .hero-label {
     margin-top: 10px !important;
   }
 
@@ -28855,12 +28867,19 @@ body.newsletter-success-open {
     box-sizing: border-box !important;
     width: 100% !important;
     padding: 0 var(--container-padding) !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
     text-align: left !important;
   }
 
+  .about-page #main-content .page-hero.about-hero .hero-label,
+  .about-page #main-content > section.page-hero.about-hero .hero-label,
   .explore-page #main-content .page-hero.explore-hero .hero-label,
-  .explore-page #main-content > section.page-hero.explore-hero .hero-label {
+  .explore-page #main-content > section.page-hero.explore-hero .hero-label,
+  .for-parents-page #main-content .page-hero .hero-label,
+  .our-vision-page #main-content .page-hero .hero-label,
+  .get-involved-page #main-content .page-hero .hero-label,
+  .partners-page #main-content .page-hero .hero-label,
+  .contact-page #main-content .page-hero .hero-label {
     margin-top: 10px !important;
   }
 
