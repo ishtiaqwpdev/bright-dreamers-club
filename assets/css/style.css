@@ -1226,25 +1226,38 @@ button {
     flex: 0 0 auto;
     width: auto;
     max-width: var(--header-logo-box-width);
+    align-self: center;
   }
 
   .site-header__logo img {
     width: calc(var(--header-logo-box-width) * 0.8);
     max-width: 100%;
     height: auto;
+    display: block;
   }
 
   .site-nav {
     flex: 0 0 auto;
     display: flex;
+    align-items: center;
     justify-content: center;
     min-width: 0;
+    align-self: center;
+    padding-top: 18px;
   }
 
   .site-header__actions {
     flex: 0 0 auto;
     width: auto;
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
+    align-self: center;
+    padding-top: 18px;
+  }
+
+  .site-nav__list {
+    align-items: center;
   }
 }
 
