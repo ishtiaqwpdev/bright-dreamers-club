@@ -30304,24 +30304,34 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Home page ONLY — reference lockup (menu + hero alignment)
+   Home + About — reference lockup (menu + hero spacing)
    Equal L/R inset, logo↔hero text on one left edge, menu centred,
-   equal space above/below menu, shared banner title size.
+   equal space above/below logo, shared banner spacing.
    ========================================================================== */
 @media (min-width: 1201px) {
+  .home-page,
+  .about-page {
+    --header-pad-y: 16px;
+    /* Bottom gap (logo→banner text) = top gap (announce→logo) */
+    --page-header-hero-gap: var(--header-pad-y);
+  }
+
   .home-page {
     /* Match category banner title size (Contact / For Parents / Get Involved) */
     --home-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
     /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
     --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
-    --header-pad-y: 16px;
-    /* Bottom gap (logo→eyebrow) = top gap (announce→logo) */
-    --home-header-hero-gap: var(--header-pad-y);
+    --home-header-hero-gap: var(--page-header-hero-gap);
+  }
+
+  .about-page {
+    --about-header-hero-gap: var(--page-header-hero-gap);
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
      → logo↔Home gap === Contact↔Donate gap (always) */
-  .home-page .site-header__inner {
+  .home-page .site-header__inner,
+  .about-page .site-header__inner {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
@@ -30332,7 +30342,8 @@ body.newsletter-success-open {
     min-height: 0 !important;
   }
 
-  .home-page .site-header__logo {
+  .home-page .site-header__logo,
+  .about-page .site-header__logo {
     flex: 0 0 auto !important;
     width: auto !important;
     max-width: var(--header-logo-box-width) !important;
@@ -30340,7 +30351,8 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  .home-page .site-header__logo img {
+  .home-page .site-header__logo img,
+  .about-page .site-header__logo img {
     display: block !important;
     width: calc(var(--header-logo-box-width) * 0.8) !important;
     max-width: 100% !important;
@@ -30348,7 +30360,8 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  .home-page .site-nav {
+  .home-page .site-nav,
+  .about-page .site-nav {
     flex: 1 1 auto !important;
     display: flex !important;
     align-items: center !important;
@@ -30360,7 +30373,8 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  .home-page .site-nav__list {
+  .home-page .site-nav__list,
+  .about-page .site-nav__list {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -30368,11 +30382,13 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  .home-page .site-nav .nav-link {
+  .home-page .site-nav .nav-link,
+  .about-page .site-nav .nav-link {
     padding-top: 5px !important;
   }
 
-  .home-page .site-header__actions {
+  .home-page .site-header__actions,
+  .about-page .site-header__actions {
     flex: 0 0 auto !important;
     width: auto !important;
     display: flex !important;
@@ -30383,7 +30399,7 @@ body.newsletter-success-open {
     margin: 0 !important;
   }
 
-  /* logo-bottom → eyebrow = page-top → logo-center */
+  /* logo-bottom → banner text = announce→logo top gap */
   .home-page #main-content > section.page-hero.home-hero,
   .home-page #main-content > section.page-hero.home-welcome-hero,
   .home-page #main-content > section.home-hero.page-hero,
@@ -30393,13 +30409,22 @@ body.newsletter-success-open {
     padding-top: var(--home-header-hero-gap) !important;
   }
 
+  .about-page #main-content > section.page-hero.about-hero,
+  .about-page #main-content > section.about-hero.page-hero,
+  .about-page .page-hero.about-hero {
+    margin-top: 0 !important;
+    padding-top: var(--about-header-hero-gap) !important;
+  }
+
   .home-page .page-hero.home-hero .page-hero__inner,
-  .home-page .page-hero.home-welcome-hero .page-hero__inner {
+  .home-page .page-hero.home-welcome-hero .page-hero__inner,
+  .about-page .page-hero.about-hero .page-hero__inner {
     padding-top: 0 !important;
   }
 
   .home-page .page-hero.home-hero .hero-label,
-  .home-page .page-hero.home-welcome-hero .hero-label {
+  .home-page .page-hero.home-welcome-hero .hero-label,
+  .about-page .page-hero.about-hero .hero-label {
     margin-top: 0 !important;
   }
 
@@ -30407,7 +30432,9 @@ body.newsletter-success-open {
   .home-page #main-content > section.page-hero.home-hero > .site-container.page-hero__inner,
   .home-page #main-content > section.page-hero.home-welcome-hero > .site-container.page-hero__inner,
   .home-page .page-hero.home-hero > .site-container.page-hero__inner,
-  .home-page .page-hero.home-welcome-hero > .site-container.page-hero__inner {
+  .home-page .page-hero.home-welcome-hero > .site-container.page-hero__inner,
+  .about-page #main-content > section.page-hero.about-hero > .site-container.page-hero__inner,
+  .about-page .page-hero.about-hero > .site-container.page-hero__inner {
     padding-left: var(--container-padding) !important;
     padding-right: var(--container-padding) !important;
     margin-left: auto !important;
@@ -30416,7 +30443,8 @@ body.newsletter-success-open {
   }
 
   .home-page .page-hero.home-hero .page-hero__content,
-  .home-page .page-hero.home-welcome-hero .page-hero__content {
+  .home-page .page-hero.home-welcome-hero .page-hero__content,
+  .about-page .page-hero.about-hero .page-hero__content {
     justify-self: start !important;
     align-items: flex-start !important;
     text-align: left !important;
@@ -30438,7 +30466,11 @@ body.newsletter-success-open {
   .home-page .page-hero.home-hero .hero-copy,
   .home-page .page-hero.home-welcome-hero .hero-copy,
   .home-page .page-hero.home-hero .page-hero__actions,
-  .home-page .page-hero.home-welcome-hero .page-hero__actions {
+  .home-page .page-hero.home-welcome-hero .page-hero__actions,
+  .about-page .page-hero.about-hero .hero-label,
+  .about-page .page-hero.about-hero .hero-headline,
+  .about-page .page-hero.about-hero .hero-copy,
+  .about-page .page-hero.about-hero .page-hero__actions {
     margin-left: 0 !important;
     padding-left: 0 !important;
     text-align: left !important;
