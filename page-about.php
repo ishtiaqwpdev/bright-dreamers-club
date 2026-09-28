@@ -18,7 +18,7 @@ $about_story_title = bdc_get_acf_text(
 	'Our Story',
 	$about_page_id
 );
-$about_story_photo_relative = 'assets/images/our-story-photo.jpg';
+$about_story_photo_relative = 'assets/images/our-story-photo.png';
 $about_story_photo_url      = bdc_theme_asset_url( $about_story_photo_relative );
 $about_story_photo_ver      = bdc_asset_version( $about_story_photo_relative );
 if ( $about_story_photo_ver ) {
