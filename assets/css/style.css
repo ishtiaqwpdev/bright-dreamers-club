@@ -30312,62 +30312,84 @@ body.newsletter-success-open {
   .home-page {
     /* Match category banner title size (Contact / For Parents / Get Involved) */
     --home-hero-title-size: clamp(2.75rem, 4.8vw, 4rem);
-    /* Equal breathing room above menu links and below header into hero */
-    --header-pad-y: 18px;
-    --home-header-hero-gap: 18px;
+    /* Logo render size: box × 80% width × intrinsic aspect (1659×948) */
+    --home-logo-render-h: calc(var(--header-logo-box-width) * 0.8 * 0.5714);
+    --header-pad-y: 16px;
+    /*
+      page-top → logo vertical-center = padY + logoH/2
+      logo-bottom → eyebrow must equal that exact distance.
+    */
+    --home-top-to-logo-center: calc(
+      var(--header-pad-y) + (var(--home-logo-render-h) * 0.5)
+    );
+    --home-header-hero-gap: var(--home-top-to-logo-center);
   }
 
-  /* Header: logo | centred menu | actions — equal side columns */
+  /* Header: logo + actions auto; nav fills middle and centres links
+     → logo↔Home gap === Contact↔Donate gap (always) */
   .home-page .site-header__inner {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    display: flex !important;
     align-items: center !important;
-    justify-content: stretch !important;
+    justify-content: flex-start !important;
     gap: 0 !important;
     padding-top: var(--header-pad-y) !important;
-    padding-bottom: var(--header-pad-y) !important;
+    /* Zero bottom pad so hero padding-top IS the full logo→eyebrow gap */
+    padding-bottom: 0 !important;
     min-height: 0 !important;
   }
 
   .home-page .site-header__logo {
-    justify-self: start !important;
-    align-self: center !important;
+    flex: 0 0 auto !important;
     width: auto !important;
     max-width: var(--header-logo-box-width) !important;
+    line-height: 0 !important;
+    margin: 0 !important;
   }
 
   .home-page .site-header__logo img {
     display: block !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
+    width: calc(var(--header-logo-box-width) * 0.8) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
   }
 
   .home-page .site-nav {
-    justify-self: center !important;
-    align-self: center !important;
-    flex: 0 0 auto !important;
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: auto !important;
+    min-width: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     margin: 0 !important;
   }
 
   .home-page .site-nav__list {
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .home-page .site-nav .nav-link {
+    padding-top: 5px !important;
   }
 
   .home-page .site-header__actions {
-    justify-self: end !important;
-    align-self: center !important;
     flex: 0 0 auto !important;
     width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     margin: 0 !important;
   }
 
-  /* Equal gap below menu = same as header pad above menu */
+  /* logo-bottom → eyebrow = page-top → logo-center */
   .home-page #main-content > section.page-hero.home-hero,
   .home-page #main-content > section.page-hero.home-welcome-hero,
   .home-page #main-content > section.home-hero.page-hero,
@@ -30375,6 +30397,16 @@ body.newsletter-success-open {
   .home-page .page-hero.home-welcome-hero {
     margin-top: 0 !important;
     padding-top: var(--home-header-hero-gap) !important;
+  }
+
+  .home-page .page-hero.home-hero .page-hero__inner,
+  .home-page .page-hero.home-welcome-hero .page-hero__inner {
+    padding-top: 0 !important;
+  }
+
+  .home-page .page-hero.home-hero .hero-label,
+  .home-page .page-hero.home-welcome-hero .hero-label {
+    margin-top: 0 !important;
   }
 
   /* Same L/R inset as header (site-container); text flush to logo edge */
