@@ -30463,6 +30463,11 @@ body.newsletter-success-open {
     padding-right: 0 !important;
   }
 
+  .home-page .page-hero.home-hero .page-hero__content,
+  .home-page .page-hero.home-welcome-hero .page-hero__content {
+    margin-top: -40px !important;
+  }
+
   .home-page .page-hero.home-hero .hero-label,
   .home-page .page-hero.home-welcome-hero .hero-label,
   .home-page .page-hero.home-hero .hero-headline,
