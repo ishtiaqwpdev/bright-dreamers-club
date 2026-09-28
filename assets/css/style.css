@@ -30468,6 +30468,10 @@ body.newsletter-success-open {
     margin-top: -75px !important;
   }
 
+  .explore-page .page-hero.explore-hero .page-hero__content {
+    margin-top: -30px !important;
+  }
+
   .home-page .page-hero.home-hero .hero-label,
   .home-page .page-hero.home-welcome-hero .hero-label,
   .home-page .page-hero.home-hero .hero-headline,
