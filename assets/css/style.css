@@ -6437,6 +6437,14 @@ img.lazy-img.loaded {
   margin-bottom: 0;
 }
 
+/* First two ways cards — keep faces/tops in frame (center crop was cutting heads) */
+.explore-ways__grid > .explore-way:nth-child(1) .explore-way-card__photo,
+.explore-ways__grid > .explore-way:nth-child(2) .explore-way-card__photo,
+.explore-ways__grid > .explore-way:nth-child(1) .lazy-img-wrap--cover img.lazy-img,
+.explore-ways__grid > .explore-way:nth-child(2) .lazy-img-wrap--cover img.lazy-img {
+  object-position: center top;
+}
+
 .explore-way-card__text {
   flex: 1 1 auto;
   font-family: var(--font-body);
