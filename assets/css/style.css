@@ -31134,7 +31134,7 @@ body #main-content > section.page-hero.faq-hero {
   }
 }
 
-/* About: right banner image — 60px space under the image */
+/* About: right banner image — 75px space under the image */
 @media (min-width: 1024px) {
   body.about-page #main-content > section.page-hero.about-hero,
   body.about-page #main-content > section.about-hero.page-hero {
@@ -31159,7 +31159,7 @@ body #main-content > section.page-hero.faq-hero {
   body.about-page .page-hero.about-hero .about-hero__banner,
   body.about-page .page-hero.about-hero picture img.about-hero__banner {
     margin-top: 0 !important;
-    margin-bottom: 60px !important;
+    margin-bottom: 75px !important;
     object-position: left top !important;
   }
 }
