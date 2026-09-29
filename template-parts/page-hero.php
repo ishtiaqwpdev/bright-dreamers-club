@@ -249,23 +249,25 @@ $image_class   = trim( 'lazy-img ' . (string) $hero['image_class'] );
                   srcset="<?php echo esc_url( $hero['hero_image_mobile'] ); ?>"
                 />
                 <img
-                  class="<?php echo esc_attr( $banner_class ); ?>"
+                  class="<?php echo esc_attr( $banner_class ); ?> page-hero__banner-img"
                   src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                   alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
                   width="1024"
                   height="555"
                   decoding="async"
+                  style="border:0;outline:0;box-shadow:none;"
                 />
               </picture>
               <?php else : ?>
               <img
-                class="<?php echo esc_attr( $image_class ); ?>"
+                class="<?php echo esc_attr( $image_class ); ?> page-hero__banner-img"
                 src="<?php echo esc_attr( $hero['hero_image_placeholder'] ); ?>"
                 data-src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                 alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
                 width="1024"
                 height="555"
                 decoding="async"
+                style="border:0;outline:0;box-shadow:none;"
               />
               <?php endif; ?>
             </div>

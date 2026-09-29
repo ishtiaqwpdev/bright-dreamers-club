@@ -402,6 +402,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border: 0;
+  border-style: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 a {
@@ -8821,8 +8825,11 @@ img.lazy-img.loaded {
     max-width: 100% !important;
     margin: 0 auto !important;
     padding: 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     box-sizing: border-box !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
   }
 
   .creative-makers-page #main-content > section.page-hero.creative-makers-hero .creative-makers-hero__banner,
@@ -8838,6 +8845,9 @@ img.lazy-img.loaded {
     object-fit: contain !important;
     object-position: center center !important;
     max-height: min(820px, 72vh) !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
   }
 
   .creative-makers-page #main-content > section.page-hero.creative-makers-hero .page-hero__content,
@@ -30967,4 +30977,53 @@ body.newsletter-success-open {
 .page-hero .lazy-img-wrap,
 .program-detail-page .page-hero .lazy-img-wrap {
   overflow: visible !important;
+}
+/* Program / page hero banners — kill any frame around media (desktop + mobile) */
+body.creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
+body.creative-makers-page .page-hero.creative-makers-hero .hero-image-wrap,
+body.creative-makers-page .page-hero.creative-makers-hero .lazy-img-wrap,
+body.creative-makers-page .page-hero.creative-makers-hero picture,
+body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__media,
+body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .lazy-img-wrap,
+body.young-ideas-lab-page .page-hero.young-ideas-lab-hero picture,
+body.create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__media,
+body.create-for-cause-page .page-hero.create-for-cause-hero .lazy-img-wrap,
+body.create-for-cause-page .page-hero.create-for-cause-hero picture,
+body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+body.community-adventures-page .page-hero.community-adventures-hero .lazy-img-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero picture,
+body.program-detail-page .page-hero .creative-makers-hero__media,
+body.program-detail-page .page-hero .lazy-img-wrap,
+body.program-detail-page .page-hero picture {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: #fff !important;
+  background-color: #fff !important;
+  overflow: visible !important;
+}
+
+body.creative-makers-page .page-hero img.creative-makers-hero__banner,
+body.creative-makers-page .page-hero picture img.creative-makers-hero__banner,
+body.young-ideas-lab-page .page-hero img.creative-makers-hero__banner,
+body.young-ideas-lab-page .page-hero picture img.creative-makers-hero__banner,
+body.create-for-cause-page .page-hero img.creative-makers-hero__banner,
+body.create-for-cause-page .page-hero picture img.creative-makers-hero__banner,
+body.community-adventures-page .page-hero img.creative-makers-hero__banner,
+body.community-adventures-page .page-hero picture img.creative-makers-hero__banner,
+body.program-detail-page .page-hero img.creative-makers-hero__banner,
+body.program-detail-page .page-hero picture img.creative-makers-hero__banner,
+.page-hero img.page-hero__banner-img,
+.page-hero picture img.page-hero__banner-img {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  background-color: #fff !important;
+  filter: none !important;
+  transform: none !important;
+  -webkit-filter: none !important;
 }
