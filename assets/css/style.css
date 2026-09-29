@@ -31180,9 +31180,11 @@ body #main-content > section.page-hero.faq-hero {
 /* For Parents: right banner image — 60px space under the image */
 @media (min-width: 1024px) {
   body.for-parents-page #main-content > section.page-hero.for-parents-hero,
-  body.for-parents-page #main-content > section.for-parents-hero.page-hero {
+  body.for-parents-page #main-content > section.for-parents-hero.page-hero,
+  body.for-parents-page .page-hero.for-parents-hero {
     padding-top: var(--page-header-hero-gap, 16px) !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 60px !important;
+    overflow: visible !important;
   }
 
   body.for-parents-page .page-hero.for-parents-hero .page-hero__inner {
@@ -31197,12 +31199,23 @@ body #main-content > section.page-hero.faq-hero {
     margin-bottom: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.for-parents-page .page-hero.for-parents-hero .about-hero__media .lazy-img-wrap,
+  body.for-parents-page .page-hero.for-parents-hero .about-hero__media picture,
+  body.for-parents-page .page-hero.for-parents-hero .hero-image-wrap .lazy-img-wrap,
+  body.for-parents-page .page-hero.for-parents-hero .hero-image-wrap picture {
+    overflow: visible !important;
   }
 
   body.for-parents-page .page-hero.for-parents-hero .about-hero__banner,
-  body.for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner {
+  body.for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner,
+  body.for-parents-page .page-hero.for-parents-hero img.lazy-img.about-hero__banner,
+  body.for-parents-page #main-content > section.page-hero.for-parents-hero .about-hero__banner,
+  body.for-parents-page #main-content > section.page-hero.for-parents-hero picture img.about-hero__banner {
     margin-top: 0 !important;
-    margin-bottom: 60px !important;
+    margin-bottom: 0 !important;
     object-position: left top !important;
   }
 }
