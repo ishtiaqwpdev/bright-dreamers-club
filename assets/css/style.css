@@ -31218,3 +31218,46 @@ body #main-content > section.page-hero.faq-hero {
     object-position: left top !important;
   }
 }
+
+/* Get Involved: right banner image — 60px space under the image */
+@media (min-width: 1024px) {
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero,
+  body.get-involved-page #main-content > section.get-involved-hero.page-hero,
+  body.get-involved-page .page-hero.get-involved-hero {
+    padding-top: var(--page-header-hero-gap, 16px) !important;
+    padding-bottom: 60px !important;
+    overflow: visible !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .page-hero__inner {
+    align-items: start !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .about-hero__media,
+  body.get-involved-page .page-hero.get-involved-hero .hero-image-wrap {
+    align-self: start !important;
+    align-items: flex-start !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .about-hero__media .lazy-img-wrap,
+  body.get-involved-page .page-hero.get-involved-hero .about-hero__media picture,
+  body.get-involved-page .page-hero.get-involved-hero .hero-image-wrap .lazy-img-wrap,
+  body.get-involved-page .page-hero.get-involved-hero .hero-image-wrap picture {
+    overflow: visible !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .about-hero__banner,
+  body.get-involved-page .page-hero.get-involved-hero picture img.about-hero__banner,
+  body.get-involved-page .page-hero.get-involved-hero img.lazy-img.about-hero__banner,
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero .about-hero__banner,
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero picture img.about-hero__banner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    object-position: left top !important;
+  }
+}
