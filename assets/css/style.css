@@ -31511,3 +31511,62 @@ body #main-content > section.page-hero.faq-hero {
     transform: none !important;
   }
 }
+
+/* ==========================================================================
+   Our Vision + Get Involved: kill heading animation / load jerk
+   ========================================================================== */
+body.our-vision-page .page-hero.vision-hero .page-hero__content,
+body.our-vision-page .page-hero.vision-hero .page-hero__content .hero-headline,
+body.our-vision-page .page-hero.vision-hero .page-hero__content .hero-headline [class*='__title-line'],
+body.our-vision-page .page-hero.vision-hero .page-hero__content .hero-label,
+body.our-vision-page .page-hero.vision-hero .page-hero__content .hero-copy,
+body.our-vision-page .page-hero.vision-hero .page-hero__content .page-hero__actions,
+body.our-vision-page .page-hero.vision-hero .page-hero__content .hero-ctas,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-headline,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-headline [class*='__title-line'],
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-label,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-copy,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .page-hero__actions,
+body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-ctas {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (min-width: 1024px) {
+  body.our-vision-page .page-hero.vision-hero .page-hero__inner,
+  body.get-involved-page .page-hero.get-involved-hero .page-hero__inner {
+    align-items: start !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .page-hero__content,
+  body.our-vision-page #main-content > section.page-hero.vision-hero .page-hero__content {
+    align-self: start !important;
+    margin-top: 30px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .page-hero__content,
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero .page-hero__content {
+    align-self: start !important;
+    margin-top: -110px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .hero-headline,
+  body.our-vision-page .page-hero.vision-hero .hero-headline .vision-hero__title-line,
+  body.get-involved-page .page-hero.get-involved-hero .hero-headline,
+  body.get-involved-page .page-hero.get-involved-hero .hero-headline .get-involved-hero__title-line {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: 48px !important;
+  }
+}
