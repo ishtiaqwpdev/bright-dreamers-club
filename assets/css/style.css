@@ -3608,7 +3608,7 @@ img.lazy-img.loaded {
   .our-vision-page .page-hero.vision-hero .hero-headline {
     font-family: var(--font-heading) !important;
     font-weight: 700 !important;
-    font-size: clamp(2.55rem, 3.8vw, 3.45rem) !important;
+    font-size: var(--vision-hero-title-size, 48px) !important;
     line-height: 1.08 !important;
     letter-spacing: -0.02em !important;
     margin: 0 0 1.15rem !important;
@@ -30452,6 +30452,10 @@ body.newsletter-success-open {
   .for-parents-page {
     /* Short title ("For Parents") — larger fixed size than About */
     --for-parents-hero-title-size: 48px;
+  }
+
+  .our-vision-page {
+    --vision-hero-title-size: 48px;
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
