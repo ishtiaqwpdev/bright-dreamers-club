@@ -81,7 +81,8 @@ $headline_html  = trim( (string) $hero['headline_html'] );
 
 $section_class = trim( 'page-hero ' . (string) $hero['section_class'] );
 $media_class   = trim( 'hero-image-wrap ' . (string) $hero['media_class'] );
-$image_class   = trim( 'lazy-img ' . (string) $hero['image_class'] );
+/* Hero banners are above-the-fold — never lazy-load (avoids text-column jump). */
+$image_class   = trim( (string) $hero['image_class'] );
 ?>
       <section
         class="<?php echo esc_attr( $section_class ); ?>"
@@ -238,35 +239,33 @@ $image_class   = trim( 'lazy-img ' . (string) $hero['image_class'] );
             <?php if ( '' !== trim( (string) $hero['hero_image_html'] ) ) : ?>
               <?php echo $hero['hero_image_html']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
             <?php else : ?>
-            <div class="lazy-img-wrap">
+            <div class="lazy-img-wrap page-hero__banner-wrap">
               <?php if ( $has_mobile_image ) : ?>
-              <?php
-              $banner_class = trim( preg_replace( '/\blazy-img\b/', '', $image_class ) );
-              ?>
               <picture>
                 <source
                   media="(max-width: 767px)"
                   srcset="<?php echo esc_url( $hero['hero_image_mobile'] ); ?>"
                 />
                 <img
-                  class="<?php echo esc_attr( $banner_class ); ?> page-hero__banner-img"
+                  class="<?php echo esc_attr( $image_class ); ?> page-hero__banner-img"
                   src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                   alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
                   width="1024"
                   height="555"
                   decoding="async"
+                  fetchpriority="high"
                   style="border:0;outline:0;box-shadow:none;"
                 />
               </picture>
               <?php else : ?>
               <img
                 class="<?php echo esc_attr( $image_class ); ?> page-hero__banner-img"
-                src="<?php echo esc_attr( $hero['hero_image_placeholder'] ); ?>"
-                data-src="<?php echo esc_url( $hero['hero_image'] ); ?>"
+                src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                 alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
                 width="1024"
                 height="555"
                 decoding="async"
+                fetchpriority="high"
                 style="border:0;outline:0;box-shadow:none;"
               />
               <?php endif; ?>

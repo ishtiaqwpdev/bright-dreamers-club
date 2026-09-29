@@ -1734,7 +1734,10 @@ button {
   max-width: 580px;
   padding-top: 0.35rem;
   padding-bottom: 0.75rem;
-  animation: rise-in 0.65s ease both;
+  /* Keep banner text still on load (no rise / fade jump) */
+  animation: none;
+  opacity: 1;
+  transform: none;
 }
 
 .page-hero__text {
@@ -2116,6 +2119,10 @@ button {
     padding-bottom: 0;
     padding-right: 0;
     text-align: left;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   .page-hero.home-hero .about-hero__media,
@@ -31383,4 +31390,26 @@ body #main-content > section.page-hero.faq-hero {
   body.about-page #main-content > section.page-hero.about-hero .hero-headline {
     font-size: 42px !important;
   }
+}
+
+/* ==========================================================================
+   Hero text column: stay still on first paint (no rise / layout dance)
+   ========================================================================== */
+.page-hero .page-hero__content {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.page-hero .page-hero__banner-wrap,
+.page-hero .lazy-img-wrap:has(.page-hero__banner-img),
+.page-hero .lazy-img-wrap:has(picture) {
+  aspect-ratio: 1024 / 555;
+  width: 100%;
+}
+
+.page-hero .page-hero__banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
