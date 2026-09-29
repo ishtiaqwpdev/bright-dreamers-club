@@ -30445,12 +30445,17 @@ body.newsletter-success-open {
 
   .about-page {
     --about-header-hero-gap: var(--page-header-hero-gap);
-    /* Fixed 42px ? holds at 80% / 90% browser zoom */
+    /* Fixed 42px — holds at 80% / 90% browser zoom */
     --about-hero-title-size: 42px;
   }
 
+  .for-parents-page {
+    /* Short title ("For Parents") — larger fixed size than About */
+    --for-parents-hero-title-size: 48px;
+  }
+
   /* Header: logo + actions auto; nav fills middle and centres links
-     ? logo?Home gap === Contact?Donate gap (always) */
+     → logo↔Home gap === Contact↔Donate gap (always) */
   .home-page .site-header__inner,
   .about-page .site-header__inner {
     display: flex !important;
@@ -30742,6 +30747,14 @@ body.newsletter-success-open {
   max-width: 100% !important;
   overflow: visible !important;
   font-size: var(--about-hero-title-size, 42px) !important;
+}
+
+.for-parents-page .page-hero.for-parents-hero .hero-headline,
+.for-parents-page .page-hero.for-parents-hero .for-parents-hero__title,
+.for-parents-page .page-hero.for-parents-hero .for-parents-hero__title-line,
+.for-parents-page .page-hero.for-parents-hero .hero-headline .for-parents-hero__title-line,
+#main-content > section.page-hero.for-parents-hero .hero-headline {
+  font-size: var(--for-parents-hero-title-size, 48px) !important;
 }
 
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
