@@ -30598,7 +30598,7 @@ body.newsletter-success-open {
   }
 
   .for-parents-page .page-hero.for-parents-hero .page-hero__content {
-    margin-top: -100px !important;
+    margin-top: -200px !important;
   }
 
   .our-vision-page .page-hero.vision-hero .page-hero__content {
@@ -31173,6 +31173,36 @@ body #main-content > section.page-hero.faq-hero {
   body.about-page .page-hero.about-hero picture img.about-hero__banner {
     margin-top: 0 !important;
     margin-bottom: 75px !important;
+    object-position: left top !important;
+  }
+}
+
+/* For Parents: right banner image — 60px space under the image */
+@media (min-width: 1024px) {
+  body.for-parents-page #main-content > section.page-hero.for-parents-hero,
+  body.for-parents-page #main-content > section.for-parents-hero.page-hero {
+    padding-top: var(--page-header-hero-gap, 16px) !important;
+    padding-bottom: 0 !important;
+  }
+
+  body.for-parents-page .page-hero.for-parents-hero .page-hero__inner {
+    align-items: start !important;
+  }
+
+  body.for-parents-page .page-hero.for-parents-hero .about-hero__media,
+  body.for-parents-page .page-hero.for-parents-hero .hero-image-wrap {
+    align-self: start !important;
+    align-items: flex-start !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  body.for-parents-page .page-hero.for-parents-hero .about-hero__banner,
+  body.for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner {
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
     object-position: left top !important;
   }
 }
