@@ -63,7 +63,10 @@
 
   --section-pad-y: 90px;
   --main-section-gap-y: clamp(1.5rem, 3vw, 2.25rem);
-  /* Measured from annotation: space under hero image / image?CTAs (~24px) */
+  /* Banner top gap (header?image); bottom under image matches this */
+  --page-header-hero-gap: 16px;
+  --page-hero-banner-pad-bottom: var(--page-header-hero-gap);
+  /* Stacked mobile: gap between banner image and CTAs */
   --page-hero-image-actions-gap: 1.5rem;
   --announce-pad-y: 8px;
   --announce-bg: var(--color-pink-soft);
@@ -447,7 +450,7 @@ button {
 
 #main-content > section.page-hero {
   padding-top: var(--hero-pad-y);
-  padding-bottom: var(--page-hero-image-actions-gap);
+  padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap, 16px));
 }
 
 #main-content > section.about-hero,
@@ -484,7 +487,7 @@ button {
 
 #main-content > section.faq-hero {
   padding-top: var(--about-hero-pad-top);
-  padding-bottom: var(--page-hero-image-actions-gap);
+  padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap, 16px));
 }
 
 @media (max-width: 991px) {
@@ -30522,6 +30525,7 @@ body.newsletter-success-open {
   .home-page .page-hero.home-welcome-hero {
     margin-top: 0 !important;
     padding-top: var(--home-header-hero-gap) !important;
+    padding-bottom: var(--home-header-hero-gap) !important;
   }
 
   .about-page #main-content > section.page-hero.about-hero,
@@ -31068,16 +31072,30 @@ body.community-adventures-page .page-hero.community-adventures-hero img.page-her
   }
 }
 
-body #main-content > section.page-hero {
-  padding-bottom: var(--page-hero-image-actions-gap) !important;
+/*
+  All page banners: bottom space under the image = same as top space above it.
+  Desktop uses --page-header-hero-gap (16px); elsewhere fall back to the same token.
+*/
+:root {
+  --page-header-hero-gap: 16px;
+  --page-hero-banner-pad-bottom: var(--page-header-hero-gap);
 }
 
-/* About (+ Home): bottom under banner = same as top above banner */
-@media (min-width: 1201px) {
-  body.about-page #main-content > section.page-hero.about-hero,
-  body.about-page #main-content > section.about-hero.page-hero,
-  body.home-page #main-content > section.page-hero.home-hero,
-  body.home-page #main-content > section.page-hero.home-welcome-hero {
-    padding-bottom: var(--page-header-hero-gap, 16px) !important;
-  }
+body #main-content > section.page-hero,
+body #main-content > section.page-hero.home-hero,
+body #main-content > section.page-hero.home-welcome-hero,
+body #main-content > section.page-hero.about-hero,
+body #main-content > section.page-hero.explore-hero,
+body #main-content > section.page-hero.for-parents-hero,
+body #main-content > section.page-hero.vision-hero,
+body #main-content > section.page-hero.get-involved-hero,
+body #main-content > section.page-hero.partners-hero,
+body #main-content > section.page-hero.contact-hero,
+body #main-content > section.page-hero.creative-makers-hero,
+body #main-content > section.page-hero.young-ideas-lab-hero,
+body #main-content > section.page-hero.create-for-cause-hero,
+body #main-content > section.page-hero.community-adventures-hero,
+body #main-content > section.page-hero.apply-hero,
+body #main-content > section.page-hero.faq-hero {
+  padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap)) !important;
 }
