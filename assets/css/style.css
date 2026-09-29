@@ -7819,7 +7819,7 @@ img.lazy-img.loaded {
     object-fit: contain;
     object-position: left center;
     filter: none;
-    background-color: transparent;
+    background-color: #fff;
   }
 
   .young-ideas-lab-page .page-hero.young-ideas-lab-hero .page-hero__actions {

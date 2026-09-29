@@ -101,7 +101,7 @@ $young_ideas_lab_hero_banner_url = bdc_get_acf_image_url(
 );
 $young_ideas_lab_hero_banner_alt = bdc_get_acf_text(
 	'young_ideas_lab_hero_banner_alt',
-	'Two children working together on a science and engineering project',
+	'Two children building a small robot together at a workspace',
 	$young_ideas_lab_page_id
 );
 $young_ideas_lab_hero_banner_mobile_url = bdc_theme_asset_url( 'assets/images/young-ideas-lab-hero-banner-mobile.jpg' );
