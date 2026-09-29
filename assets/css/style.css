@@ -27900,14 +27900,15 @@ body.newsletter-success-open {
   }
 }
 
-/* Hero eyebrow ? hidden on desktop except Home and About */
+/* Hero eyebrow — hidden on desktop except Home, About, and Contact */
 @media (min-width: 1024px) {
   .page-hero:not(.home-hero) .hero-label,
   .page-hero:not(.home-hero) [class*='__eyebrow'] {
     display: none !important;
   }
 
-  .about-page .page-hero.about-hero .hero-label {
+  .about-page .page-hero.about-hero .hero-label,
+  .contact-page .page-hero.contact-hero .hero-label {
     display: inline-flex !important;
     align-items: center;
     justify-content: flex-start;
@@ -27923,7 +27924,9 @@ body.newsletter-success-open {
   }
 
   .about-page .page-hero.about-hero .hero-label::before,
-  .about-page .page-hero.about-hero .hero-label::after {
+  .about-page .page-hero.about-hero .hero-label::after,
+  .contact-page .page-hero.contact-hero .hero-label::before,
+  .contact-page .page-hero.contact-hero .hero-label::after {
     content: none !important;
     display: none !important;
   }
@@ -30603,7 +30606,8 @@ body.newsletter-success-open {
   }
 
   .contact-page .page-hero.contact-hero .page-hero__content {
-    margin-top: -90px !important;
+    /* Room for "Contact Us" eyebrow above the title (was -90 without eyebrow) */
+    margin-top: -55px !important;
     align-items: flex-start !important;
     text-align: left !important;
     justify-self: start !important;

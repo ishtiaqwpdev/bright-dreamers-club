@@ -20,7 +20,7 @@ $contact_hero_aria_label = bdc_get_acf_text(
 );
 $contact_hero_eyebrow = bdc_get_acf_text(
 	'contact_hero_eyebrow',
-	'CONTACT US',
+	'Contact Us',
 	$contact_page_id
 );
 $contact_hero_title_line_1 = bdc_get_acf_text(
