@@ -30929,3 +30929,42 @@ body.newsletter-success-open {
     object-position: left center !important;
   }
 }
+
+/* ==========================================================================
+   Page hero banners — never show border / outline / shadow around images
+   ========================================================================== */
+.page-hero .hero-image-wrap,
+.page-hero [class*='-hero__media'],
+.page-hero [class*='__media'],
+.page-hero .lazy-img-wrap,
+.page-hero picture,
+.page-hero img[class*='__banner'],
+.page-hero picture img,
+.program-detail-page .page-hero .hero-image-wrap,
+.program-detail-page .page-hero .creative-makers-hero__media,
+.program-detail-page .page-hero .lazy-img-wrap,
+.program-detail-page .page-hero picture,
+.program-detail-page .page-hero .creative-makers-hero__banner,
+.program-detail-page .page-hero picture img.creative-makers-hero__banner {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.page-hero img[class*='__banner'],
+.page-hero picture img,
+.program-detail-page .page-hero .creative-makers-hero__banner,
+.program-detail-page .page-hero picture img.creative-makers-hero__banner {
+  border-radius: 0 !important;
+  background-color: #fff !important;
+}
+
+.page-hero .lazy-img-wrap,
+.program-detail-page .page-hero .lazy-img-wrap {
+  overflow: visible !important;
+}
