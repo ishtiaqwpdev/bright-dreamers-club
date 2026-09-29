@@ -30336,6 +30336,16 @@ body.newsletter-success-open {
     font-size: 14px !important;
   }
 
+  /* All page hero headings = 48px (About kept at 42px below) */
+  :root {
+    --page-hero-title-size: 48px;
+    --home-hero-title-size: 48px;
+    --contact-hero-title-size: 48px;
+    --for-parents-hero-title-size: 48px;
+    --get-involved-hero-title-size: 48px;
+    --vision-hero-title-size: 48px;
+  }
+
   /* Main heading */
   .page-hero .hero-headline,
   .home-hero .hero-headline,
@@ -30344,8 +30354,36 @@ body.newsletter-success-open {
   .home-page .page-hero.home-welcome-hero .hero-headline,
   .home-page .page-hero.home-hero .home-hero__title,
   .home-page .page-hero.home-welcome-hero .home-hero__title,
-  .our-vision-page .page-hero.vision-hero .hero-headline {
+  .explore-page .page-hero.explore-hero .hero-headline,
+  .for-parents-page .page-hero.for-parents-hero .hero-headline,
+  .our-vision-page .page-hero.vision-hero .hero-headline,
+  .get-involved-page .page-hero.get-involved-hero .hero-headline,
+  .partners-page .page-hero.partners-hero .hero-headline,
+  .contact-page .page-hero.contact-hero .hero-headline,
+  .creative-makers-page .page-hero.creative-makers-hero .hero-headline,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .hero-headline,
+  .create-for-cause-page .page-hero.create-for-cause-hero .hero-headline,
+  .community-adventures-page .page-hero.community-adventures-hero .hero-headline,
+  .apply-page .page-hero.apply-hero .hero-headline,
+  .faq-page .page-hero.faq-hero .hero-headline {
     font-size: 48px !important;
+  }
+
+  .page-hero .hero-headline [class*='__title-line'],
+  .for-parents-page .page-hero.for-parents-hero .for-parents-hero__title-line,
+  .our-vision-page .page-hero.vision-hero .vision-hero__title-line,
+  .get-involved-page .page-hero.get-involved-hero .get-involved-hero__title-line,
+  .contact-page .page-hero.contact-hero .contact-hero__title-line,
+  .explore-page .page-hero.explore-hero .explore-hero__title-line,
+  .partners-page .page-hero.partners-hero .vision-hero__title-line {
+    font-size: inherit !important;
+  }
+
+  /* About stays 42px */
+  .about-page .page-hero.about-hero .hero-headline,
+  .about-page .page-hero.about-hero .about-hero__title,
+  #main-content > section.page-hero.about-hero .hero-headline {
+    font-size: 42px !important;
   }
 
   /* Tagline (home banner only) */
@@ -31314,5 +31352,35 @@ body #main-content > section.page-hero.faq-hero {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     object-position: left top !important;
+  }
+}
+
+/* ==========================================================================
+   Final lock: all page hero headings = 48px (About stays 42px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  :root {
+    --page-hero-title-size: 48px;
+    --home-hero-title-size: 48px;
+    --contact-hero-title-size: 48px;
+    --for-parents-hero-title-size: 48px;
+    --get-involved-hero-title-size: 48px;
+    --vision-hero-title-size: 48px;
+  }
+
+  body:not(.about-page) .page-hero .hero-headline,
+  body:not(.about-page) .page-hero .hero-headline [class*='__title'],
+  body:not(.about-page) .page-hero .hero-headline [class*='__title-line'],
+  body:not(.about-page) .page-hero .home-hero__title,
+  body:not(.about-page) .page-hero [class*='-hero__title']:not([class*='__title-line']),
+  body:not(.about-page) #main-content > section.page-hero .hero-headline {
+    font-size: 48px !important;
+  }
+
+  body.about-page .page-hero.about-hero .hero-headline,
+  body.about-page .page-hero.about-hero .about-hero__title,
+  body.about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
+  body.about-page #main-content > section.page-hero.about-hero .hero-headline {
+    font-size: 42px !important;
   }
 }
