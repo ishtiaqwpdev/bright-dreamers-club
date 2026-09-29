@@ -30529,6 +30529,8 @@ body.newsletter-success-open {
   .about-page .page-hero.about-hero {
     margin-top: 0 !important;
     padding-top: var(--about-header-hero-gap) !important;
+    /* Match top gap under the banner image */
+    padding-bottom: var(--about-header-hero-gap) !important;
   }
 
   .home-page .page-hero.home-hero .page-hero__inner,
@@ -30755,7 +30757,8 @@ body.newsletter-success-open {
 @media (min-width: 1201px) {
   :root {
     --page-header-hero-gap: 16px;
-    --page-hero-banner-pad-bottom: 1rem;
+    /* Bottom breathing room under banner = same as top gap above banner */
+    --page-hero-banner-pad-bottom: var(--page-header-hero-gap);
   }
 
   .explore-page,
@@ -31055,7 +31058,7 @@ body.community-adventures-page .page-hero.community-adventures-hero img.page-her
   outline: 0 !important;
   box-shadow: none !important;
 }
-/* Hero image ? CTAs / under-banner gap (annotation ~24px) ? final lock */
+/* Hero image ? CTAs gap on stacked (mobile) layouts */
 @media (max-width: 1023px) {
   body #main-content > section.page-hero .page-hero__actions,
   body #main-content > section.page-hero .hero-ctas,
@@ -31067,4 +31070,14 @@ body.community-adventures-page .page-hero.community-adventures-hero img.page-her
 
 body #main-content > section.page-hero {
   padding-bottom: var(--page-hero-image-actions-gap) !important;
+}
+
+/* About (+ Home): bottom under banner = same as top above banner */
+@media (min-width: 1201px) {
+  body.about-page #main-content > section.page-hero.about-hero,
+  body.about-page #main-content > section.about-hero.page-hero,
+  body.home-page #main-content > section.page-hero.home-hero,
+  body.home-page #main-content > section.page-hero.home-welcome-hero {
+    padding-bottom: var(--page-header-hero-gap, 16px) !important;
+  }
 }
