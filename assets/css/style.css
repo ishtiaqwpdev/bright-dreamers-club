@@ -7925,7 +7925,8 @@ img.lazy-img.loaded {
     object-fit: contain;
     object-position: left center;
     filter: none;
-    background-color: #fff;
+    background: transparent;
+    background-color: transparent;
   }
 
   .community-adventures-page .page-hero.community-adventures-hero .page-hero__actions {
@@ -31026,4 +31027,19 @@ body.program-detail-page .page-hero picture img.creative-makers-hero__banner,
   filter: none !important;
   transform: none !important;
   -webkit-filter: none !important;
+}
+/* Community Adventures hero — transparent PNG, no black/colored fill behind */
+body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+body.community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero .lazy-img-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero picture,
+body.community-adventures-page .page-hero.community-adventures-hero img.creative-makers-hero__banner,
+body.community-adventures-page .page-hero.community-adventures-hero picture img.creative-makers-hero__banner,
+body.community-adventures-page .page-hero.community-adventures-hero img.page-hero__banner-img {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
