@@ -89,20 +89,20 @@ $create_for_cause_hero_back_link = bdc_get_acf_link(
 	),
 	$create_for_cause_page_id
 );
-$create_for_cause_hero_banner_relative = 'assets/images/46fd4d76-4bf8-4376-aa4f-fa8a19c43d33.png';
+$create_for_cause_hero_banner_relative = 'assets/images/create-for-cause-hero-banner.jpeg';
 $create_for_cause_hero_banner_url      = bdc_theme_asset_url( $create_for_cause_hero_banner_relative );
 $create_for_cause_hero_banner_ver      = bdc_asset_version( $create_for_cause_hero_banner_relative );
 if ( $create_for_cause_hero_banner_ver ) {
 	$create_for_cause_hero_banner_url = add_query_arg( 'v', $create_for_cause_hero_banner_ver, $create_for_cause_hero_banner_url );
 }
-$create_for_cause_hero_banner_mobile_url = bdc_theme_asset_url( 'assets/images/create-for-cause-hero-banner-mobile.png' );
-$create_for_cause_hero_banner_mobile_ver = bdc_asset_version( 'assets/images/create-for-cause-hero-banner-mobile.png' );
+$create_for_cause_hero_banner_mobile_url = bdc_theme_asset_url( 'assets/images/create-for-cause-hero-banner-mobile.jpg' );
+$create_for_cause_hero_banner_mobile_ver = bdc_asset_version( 'assets/images/create-for-cause-hero-banner-mobile.jpg' );
 if ( $create_for_cause_hero_banner_mobile_ver ) {
 	$create_for_cause_hero_banner_mobile_url = add_query_arg( 'v', $create_for_cause_hero_banner_mobile_ver, $create_for_cause_hero_banner_mobile_url );
 }
 $create_for_cause_hero_banner_alt = bdc_get_acf_text(
 	'create_for_cause_hero_banner_alt',
-	'Three children holding a colorful handmade thank-you sign',
+	'Three Bright Dreamers holding a colorful handmade thank-you sign',
 	$create_for_cause_page_id
 );
 

@@ -7870,7 +7870,7 @@ img.lazy-img.loaded {
     object-fit: contain;
     object-position: left center;
     filter: none;
-    background-color: transparent;
+    background-color: #fff;
   }
 
   .create-for-cause-page .page-hero.create-for-cause-hero .page-hero__actions {
