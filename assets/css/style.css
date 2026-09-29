@@ -31273,3 +31273,46 @@ body #main-content > section.page-hero.faq-hero {
     object-position: left top !important;
   }
 }
+
+/* Our Vision: right banner image — 60px space under the image */
+@media (min-width: 1024px) {
+  body.our-vision-page #main-content > section.page-hero.vision-hero,
+  body.our-vision-page #main-content > section.vision-hero.page-hero,
+  body.our-vision-page .page-hero.vision-hero {
+    padding-top: var(--page-header-hero-gap, 16px) !important;
+    padding-bottom: 60px !important;
+    overflow: visible !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .page-hero__inner {
+    align-items: start !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .about-hero__media,
+  body.our-vision-page .page-hero.vision-hero .hero-image-wrap {
+    align-self: start !important;
+    align-items: flex-start !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .about-hero__media .lazy-img-wrap,
+  body.our-vision-page .page-hero.vision-hero .about-hero__media picture,
+  body.our-vision-page .page-hero.vision-hero .hero-image-wrap .lazy-img-wrap,
+  body.our-vision-page .page-hero.vision-hero .hero-image-wrap picture {
+    overflow: visible !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .about-hero__banner,
+  body.our-vision-page .page-hero.vision-hero picture img.about-hero__banner,
+  body.our-vision-page .page-hero.vision-hero img.lazy-img.about-hero__banner,
+  body.our-vision-page #main-content > section.page-hero.vision-hero .about-hero__banner,
+  body.our-vision-page #main-content > section.page-hero.vision-hero picture img.about-hero__banner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    object-position: left top !important;
+  }
+}
