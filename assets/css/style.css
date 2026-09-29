@@ -31103,3 +31103,33 @@ body #main-content > section.page-hero.apply-hero,
 body #main-content > section.page-hero.faq-hero {
   padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap)) !important;
 }
+
+/* Contact: right banner image — bottom space = top space */
+@media (min-width: 1024px) {
+  body.contact-page #main-content > section.page-hero.contact-hero,
+  body.contact-page #main-content > section.contact-hero.page-hero {
+    padding-top: var(--page-header-hero-gap, 16px) !important;
+    padding-bottom: var(--page-header-hero-gap, 16px) !important;
+  }
+
+  body.contact-page .page-hero.contact-hero .page-hero__inner {
+    align-items: start !important;
+  }
+
+  body.contact-page .page-hero.contact-hero .about-hero__media,
+  body.contact-page .page-hero.contact-hero .hero-image-wrap {
+    align-self: start !important;
+    align-items: flex-start !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  body.contact-page .page-hero.contact-hero .about-hero__banner,
+  body.contact-page .page-hero.contact-hero picture img.about-hero__banner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    object-position: left top !important;
+  }
+}
