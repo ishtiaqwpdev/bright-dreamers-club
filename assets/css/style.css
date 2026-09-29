@@ -30655,7 +30655,7 @@ body.newsletter-success-open {
   }
 
   .get-involved-page .page-hero.get-involved-hero .page-hero__content {
-    margin-top: -110px !important;
+    margin-top: -50px !important;
     padding-left: 6px !important;
   }
 
@@ -31457,7 +31457,7 @@ body #main-content > section.page-hero.faq-hero {
 
   body.get-involved-page .page-hero.get-involved-hero .page-hero__content,
   body.get-involved-page #main-content > section.page-hero.get-involved-hero .page-hero__content {
-    margin-top: -110px !important;
+    margin-top: -50px !important;
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -31553,7 +31553,7 @@ body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-ct
   body.get-involved-page .page-hero.get-involved-hero .page-hero__content,
   body.get-involved-page #main-content > section.page-hero.get-involved-hero .page-hero__content {
     align-self: start !important;
-    margin-top: -110px !important;
+    margin-top: -50px !important;
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
