@@ -31570,3 +31570,11 @@ body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-ct
     font-size: 48px !important;
   }
 }
+
+/* Partners hero text pull — force -120px */
+@media (min-width: 1024px) {
+  body.partners-page #main-content > section.page-hero.partners-hero .page-hero__content,
+  body.partners-page .page-hero.partners-hero .page-hero__content {
+    margin-top: -120px !important;
+  }
+}
