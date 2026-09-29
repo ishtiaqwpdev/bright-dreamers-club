@@ -7921,7 +7921,7 @@ img.lazy-img.loaded {
     object-fit: contain;
     object-position: left center;
     filter: none;
-    background-color: transparent;
+    background-color: #fff;
   }
 
   .community-adventures-page .page-hero.community-adventures-hero .page-hero__actions {
