@@ -31393,7 +31393,8 @@ body #main-content > section.page-hero.faq-hero {
 }
 
 /* ==========================================================================
-   Hero text column: stay still on first paint (no rise / layout dance)
+   Hero text column: still on first paint + per-page margin lock
+   (Removed forced aspect-ratio — it was shifting the tuned margins.)
    ========================================================================== */
 .page-hero .page-hero__content {
   animation: none !important;
@@ -31401,15 +31402,112 @@ body #main-content > section.page-hero.faq-hero {
   transform: none !important;
 }
 
-.page-hero .page-hero__banner-wrap,
-.page-hero .lazy-img-wrap:has(.page-hero__banner-img),
-.page-hero .lazy-img-wrap:has(picture) {
-  aspect-ratio: 1024 / 555;
-  width: 100%;
-}
-
 .page-hero .page-hero__banner-img {
   width: 100%;
   height: auto;
   display: block;
+  filter: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Re-lock each page's tuned text pull (desktop) so nothing overrides it */
+@media (min-width: 1024px) {
+  body.home-page .page-hero.home-hero .page-hero__content,
+  body.home-page .page-hero.home-welcome-hero .page-hero__content,
+  body.home-page #main-content > section.page-hero.home-hero .page-hero__content,
+  body.home-page #main-content > section.page-hero.home-welcome-hero .page-hero__content {
+    margin-top: 0 !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.about-page .page-hero.about-hero .page-hero__content,
+  body.about-page #main-content > section.page-hero.about-hero .page-hero__content {
+    margin-top: -200px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.explore-page .page-hero.explore-hero .page-hero__content,
+  body.explore-page #main-content > section.page-hero.explore-hero .page-hero__content {
+    margin-top: -40px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.for-parents-page .page-hero.for-parents-hero .page-hero__content,
+  body.for-parents-page #main-content > section.page-hero.for-parents-hero .page-hero__content {
+    margin-top: -100px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.our-vision-page .page-hero.vision-hero .page-hero__content,
+  body.our-vision-page #main-content > section.page-hero.vision-hero .page-hero__content {
+    margin-top: 30px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.get-involved-page .page-hero.get-involved-hero .page-hero__content,
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero .page-hero__content {
+    margin-top: -110px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.contact-page .page-hero.contact-hero .page-hero__content,
+  body.contact-page #main-content > section.page-hero.contact-hero .page-hero__content {
+    margin-top: -130px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.partners-page .page-hero.partners-hero .page-hero__content,
+  body.partners-page #main-content > section.page-hero.partners-hero .page-hero__content {
+    margin-top: -120px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.create-for-cause-page .page-hero.create-for-cause-hero .page-hero__content,
+  body.create-for-cause-page #main-content > section.page-hero.create-for-cause-hero .page-hero__content {
+    margin-top: -90px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.creative-makers-page .page-hero.creative-makers-hero .page-hero__content,
+  body.creative-makers-page #main-content > section.page-hero.creative-makers-hero .page-hero__content {
+    margin-top: -100px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .page-hero__content,
+  body.young-ideas-lab-page #main-content > section.page-hero.young-ideas-lab-hero .page-hero__content {
+    margin-top: -65px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.community-adventures-page .page-hero.community-adventures-hero .page-hero__content,
+  body.community-adventures-page #main-content > section.page-hero.community-adventures-hero .page-hero__content {
+    margin-top: -50px !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

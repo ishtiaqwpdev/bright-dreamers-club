@@ -81,8 +81,27 @@ $headline_html  = trim( (string) $hero['headline_html'] );
 
 $section_class = trim( 'page-hero ' . (string) $hero['section_class'] );
 $media_class   = trim( 'hero-image-wrap ' . (string) $hero['media_class'] );
-/* Hero banners are above-the-fold — never lazy-load (avoids text-column jump). */
 $image_class   = trim( (string) $hero['image_class'] );
+
+/* Real banner dimensions → browser reserves height on first paint (stops text jerk). */
+$banner_width  = 1024;
+$banner_height = 555;
+$hero_image_url = trim( (string) $hero['hero_image'] );
+if ( '' !== $hero_image_url ) {
+	$url_path = (string) wp_parse_url( $hero_image_url, PHP_URL_PATH );
+	$assets_pos = strpos( $url_path, '/assets/' );
+	if ( false !== $assets_pos ) {
+		$theme_rel = ltrim( substr( $url_path, $assets_pos ), '/' );
+		$theme_file = trailingslashit( get_template_directory() ) . $theme_rel;
+		if ( is_readable( $theme_file ) ) {
+			$measured = @getimagesize( $theme_file );
+			if ( is_array( $measured ) && ! empty( $measured[0] ) && ! empty( $measured[1] ) ) {
+				$banner_width  = (int) $measured[0];
+				$banner_height = (int) $measured[1];
+			}
+		}
+	}
+}
 ?>
       <section
         class="<?php echo esc_attr( $section_class ); ?>"
@@ -250,8 +269,8 @@ $image_class   = trim( (string) $hero['image_class'] );
                   class="<?php echo esc_attr( $image_class ); ?> page-hero__banner-img"
                   src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                   alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
-                  width="1024"
-                  height="555"
+                  width="<?php echo esc_attr( (string) $banner_width ); ?>"
+                  height="<?php echo esc_attr( (string) $banner_height ); ?>"
                   decoding="async"
                   fetchpriority="high"
                   style="border:0;outline:0;box-shadow:none;"
@@ -262,8 +281,8 @@ $image_class   = trim( (string) $hero['image_class'] );
                 class="<?php echo esc_attr( $image_class ); ?> page-hero__banner-img"
                 src="<?php echo esc_url( $hero['hero_image'] ); ?>"
                 alt="<?php echo esc_attr( $hero['hero_image_alt'] ); ?>"
-                width="1024"
-                height="555"
+                width="<?php echo esc_attr( (string) $banner_width ); ?>"
+                height="<?php echo esc_attr( (string) $banner_height ); ?>"
                 decoding="async"
                 fetchpriority="high"
                 style="border:0;outline:0;box-shadow:none;"
