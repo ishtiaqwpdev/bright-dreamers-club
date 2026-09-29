@@ -30760,6 +30760,14 @@ body.newsletter-success-open {
   font-size: var(--for-parents-hero-title-size, 48px) !important;
 }
 
+.our-vision-page .page-hero.vision-hero .hero-headline,
+.our-vision-page .page-hero.vision-hero .vision-hero__title,
+.our-vision-page .page-hero.vision-hero .vision-hero__title-line,
+.our-vision-page .page-hero.vision-hero .hero-headline .vision-hero__title-line,
+#main-content > section.page-hero.vision-hero .hero-headline {
+  font-size: var(--vision-hero-title-size, 48px) !important;
+}
+
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line,
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line--navy,
 .about-page .page-hero.about-hero .hero-headline .about-hero__title-line--pink,
