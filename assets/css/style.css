@@ -63,6 +63,8 @@
 
   --section-pad-y: 90px;
   --main-section-gap-y: clamp(1.5rem, 3vw, 2.25rem);
+  /* Measured from annotation: space under hero image / image?CTAs (~24px) */
+  --page-hero-image-actions-gap: 1.5rem;
   --announce-pad-y: 8px;
   --announce-bg: var(--color-pink-soft);
   --announce-text-color: var(--color-navy);
@@ -445,7 +447,7 @@ button {
 
 #main-content > section.page-hero {
   padding-top: var(--hero-pad-y);
-  padding-bottom: var(--main-section-gap-y);
+  padding-bottom: var(--page-hero-image-actions-gap);
 }
 
 #main-content > section.about-hero,
@@ -482,15 +484,7 @@ button {
 
 #main-content > section.faq-hero {
   padding-top: var(--about-hero-pad-top);
-  padding-bottom: var(--main-section-gap-y);
-}
-
-#main-content > section.explore-hero.page-hero,
-#main-content > section.creative-makers-hero.page-hero,
-#main-content > section.young-ideas-lab-hero.page-hero,
-#main-content > section.create-for-cause-hero.page-hero,
-#main-content > section.community-adventures-hero.page-hero {
-  padding-bottom: 0.35rem;
+  padding-bottom: var(--page-hero-image-actions-gap);
 }
 
 @media (max-width: 991px) {
@@ -1755,6 +1749,16 @@ button {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 0.85rem;
+}
+
+/* Stacked heroes (mobile): same measured gap between banner image and CTAs */
+@media (max-width: 1023px) {
+  #main-content > section.page-hero .page-hero__actions,
+  #main-content > section.page-hero .hero-ctas,
+  .page-hero .page-hero__actions,
+  .page-hero .hero-ctas {
+    margin-top: var(--page-hero-image-actions-gap) !important;
+  }
 }
 
 .page-hero:not(.home-hero) .hero-label {
@@ -20465,7 +20469,7 @@ body.newsletter-success-open {
     justify-content: center;
     width: 100%;
     max-width: 280px;
-    margin: 2px auto 0;
+    margin: var(--page-hero-image-actions-gap) auto 0;
     gap: 8px;
   }
 
@@ -23612,7 +23616,7 @@ body.newsletter-success-open {
     justify-content: flex-start !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
+    margin: var(--page-hero-image-actions-gap) 0 0 !important;
     padding: 0 var(--container-padding) !important;
     gap: 8px !important;
   }
@@ -27766,7 +27770,7 @@ body.newsletter-success-open {
     order: 6 !important;
     width: 100% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: var(--page-hero-image-actions-gap) 0 0 !important;
     padding: 0 var(--container-padding) !important;
     flex-direction: column !important;
     align-items: stretch !important;
@@ -28499,7 +28503,7 @@ body.newsletter-success-open {
     align-self: stretch !important;
     width: 100% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: var(--page-hero-image-actions-gap) 0 0 !important;
     padding: 0 var(--container-padding) !important;
     gap: 0.75rem !important;
   }
@@ -30950,7 +30954,7 @@ body.newsletter-success-open {
 }
 
 /* ==========================================================================
-   Page hero banners — never show border / outline / shadow around images
+   Page hero banners ? never show border / outline / shadow around images
    ========================================================================== */
 .page-hero .hero-image-wrap,
 .page-hero [class*='-hero__media'],
@@ -30987,7 +30991,7 @@ body.newsletter-success-open {
 .program-detail-page .page-hero .lazy-img-wrap {
   overflow: visible !important;
 }
-/* Program / page hero banners — kill any frame around media (desktop + mobile) */
+/* Program / page hero banners ? kill any frame around media (desktop + mobile) */
 body.creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
 body.creative-makers-page .page-hero.creative-makers-hero .hero-image-wrap,
 body.creative-makers-page .page-hero.creative-makers-hero .lazy-img-wrap,
@@ -31036,7 +31040,7 @@ body.program-detail-page .page-hero picture img.creative-makers-hero__banner,
   transform: none !important;
   -webkit-filter: none !important;
 }
-/* Community Adventures hero — transparent PNG, no black/colored fill behind */
+/* Community Adventures hero ? transparent PNG, no black/colored fill behind */
 body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
 body.community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
 body.community-adventures-page .page-hero.community-adventures-hero .lazy-img-wrap,
@@ -31050,4 +31054,17 @@ body.community-adventures-page .page-hero.community-adventures-hero img.page-her
   border: 0 !important;
   outline: 0 !important;
   box-shadow: none !important;
+}
+/* Hero image ? CTAs / under-banner gap (annotation ~24px) ? final lock */
+@media (max-width: 1023px) {
+  body #main-content > section.page-hero .page-hero__actions,
+  body #main-content > section.page-hero .hero-ctas,
+  body .page-hero .page-hero__actions,
+  body .page-hero .hero-ctas {
+    margin-top: var(--page-hero-image-actions-gap) !important;
+  }
+}
+
+body #main-content > section.page-hero {
+  padding-bottom: var(--page-hero-image-actions-gap) !important;
 }
