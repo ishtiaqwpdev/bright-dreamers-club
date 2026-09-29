@@ -15,49 +15,40 @@ $get_involved_hero_lazy_placeholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAA
 
 $get_involved_hero_eyebrow = bdc_get_acf_text(
 	'get_involved_hero_eyebrow',
-	'GET INVOLVED',
+	'',
 	$get_involved_page_id
 );
 $get_involved_hero_title_line_1 = bdc_get_acf_text(
 	'get_involved_hero_title_line_1',
-	'Get',
+	'Get Involved.',
 	$get_involved_page_id
 );
 $get_involved_hero_title_line_2 = bdc_get_acf_text(
 	'get_involved_hero_title_line_2',
-	'Involved',
+	'Make a Brighter Tomorrow.',
 	$get_involved_page_id
 );
-$get_involved_hero_text_intro = bdc_get_acf_text(
+$get_involved_hero_text = bdc_get_acf_text(
+	'get_involved_hero_text',
+	'We\'re building a community where young ideas are heard, supported and turned into real projects that help others. Your time, skills, resources, and support help open doors for children with ideas and the desire to make a difference.',
+	$get_involved_page_id
+);
+/* Prefer the new hero copy when ACF still has the old split title/body fields. */
+if ( 'Get' === trim( (string) $get_involved_hero_title_line_1 ) || 'Involved' === trim( (string) $get_involved_hero_title_line_2 ) ) {
+	$get_involved_hero_title_line_1 = 'Get Involved.';
+	$get_involved_hero_title_line_2 = 'Make a Brighter Tomorrow.';
+}
+$get_involved_hero_text_legacy_intro = bdc_get_acf_text(
 	'get_involved_hero_text_intro',
-	'We\'re building a community where young ideas are heard,',
+	'',
 	$get_involved_page_id
 );
-$get_involved_hero_text_accent_1 = bdc_get_acf_text(
-	'get_involved_hero_text_accent_1',
-	'supported',
-	$get_involved_page_id
-);
-$get_involved_hero_text_middle = bdc_get_acf_text(
-	'get_involved_hero_text_middle',
-	'and turned into',
-	$get_involved_page_id
-);
-$get_involved_hero_text_accent_2 = bdc_get_acf_text(
-	'get_involved_hero_text_accent_2',
-	'real projects',
-	$get_involved_page_id
-);
-$get_involved_hero_text_outro = bdc_get_acf_text(
-	'get_involved_hero_text_outro',
-	'that help others.',
-	$get_involved_page_id
-);
-$get_involved_hero_text_secondary = bdc_get_acf_text(
-	'get_involved_hero_text_secondary',
-	'Your time, skills, resources, and support help open doors for children with ideas and the desire to make a difference.',
-	$get_involved_page_id
-);
+if (
+	'' === trim( (string) $get_involved_hero_text )
+	|| false !== strpos( (string) $get_involved_hero_text_legacy_intro, 'young ideas are heard,' )
+) {
+	$get_involved_hero_text = 'We\'re building a community where young ideas are heard, supported and turned into real projects that help others. Your time, skills, resources, and support help open doors for children with ideas and the desire to make a difference.';
+}
 $get_involved_hero_primary_btn_text = bdc_get_acf_text(
 	'get_involved_hero_primary_btn_text',
 	'Volunteer With Us',
@@ -349,39 +340,32 @@ $get_involved_partner_cta_deco_url = bdc_get_acf_image_url(
 ?>
     <main id="main-content">
       <?php
-      $get_involved_copy = bdc_hero_join_copy(
-        $get_involved_hero_text_intro,
-        $get_involved_hero_text_accent_1,
-        $get_involved_hero_text_middle,
-        $get_involved_hero_text_accent_2,
-        $get_involved_hero_text_outro,
-        $get_involved_hero_text_secondary
-      );
-
       get_template_part(
         'template-parts/page-hero',
         null,
         array(
-          'section_class'      => 'get-involved-hero about-hero',
-          'aria_label'         => 'Get Involved',
-          'section_label'      => $get_involved_hero_eyebrow,
-          'headline_html'      => bdc_hero_lines_html(
+          'section_class'            => 'get-involved-hero about-hero',
+          'aria_label'               => 'Get Involved',
+          'section_label'            => $get_involved_hero_eyebrow,
+          'headline_html'            => bdc_hero_lines_html(
             array(
-              array( 'text' => $get_involved_hero_title_line_1, 'class' => 'get-involved-hero__title-line get-involved-hero__title-line--pink' ),
-              array( 'text' => $get_involved_hero_title_line_2, 'class' => 'get-involved-hero__title-line get-involved-hero__title-line--navy' ),
+              array( 'text' => $get_involved_hero_title_line_1, 'class' => 'get-involved-hero__title-line get-involved-hero__title-line--navy' ),
+              array( 'text' => $get_involved_hero_title_line_2, 'class' => 'get-involved-hero__title-line get-involved-hero__title-line--pink' ),
             )
           ),
-          'supporting_copy'    => $get_involved_copy,
-          'primary_cta_text'   => $get_involved_hero_primary_btn_text,
-          'primary_cta_link'   => $get_involved_hero_primary_btn_link,
-          'secondary_cta_text' => $get_involved_hero_secondary_btn_text,
-          'secondary_cta_link' => $get_involved_hero_secondary_btn_link,
-          'hero_image'         => $get_involved_hero_banner_url,
-          'hero_image_mobile'  => $get_involved_hero_banner_mobile_url,
-          'hero_image_alt'     => $get_involved_hero_banner_alt,
-          'media_class'        => 'about-hero__media',
-          'image_class'        => 'about-hero__banner',
-          'inner_data_attrs'   => array(
+          'supporting_copy'          => $get_involved_hero_text,
+          'primary_cta_text'         => $get_involved_hero_primary_btn_text,
+          'primary_cta_link'         => $get_involved_hero_primary_btn_link,
+          'secondary_cta_text'       => $get_involved_hero_secondary_btn_text,
+          'secondary_cta_link'       => $get_involved_hero_secondary_btn_link,
+          'hero_image'               => $get_involved_hero_banner_url,
+          'hero_image_mobile'        => $get_involved_hero_banner_mobile_url,
+          'hero_image_alt'           => $get_involved_hero_banner_alt,
+          'media_class'              => 'about-hero__media',
+          'image_class'              => 'about-hero__banner',
+          'primary_cta_show_icon'    => true,
+          'secondary_cta_show_heart' => true,
+          'inner_data_attrs'         => array(
             'data-bdc-hero-text-col'   => '36',
             'data-bdc-hero-banner-col' => '64',
           ),
