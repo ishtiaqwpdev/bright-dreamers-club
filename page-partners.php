@@ -191,15 +191,15 @@ $partners_impact_intro = bdc_get_acf_text(
 );
 $partners_impact_cards_defaults = array(
 	array(
-		'photo'     => bdc_theme_asset_url( 'assets/images/partners-impact-photo-ideas.jpeg' ),
-		'photo_alt' => 'School children in red uniforms sharing books and notebooks',
+		'photo'     => bdc_theme_asset_url( 'assets/images/partners-impact-photo-skills.jpeg' ),
+		'photo_alt' => 'Children and a mentor shaping dough together at a table',
 		'title'     => 'Ideas Become Real',
 		'text'      => 'Children see their ideas come to life through projects and experiences.',
 		'deco'      => bdc_theme_asset_url( 'assets/images/partners-impact-deco-heart-purple.jpeg' ),
 	),
 	array(
-		'photo'     => bdc_theme_asset_url( 'assets/images/partners-impact-photo-skills.jpeg' ),
-		'photo_alt' => 'Children and a mentor shaping dough together at a table',
+		'photo'     => bdc_theme_asset_url( 'assets/images/partners-impact-photo-ideas.jpeg' ),
+		'photo_alt' => 'School children in red uniforms sharing books and notebooks',
 		'title'     => 'Skills Grow',
 		'text'      => 'They build confidence, learn new skills, and discover their strengths.',
 		'deco'      => bdc_theme_asset_url( 'assets/images/partners-impact-deco-leaf.jpeg' ),
