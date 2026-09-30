@@ -31885,3 +31885,31 @@ body.community-adventures-page .page-hero.community-adventures-hero .hero-image-
     margin-top: -150px !important;
   }
 }
+
+/* Creative Makers hero: 20px column gap, image bottom 60px, text margin-top -130px */
+@media (min-width: 1024px) {
+  .creative-makers-page .page-hero.creative-makers-hero .page-hero__inner,
+  .page-hero.creative-makers-hero .page-hero__inner,
+  body.creative-makers-page .page-hero.creative-makers-hero .page-hero__inner,
+  #main-content > section.page-hero.creative-makers-hero .page-hero__inner {
+    gap: 20px !important;
+    column-gap: 20px !important;
+  }
+
+  .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
+  .creative-makers-page .page-hero.creative-makers-hero .hero-image-wrap,
+  body.creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__media,
+  body.creative-makers-page .page-hero.creative-makers-hero .hero-image-wrap,
+  #main-content > section.page-hero.creative-makers-hero .creative-makers-hero__media,
+  #main-content > section.page-hero.creative-makers-hero .hero-image-wrap,
+  .creative-makers-page .page-hero.creative-makers-hero .creative-makers-hero__banner,
+  .creative-makers-page .page-hero.creative-makers-hero picture img.creative-makers-hero__banner {
+    margin-bottom: 60px !important;
+  }
+
+  .creative-makers-page .page-hero.creative-makers-hero .page-hero__content,
+  body.creative-makers-page .page-hero.creative-makers-hero .page-hero__content,
+  #main-content > section.page-hero.creative-makers-hero .page-hero__content {
+    margin-top: -130px !important;
+  }
+}
