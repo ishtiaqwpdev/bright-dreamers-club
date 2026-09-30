@@ -231,7 +231,7 @@
   --contact-form-deco-fit: cover;
   --contact-form-deco-position: center bottom;
   --contact-form-aside-plane-max: clamp(170px, 18vw, 240px);
-  --contact-form-aside-plant-max: clamp(130px, 14vw, 185px);
+  --contact-form-aside-plant-max: clamp(170px, 18vw, 240px);
   --contact-form-plane-deco-max: clamp(110px, 11vw, 150px);
   --contact-form-wrap-pad: 0;
   --contact-form-wrap-gap: clamp(0.55rem, 1vw, 0.75rem);
