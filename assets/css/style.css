@@ -31814,3 +31814,14 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   object-fit: contain !important;
   object-position: center center !important;
 }
+
+/* Community Adventures hero: 20px gap between text + image columns */
+@media (min-width: 1024px) {
+  .community-adventures-page .page-hero.community-adventures-hero .page-hero__inner,
+  .page-hero.community-adventures-hero .page-hero__inner,
+  body.community-adventures-page .page-hero.community-adventures-hero .page-hero__inner,
+  #main-content > section.page-hero.community-adventures-hero .page-hero__inner {
+    gap: 20px !important;
+    column-gap: 20px !important;
+  }
+}
