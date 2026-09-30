@@ -31612,15 +31612,16 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   }
 }
 
-/* Explore dream: jar (plane) ? CTA buttons gap = 0 */
+/* Explore dream: checklist ? jar ? CTA gaps = 0 */
 @media (min-width: 1024px) {
   .explore-page .explore-dream__grid {
-    /* Keep gaps between lead / checklist / jar; cancel only before actions */
     column-gap: clamp(1.75rem, 3.5vw, 3.25rem);
   }
 
   .explore-page .explore-dream__jar-wrap {
+    margin-left: calc(-1 * clamp(1.75rem, 3.5vw, 3.25rem)) !important;
     margin-right: 0 !important;
+    padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
