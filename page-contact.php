@@ -105,9 +105,13 @@ $contact_form_aside_aria_label = bdc_get_acf_text(
 );
 $contact_form_aside_plane_url = bdc_get_acf_image_url(
 	'contact_form_aside_plane',
-	bdc_theme_asset_url( 'assets/images/contact-form-plane.jpeg' ),
+	bdc_theme_asset_url( 'assets/images/contact-form-envelope.jpeg' ),
 	$contact_page_id
 );
+$contact_form_aside_plane_ver = bdc_asset_version( 'assets/images/contact-form-envelope.jpeg' );
+if ( $contact_form_aside_plane_ver && false !== strpos( (string) $contact_form_aside_plane_url, 'contact-form-envelope' ) ) {
+	$contact_form_aside_plane_url = add_query_arg( 'v', $contact_form_aside_plane_ver, $contact_form_aside_plane_url );
+}
 $contact_form_aside_title_underline_word = bdc_get_acf_text(
 	'contact_form_aside_title_underline_word',
 	'We\'re',
@@ -229,8 +233,8 @@ $contact_cta_btn_link = bdc_get_acf_link(
                 class="contact-form__aside-plane"
                 src="<?php echo esc_url( $contact_form_aside_plane_url ); ?>"
                 alt=""
-                width="200"
-                height="120"
+                width="240"
+                height="201"
                 loading="lazy"
                 decoding="async"
                 aria-hidden="true"
