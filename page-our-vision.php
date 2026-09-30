@@ -352,16 +352,25 @@ $vision_moments_photo_art_url = bdc_get_acf_image_url(
 	bdc_theme_asset_url( 'assets/images/vision-moments-photo-art.jpeg' ),
 	$vision_page_id
 );
+$vision_moments_photo_art_ver = bdc_asset_version( 'assets/images/vision-moments-photo-art.jpeg' );
+if ( $vision_moments_photo_art_ver && false !== strpos( (string) $vision_moments_photo_art_url, 'vision-moments-photo-art' ) ) {
+	$vision_moments_photo_art_url = add_query_arg( 'v', $vision_moments_photo_art_ver, $vision_moments_photo_art_url );
+}
 $vision_moments_photo_art_alt = bdc_get_acf_text(
 	'vision_moments_photo_art_alt',
 	'Children creating colorful art together',
 	$vision_page_id
 );
-$vision_moments_feature_banner_url = bdc_get_acf_image_url(
-	'vision_moments_feature_banner',
-	bdc_theme_asset_url( 'assets/images/vision-moments-banner.jpeg' ),
+$vision_moments_balloon_theme_path = 'assets/images/vision-moments-balloon.png';
+$vision_moments_balloon_url        = bdc_get_acf_image_url(
+	'vision_moments_balloon',
+	bdc_theme_asset_url( $vision_moments_balloon_theme_path ),
 	$vision_page_id
 );
+$vision_moments_balloon_ver = bdc_asset_version( $vision_moments_balloon_theme_path );
+if ( $vision_moments_balloon_ver && false !== strpos( (string) $vision_moments_balloon_url, 'vision-moments-balloon' ) ) {
+	$vision_moments_balloon_url = add_query_arg( 'v', $vision_moments_balloon_ver, $vision_moments_balloon_url );
+}
 $vision_moments_feature_title = bdc_get_acf_text(
 	'vision_moments_feature_title',
 	'Our story is just beginning.',
@@ -377,6 +386,10 @@ $vision_moments_photo_read_url = bdc_get_acf_image_url(
 	bdc_theme_asset_url( 'assets/images/vision-moments-photo-read.jpeg' ),
 	$vision_page_id
 );
+$vision_moments_photo_read_ver = bdc_asset_version( 'assets/images/vision-moments-photo-read.jpeg' );
+if ( $vision_moments_photo_read_ver && false !== strpos( (string) $vision_moments_photo_read_url, 'vision-moments-photo-read' ) ) {
+	$vision_moments_photo_read_url = add_query_arg( 'v', $vision_moments_photo_read_ver, $vision_moments_photo_read_url );
+}
 $vision_moments_photo_read_alt = bdc_get_acf_text(
 	'vision_moments_photo_read_alt',
 	'Children reading and learning together',
@@ -387,9 +400,13 @@ $vision_moments_photo_give_url = bdc_get_acf_image_url(
 	bdc_theme_asset_url( 'assets/images/vision-moments-photo-give.jpeg' ),
 	$vision_page_id
 );
+$vision_moments_photo_give_ver = bdc_asset_version( 'assets/images/vision-moments-photo-give.jpeg' );
+if ( $vision_moments_photo_give_ver && false !== strpos( (string) $vision_moments_photo_give_url, 'vision-moments-photo-give' ) ) {
+	$vision_moments_photo_give_url = add_query_arg( 'v', $vision_moments_photo_give_ver, $vision_moments_photo_give_url );
+}
 $vision_moments_photo_give_alt = bdc_get_acf_text(
 	'vision_moments_photo_give_alt',
-	'Children placing hearts in a kindness donation box',
+	'Children packing a thank-you donation box together',
 	$vision_page_id
 );
 
@@ -799,62 +816,57 @@ $vision_together_support_btn_link = bdc_get_acf_link(
               </div>
             </figure>
 
-            <figure class="vision-moments__feature">
-              <div class="vision-moments__feature-inner">
-                <div class="lazy-img-wrap">
-                  <img
-                    class="vision-moments__feature-img lazy-img"
-                    src="<?php echo esc_attr( $vision_hero_lazy_placeholder ); ?>"
-                    data-src="<?php echo esc_url( $vision_moments_feature_banner_url ); ?>"
-                    alt=""
-                    width="900"
-                    height="400"
-                    decoding="async"
-                    aria-hidden="true"
-                  />
-                </div>
-                <figcaption class="vision-moments__feature-copy">
-                  <?php if ( '' !== trim( $vision_moments_feature_title ) ) : ?>
-                  <p class="vision-moments__feature-title"><?php echo esc_html( $vision_moments_feature_title ); ?></p>
-                  <?php endif; ?>
-                  <?php if ( '' !== trim( $vision_moments_feature_text ) ) : ?>
-                  <p class="vision-moments__feature-text">
-                    <?php echo esc_html( $vision_moments_feature_text ); ?>
-                  </p>
-                  <?php endif; ?>
-                </figcaption>
+            <figure class="vision-moments__balloon">
+              <img
+                class="vision-moments__balloon-img"
+                src="<?php echo esc_url( $vision_moments_balloon_url ); ?>"
+                alt=""
+                width="280"
+                height="320"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </figure>
+
+            <aside class="vision-moments__story">
+              <?php if ( '' !== trim( $vision_moments_feature_title ) ) : ?>
+              <p class="vision-moments__feature-title"><?php echo esc_html( $vision_moments_feature_title ); ?></p>
+              <?php endif; ?>
+              <?php if ( '' !== trim( $vision_moments_feature_text ) ) : ?>
+              <p class="vision-moments__feature-text">
+                <?php echo esc_html( $vision_moments_feature_text ); ?>
+              </p>
+              <?php endif; ?>
+            </aside>
+
+            <figure class="vision-moments__photo-wrap">
+              <div class="lazy-img-wrap">
+                <img
+                  class="vision-moments__photo lazy-img"
+                  src="<?php echo esc_attr( $vision_hero_lazy_placeholder ); ?>"
+                  data-src="<?php echo esc_url( $vision_moments_photo_read_url ); ?>"
+                  alt="<?php echo esc_attr( $vision_moments_photo_read_alt ); ?>"
+                  width="320"
+                  height="400"
+                  decoding="async"
+                />
               </div>
             </figure>
 
-            <div class="vision-moments__photo-duo">
-              <figure class="vision-moments__photo-wrap">
-                <div class="lazy-img-wrap">
-                  <img
-                    class="vision-moments__photo lazy-img"
-                    src="<?php echo esc_attr( $vision_hero_lazy_placeholder ); ?>"
-                    data-src="<?php echo esc_url( $vision_moments_photo_read_url ); ?>"
-                    alt="<?php echo esc_attr( $vision_moments_photo_read_alt ); ?>"
-                    width="320"
-                    height="400"
-                    decoding="async"
-                  />
-                </div>
-              </figure>
-
-              <figure class="vision-moments__photo-wrap">
-                <div class="lazy-img-wrap">
-                  <img
-                    class="vision-moments__photo lazy-img"
-                    src="<?php echo esc_attr( $vision_hero_lazy_placeholder ); ?>"
-                    data-src="<?php echo esc_url( $vision_moments_photo_give_url ); ?>"
-                    alt="<?php echo esc_attr( $vision_moments_photo_give_alt ); ?>"
-                    width="320"
-                    height="400"
-                    decoding="async"
-                  />
-                </div>
-              </figure>
-            </div>
+            <figure class="vision-moments__photo-wrap">
+              <div class="lazy-img-wrap">
+                <img
+                  class="vision-moments__photo lazy-img"
+                  src="<?php echo esc_attr( $vision_hero_lazy_placeholder ); ?>"
+                  data-src="<?php echo esc_url( $vision_moments_photo_give_url ); ?>"
+                  alt="<?php echo esc_attr( $vision_moments_photo_give_alt ); ?>"
+                  width="320"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
+            </figure>
 
             <article class="vision-moments__list-slide" aria-label="<?php echo esc_attr( $vision_moments_title ); ?>">
               <ul class="vision-moments__list vision-moments__list--slide">

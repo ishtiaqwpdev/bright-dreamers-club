@@ -1,4 +1,4 @@
-/*
+﻿/*
   Bright Dreamers Club ? global styles
   Tokens on :root so you can tweak them live in DevTools
   (Elements ? <html> ? Styles ? :root).
@@ -325,16 +325,14 @@
   --vision-journey-step-quote-size: clamp(0.78rem, 0.86vw, 0.88rem);
   --vision-journey-step-text-size: clamp(0.74rem, 0.82vw, 0.82rem);
   --vision-moments-bg: var(--believe-card-peach);
-  --vision-moments-card-col: 0.28fr;
-  --vision-moments-gallery-col: 0.72fr;
-  --vision-moments-photo-col: 0.15fr;
-  --vision-moments-feature-col: 0.54fr;
-  --vision-moments-duo-col: 0.31fr;
-  --vision-moments-gallery-h: auto;
-  --vision-moments-feature-aspect: 900 / 400;
-  --vision-moments-feature-copy-width: min(56%, 13.5rem);
-  --vision-moments-feature-title-size: clamp(0.82rem, 0.92vw, 0.98rem);
-  --vision-moments-feature-text-size: clamp(0.66rem, 0.74vw, 0.76rem);
+  --vision-moments-card-col: 0.24fr;
+  --vision-moments-gallery-col: 0.76fr;
+  --vision-moments-photo-col: 0.16fr;
+  --vision-moments-balloon-col: 0.2fr;
+  --vision-moments-story-col: 0.22fr;
+  --vision-moments-gallery-h: clamp(180px, 18vw, 240px);
+  --vision-moments-feature-title-size: clamp(0.95rem, 1.15vw, 1.2rem);
+  --vision-moments-feature-text-size: clamp(0.68rem, 0.78vw, 0.82rem);
   --vision-partner-bg: var(--believe-card-peach);
   --vision-partner-divider: rgba(0, 0, 0, 0.14);
   --vision-partner-card-pad: clamp(0.22rem, 0.38vw, 0.35rem);
@@ -4197,138 +4195,90 @@ img.lazy-img.loaded {
 .vision-moments__gallery {
   display: grid;
   grid-template-columns:
-    minmax(0, var(--vision-moments-photo-col)) minmax(0, var(--vision-moments-feature-col))
-    minmax(0, var(--vision-moments-duo-col));
+    minmax(0, var(--vision-moments-photo-col))
+    minmax(0, var(--vision-moments-balloon-col))
+    minmax(0, var(--vision-moments-story-col))
+    minmax(0, var(--vision-moments-photo-col))
+    minmax(0, var(--vision-moments-photo-col));
   gap: clamp(0.35rem, 0.65vw, 0.55rem);
-  align-items: stretch;
+  align-items: end;
   min-width: 0;
   max-width: 100%;
   width: 100%;
-}
-
-.vision-moments__photo-duo {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(0.35rem, 0.65vw, 0.55rem);
-  min-width: 0;
-  min-height: 0;
-  overflow: visible;
-  align-self: stretch;
-}
-
-.vision-moments__photo-duo .vision-moments__photo-wrap {
-  height: 100%;
-  min-height: 0;
+  min-height: var(--vision-moments-gallery-h);
 }
 
 .vision-moments__photo-wrap {
   margin: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
   min-width: 0;
   min-height: 0;
-  overflow: hidden;
+  height: var(--vision-moments-gallery-h);
   border-radius: var(--home-pillar-radius);
-  align-self: stretch;
+  overflow: hidden;
+  background-color: #f7f7f7;
 }
 
-.vision-moments__photo-wrap > .lazy-img-wrap,
-.vision-moments__feature-inner > .lazy-img-wrap {
-  height: 100%;
-}
-
-.vision-moments__photo-wrap > .lazy-img-wrap .vision-moments__photo {
+.vision-moments__photo-wrap > .lazy-img-wrap {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
 }
 
-.vision-moments__feature-inner > .lazy-img-wrap .vision-moments__feature-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-
+.vision-moments__photo-wrap > .lazy-img-wrap .vision-moments__photo,
 .vision-moments__photo {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 0;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center center;
   border-radius: var(--home-pillar-radius);
-  background-color: rgba(255, 255, 255, 0.55);
 }
 
-.vision-moments__feature {
-  position: relative;
+.vision-moments__balloon {
   margin: 0;
   min-width: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: calc(var(--vision-moments-gallery-h) * 1.38);
+  overflow: visible;
+}
+
+.vision-moments__balloon-img {
+  display: block;
   width: 100%;
   max-width: 100%;
-  aspect-ratio: var(--vision-moments-feature-aspect);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-  border-radius: var(--home-pillar-radius);
-  align-self: stretch;
-}
-
-.vision-moments__feature-inner {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.vision-moments__feature-img {
-  display: block;
-  width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center;
-  border-radius: var(--home-pillar-radius);
+  object-position: center bottom;
 }
 
-.vision-moments__feature-copy {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: var(--vision-moments-feature-copy-width);
-  max-width: calc(100% - 1.25rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.vision-moments__story {
+  align-self: center;
+  min-width: 0;
+  padding: clamp(0.75rem, 1.2vw, 1.05rem) clamp(0.7rem, 1.1vw, 0.95rem);
+  border-radius: var(--home-pillar-radius);
+  background-color: var(--vision-moments-bg);
   text-align: center;
-  pointer-events: none;
-  padding-inline: 0.15rem;
-  box-sizing: border-box;
 }
 
 .vision-moments__feature-title {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: var(--vision-moments-feature-title-size);
-  line-height: 1.22;
+  line-height: 1.2;
   color: var(--color-pink);
-  margin: 0 0 clamp(0.25rem, 0.4vw, 0.35rem);
+  margin: 0 0 0.45rem;
 }
 
 .vision-moments__feature-text {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: var(--vision-moments-feature-text-size);
-  line-height: 1.32;
+  line-height: 1.35;
   color: var(--color-navy);
   margin: 0;
   overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 .vision-partner {
@@ -31766,5 +31716,32 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
 @media (max-width: 1023px) {
   .contact-cta__inner {
     padding-bottom: 1.5rem !important;
+  }
+}
+
+/* Vision moments: new gallery (photo | balloon | story | photo | photo) */
+@media (max-width: 1023px) {
+  .vision-moments__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+  }
+
+  .vision-moments__balloon {
+    height: auto !important;
+    min-height: clamp(160px, 40vw, 220px) !important;
+  }
+
+  .vision-moments__photo-wrap {
+    height: clamp(160px, 40vw, 220px) !important;
+  }
+
+  .vision-moments__story {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .vision-moments__gallery {
+    grid-template-columns: 1fr !important;
   }
 }
