@@ -64,11 +64,9 @@
 
   --section-pad-y: 90px;
   --main-section-gap-y: clamp(1.5rem, 3vw, 2.25rem);
-  /* Equal page chrome: header→hero === last content→footer */
-  --section-spacing: 80px;
-  /* Banner top gap (header?image); bottom under image matches this */
-  --page-header-hero-gap: var(--section-spacing);
-  --page-hero-banner-pad-bottom: var(--main-section-gap-y);
+  /* Banner top gap (header→image); bottom under image matches this */
+  --page-header-hero-gap: 16px;
+  --page-hero-banner-pad-bottom: var(--page-header-hero-gap);
   /* Stacked mobile: gap between banner image and CTAs */
   --page-hero-image-actions-gap: 1.5rem;
   --announce-pad-y: 8px;
@@ -78,7 +76,7 @@
   --footer-bg: var(--color-pink-soft);
   --footer-edge-height: clamp(24px, 3.2vw, 40px);
   --footer-pad-y: clamp(2.35rem, 4vw, 3.65rem);
-  --footer-pad-top-desktop: 0;
+  --footer-pad-top-desktop: 60px;
   --footer-pad-bottom-desktop: 40px;
   --footer-desktop-max-width: 1440px;
   --footer-col-gap: clamp(1rem, 2.2vw, 2.25rem);
@@ -92,8 +90,8 @@
   --header-logo-height: clamp(72px, 5.5vw, 92px);
   --header-logo-box-width: clamp(240px, 16vw, 300px);
   --header-logo-width-pct: 80%;
-  --hero-pad-y: var(--section-spacing);
-  --about-hero-pad-top: var(--section-spacing);
+  --hero-pad-y: 0;
+  --about-hero-pad-top: 8px;
   --home-hero-logo-width: 460px;
   --home-hero-col-gap: clamp(0.25rem, 0.6vw, 0.65rem);
   --home-hero-content-max: 36rem;
@@ -454,26 +452,60 @@ button {
   margin-bottom: 0;
 }
 
-/* Equal page chrome: header→hero === last content→footer */
-#main-content {
-  padding-bottom: var(--section-spacing);
+#main-content > section.page-hero {
+  padding-top: var(--hero-pad-y);
+  padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap, 16px));
 }
 
-#main-content > section.page-hero,
-#main-content > section[class$='-hero'] {
-  padding-top: var(--section-spacing);
-  padding-bottom: var(--page-hero-banner-pad-bottom, var(--main-section-gap-y));
-}
-
-/* Avoid doubling the shared footer gap from the last block */
-#main-content > section:last-child,
-#main-content > div:last-child > section:last-child {
-  padding-bottom: 0;
+#main-content > section.about-hero,
+#main-content > section.home-hero,
+#main-content > section.for-parents-hero,
+#main-content > section.get-involved-hero,
+#main-content > section.vision-hero,
+#main-content > section.explore-hero,
+#main-content > section.creative-makers-hero,
+#main-content > section.young-ideas-lab-hero,
+#main-content > section.create-for-cause-hero,
+#main-content > section.community-adventures-hero {
+  padding-top: var(--about-hero-pad-top);
 }
 
 #main-content > section.faq-hero {
-  padding-top: var(--section-spacing);
-  padding-bottom: var(--page-hero-banner-pad-bottom, var(--main-section-gap-y));
+  padding-top: var(--about-hero-pad-top);
+  padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap, 16px));
+}
+
+/*
+ * Home only: header↔banner gap === last section↔footer gap.
+ * Marked header-to-banner space is the reference (~20px).
+ */
+.home-page {
+  --home-chrome-gap: 20px;
+}
+
+.home-page #main-content {
+  padding-bottom: var(--home-chrome-gap);
+}
+
+.home-page #main-content > section.page-hero.home-hero,
+.home-page #main-content > section.page-hero.home-welcome-hero,
+.home-page #main-content > section.home-hero {
+  padding-top: var(--home-chrome-gap);
+  margin-top: 0;
+}
+
+.home-page #main-content > section:last-child {
+  padding-bottom: 0;
+}
+
+.home-page .site-footer__main {
+  padding-top: 0;
+}
+
+@media (min-width: 992px) {
+  .home-page .site-footer__main {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 991px) {
@@ -495,7 +527,7 @@ button {
   #main-content > section.apply-hero,
   #main-content > section.terms-hero,
   #main-content > section.media-policy-hero {
-    padding-bottom: var(--main-section-gap-y);
+    padding-bottom: 2.25rem;
   }
 
   #explore-content > .explore-ways:first-child {
@@ -513,6 +545,10 @@ button {
   #main-content > section.home-hero + section,
   #main-content > section.about-hero + section {
     padding-top: 0.35rem;
+  }
+
+  .home-page {
+    --home-chrome-gap: 16px;
   }
 }
 
@@ -726,7 +762,7 @@ button {
 
 .site-footer__main {
   background-color: var(--footer-bg);
-  padding-top: 0;
+  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
   padding-bottom: var(--footer-pad-y);
 }
 
@@ -10279,9 +10315,9 @@ img.lazy-img.loaded {
     --page-hero-content-max-width: 520px;
     --home-hero-content-max: 520px;
     --explore-hero-content-max: 520px;
-    --page-hero-desktop-pad-top: var(--section-spacing);
-    --page-hero-desktop-pad-bottom: var(--main-section-gap-y);
-    --page-hero-next-section-gap: var(--main-section-gap-y);
+    --page-hero-desktop-pad-top: 12px;
+    --page-hero-desktop-pad-bottom: 1rem;
+    --page-hero-next-section-gap: 1rem;
     --page-hero-desktop-min-height: clamp(500px, calc(100vh - 160px), 620px);
   }
 
@@ -10315,14 +10351,14 @@ img.lazy-img.loaded {
   .home-page #main-content > section.page-hero.home-hero,
   .home-page #main-content > section.page-hero.home-welcome-hero,
   .home-page #main-content > section.home-hero.page-hero {
-    padding-top: var(--section-spacing) !important;
+    padding-top: var(--home-chrome-gap, 20px) !important;
     margin-top: 0 !important;
     min-height: 0 !important;
   }
 
   .home-page .page-hero.home-hero,
   .home-page .page-hero.home-welcome-hero {
-    padding-top: var(--section-spacing) !important;
+    padding-top: var(--home-chrome-gap, 20px) !important;
     margin-top: 0 !important;
     min-height: 0 !important;
   }
@@ -10334,12 +10370,12 @@ img.lazy-img.loaded {
     align-items: center !important;
   }
 
-  /* About page hero uses shared section spacing */
+  /* About page ? tight top on laptop at 70?100% zoom (no tall empty band) */
   .about-page #main-content > section.page-hero.about-hero,
   .about-page #main-content > section.about-hero.page-hero,
   .about-page .page-hero.about-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
@@ -10358,14 +10394,14 @@ img.lazy-img.loaded {
 
   .get-involved-page #main-content > section.page-hero.get-involved-hero,
   .get-involved-page #main-content > section.get-involved-hero.page-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
   .get-involved-page .page-hero.get-involved-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
@@ -10386,14 +10422,14 @@ img.lazy-img.loaded {
 
   .our-vision-page #main-content > section.page-hero.vision-hero,
   .our-vision-page #main-content > section.vision-hero.page-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
   .our-vision-page .page-hero.vision-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
@@ -10648,7 +10684,6 @@ img.lazy-img.loaded {
   :root {
     --container-padding: 32px;
     --section-pad-y: 64px;
-    --section-spacing: 64px;
     --main-section-gap-y: 1.25rem;
     --page-hero-mobile-stack-gap: 1.25rem;
     --page-hero-mobile-content-gap: 0.85rem;
@@ -12446,7 +12481,6 @@ img.lazy-img.loaded {
   :root {
     --container-padding: 20px;
     --section-pad-y: 48px;
-    --section-spacing: 48px;
     --main-section-gap-y: 1rem;
     --announce-pad-y: 6px;
     --header-pad-y: 8px;
@@ -19574,10 +19608,9 @@ body.newsletter-success-open {
   :root {
     --announce-pad-y: 6px;
     --header-pad-y: 8px;
-    --section-spacing: 48px;
-    --hero-pad-y: var(--section-spacing);
-    --about-hero-pad-top: var(--section-spacing);
-    --contact-hero-pad-top: var(--section-spacing);
+    --hero-pad-y: 14px;
+    --about-hero-pad-top: 14px;
+    --contact-hero-pad-top: 14px;
     --get-involved-hero-title-size: 26px;
     --contact-hero-title-size: 26px;
     --for-parents-hero-title-size: 26px;
@@ -19698,16 +19731,20 @@ body.newsletter-success-open {
   #main-content > section.page-hero,
   .page-hero {
     text-align: center;
-    padding-top: var(--section-spacing);
-    padding-right: 20px;
-    padding-bottom: var(--main-section-gap-y);
-    padding-left: 20px;
+    padding: 16px 20px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     min-height: 0;
     margin-top: 0;
+  }
+
+  .home-page #main-content > section.page-hero.home-hero,
+  .home-page #main-content > section.page-hero.home-welcome-hero,
+  .home-page .page-hero.home-hero,
+  .home-page .page-hero.home-welcome-hero {
+    padding-top: var(--home-chrome-gap, 16px);
   }
 
   #main-content > section.home-hero.page-hero,
@@ -19728,7 +19765,7 @@ body.newsletter-success-open {
   #main-content > section.apply-hero.page-hero,
   #main-content > section.terms-hero.page-hero,
   #main-content > section.media-policy-hero.page-hero {
-    padding-bottom: var(--main-section-gap-y);
+    padding-bottom: 2.25rem;
   }
 
   .page-hero > .site-container,
@@ -23347,8 +23384,8 @@ body.newsletter-success-open {
   .page-hero.young-ideas-lab-hero,
   .page-hero.create-for-cause-hero,
   .page-hero.community-adventures-hero {
-    padding-top: var(--section-spacing) !important;
-    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-top: -20px !important;
     min-height: 0 !important;
   }
 
@@ -30495,13 +30532,9 @@ body.newsletter-success-open {
   }
 }
 
-/* All page heroes ? shared header→hero spacing (desktop ≥1024px). */
+/* All page hero banners ? pull up under transparent header (desktop ≥1024px).
+   Home keeps equal chrome gap; other pages keep the tight lockup. */
 @media (min-width: 1024px) {
-  .home-page #main-content > section.page-hero.home-hero,
-  .home-page #main-content > section.page-hero.home-welcome-hero,
-  .home-page #main-content > section.home-hero.page-hero,
-  .home-page .page-hero.home-hero,
-  .home-page .page-hero.home-welcome-hero,
   .about-page #main-content > section.page-hero.about-hero,
   .about-page #main-content > section.about-hero.page-hero,
   .about-page .page-hero.about-hero,
@@ -30528,11 +30561,17 @@ body.newsletter-success-open {
   .create-for-cause-page #main-content > section.page-hero.create-for-cause-hero,
   .community-adventures-page #main-content > section.page-hero.community-adventures-hero,
   .apply-page #main-content > section.page-hero.apply-hero,
-  .faq-page #main-content > section.page-hero.faq-hero,
-  #main-content > section.page-hero,
-  .page-hero {
+  .faq-page #main-content > section.page-hero.faq-hero {
+    margin-top: -20px !important;
+  }
+
+  .home-page #main-content > section.page-hero.home-hero,
+  .home-page #main-content > section.page-hero.home-welcome-hero,
+  .home-page #main-content > section.home-hero.page-hero,
+  .home-page .page-hero.home-hero,
+  .home-page .page-hero.home-welcome-hero {
     margin-top: 0 !important;
-    padding-top: var(--section-spacing) !important;
+    padding-top: var(--home-chrome-gap, 20px) !important;
   }
 }
 
