@@ -31865,3 +31865,23 @@ body.community-adventures-page .page-hero.community-adventures-hero .hero-image-
     margin-top: -250px !important;
   }
 }
+
+/* Young Ideas Lab hero: image bottom 50px, text block margin-top -150px */
+@media (min-width: 1024px) {
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__media,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .hero-image-wrap,
+  body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__media,
+  body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .hero-image-wrap,
+  #main-content > section.page-hero.young-ideas-lab-hero .creative-makers-hero__media,
+  #main-content > section.page-hero.young-ideas-lab-hero .hero-image-wrap,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .creative-makers-hero__banner,
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero picture img.creative-makers-hero__banner {
+    margin-bottom: 50px !important;
+  }
+
+  .young-ideas-lab-page .page-hero.young-ideas-lab-hero .page-hero__content,
+  body.young-ideas-lab-page .page-hero.young-ideas-lab-hero .page-hero__content,
+  #main-content > section.page-hero.young-ideas-lab-hero .page-hero__content {
+    margin-top: -150px !important;
+  }
+}
