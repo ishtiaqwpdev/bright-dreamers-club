@@ -64,6 +64,8 @@
 
   --section-pad-y: 90px;
   --main-section-gap-y: clamp(1.5rem, 3vw, 2.25rem);
+  /* Gap between last main section and footer (all pages) */
+  --page-footer-gap: 50px;
   /* Banner top gap (header→image); bottom under image matches this */
   --page-header-hero-gap: 16px;
   --page-hero-banner-pad-bottom: var(--page-header-hero-gap);
@@ -76,7 +78,7 @@
   --footer-bg: var(--color-pink-soft);
   --footer-edge-height: clamp(24px, 3.2vw, 40px);
   --footer-pad-y: clamp(2.35rem, 4vw, 3.65rem);
-  --footer-pad-top-desktop: 60px;
+  --footer-pad-top-desktop: 0;
   --footer-pad-bottom-desktop: 40px;
   --footer-desktop-max-width: 1440px;
   --footer-col-gap: clamp(1rem, 2.2vw, 2.25rem);
@@ -475,17 +477,25 @@ button {
   padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap, 16px));
 }
 
+/* All pages: equal 50px space between last section and footer */
+#main-content {
+  padding-bottom: var(--page-footer-gap);
+}
+
+#main-content > section:last-child,
+#main-content > div:last-child > section:last-child {
+  padding-bottom: 0;
+}
+
+.site-footer__main {
+  padding-top: 0;
+}
+
 /*
- * Home only: header↔banner gap, and last section↔footer gap.
- * Marked header-to-banner space is the top reference; bottom is set separately.
+ * Home only: header↔banner gap (footer gap uses global --page-footer-gap).
  */
 .home-page {
   --home-chrome-gap: 20px;
-  --home-chrome-gap-bottom: 50px;
-}
-
-.home-page #main-content {
-  padding-bottom: var(--home-chrome-gap-bottom);
 }
 
 .home-page #main-content > section.page-hero.home-hero,
@@ -493,20 +503,6 @@ button {
 .home-page #main-content > section.home-hero {
   padding-top: var(--home-chrome-gap);
   margin-top: 0;
-}
-
-.home-page #main-content > section:last-child {
-  padding-bottom: 0;
-}
-
-.home-page .site-footer__main {
-  padding-top: 0;
-}
-
-@media (min-width: 992px) {
-  .home-page .site-footer__main {
-    padding-top: 0;
-  }
 }
 
 @media (max-width: 991px) {
@@ -550,7 +546,11 @@ button {
 
   .home-page {
     --home-chrome-gap: 16px;
-    --home-chrome-gap-bottom: 50px;
+  }
+
+  #main-content > section:last-child,
+  #main-content > div:last-child > section:last-child {
+    padding-bottom: 0;
   }
 }
 
@@ -764,7 +764,7 @@ button {
 
 .site-footer__main {
   background-color: var(--footer-bg);
-  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding-top: 0;
   padding-bottom: var(--footer-pad-y);
 }
 
