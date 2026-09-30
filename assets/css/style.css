@@ -476,15 +476,16 @@ button {
 }
 
 /*
- * Home only: header↔banner gap === last section↔footer gap.
- * Marked header-to-banner space is the reference (~20px).
+ * Home only: header↔banner gap, and last section↔footer gap.
+ * Marked header-to-banner space is the top reference; bottom is set separately.
  */
 .home-page {
   --home-chrome-gap: 20px;
+  --home-chrome-gap-bottom: 50px;
 }
 
 .home-page #main-content {
-  padding-bottom: var(--home-chrome-gap);
+  padding-bottom: var(--home-chrome-gap-bottom);
 }
 
 .home-page #main-content > section.page-hero.home-hero,
@@ -549,6 +550,7 @@ button {
 
   .home-page {
     --home-chrome-gap: 16px;
+    --home-chrome-gap-bottom: 50px;
   }
 }
 
