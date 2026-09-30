@@ -47,7 +47,7 @@
   --panel-bg-size: clamp(160px, 20vw, 200px) auto;
   --panel-bg-position: right center;
   --panel-journey-content-max: 54%;
-  --panel-council-figure-width: clamp(320px, 40vw, 440px);
+  --panel-council-figure-width: 185px;
   --font-heading: 'Bitter', serif;
   --font-body: 'Outfit', sans-serif;
   --believe-icon-height: clamp(48px, 4.8vw, 58px);
@@ -9409,7 +9409,7 @@ img.lazy-img.loaded {
 .panel-card--council .panel-card__figure {
   align-self: stretch;
   width: var(--panel-council-figure-width);
-  max-width: 48%;
+  max-width: 100%;
   background-color: var(--panel-lavender);
   justify-content: center;
   align-items: center;
@@ -9624,25 +9624,6 @@ img.lazy-img.loaded {
   letter-spacing: -0.015em;
   color: var(--color-navy);
   margin: 0 0 0.85rem;
-}
-
-.panel-card__title--council {
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-
-.panel-card__title-lines {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.panel-card__title-line {
-  display: block;
-}
-
-.panel-card__title--council .panel-card__title-icon {
-  margin-top: 0.15em;
 }
 
 .panel-card__title-icon {
@@ -12322,7 +12303,7 @@ img.lazy-img.loaded {
   .panel-card__figure {
     width: 100%;
     max-width: 100%;
-    padding: 0 0.75rem 0.85rem;
+    padding: 0 0.75rem 0.5rem;
     box-sizing: border-box;
   }
 
