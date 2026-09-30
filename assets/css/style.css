@@ -7028,8 +7028,8 @@ img.lazy-img.loaded {
 .explore-dream__lead {
   display: flex;
   align-items: center;
-  /* Title ? girls photo gap */
-  gap: 10px;
+  /* Title / girls photo gap */
+  gap: 0;
   min-width: 0;
   justify-self: start;
 }
@@ -27907,7 +27907,7 @@ body.newsletter-success-open {
   }
 }
 
-/* Hero eyebrow — hidden on desktop except Home, About, and Contact */
+/* Hero eyebrow ? hidden on desktop except Home, About, and Contact */
 @media (min-width: 1024px) {
   .page-hero:not(.home-hero) .hero-label,
   .page-hero:not(.home-hero) [class*='__eyebrow'] {
@@ -30490,12 +30490,12 @@ body.newsletter-success-open {
 
   .about-page {
     --about-header-hero-gap: var(--page-header-hero-gap);
-    /* Fixed 42px — holds at 80% / 90% browser zoom */
+    /* Fixed 42px ? holds at 80% / 90% browser zoom */
     --about-hero-title-size: 42px;
   }
 
   .for-parents-page {
-    /* Short title ("For Parents") — larger fixed size than About */
+    /* Short title ("For Parents") ? larger fixed size than About */
     --for-parents-hero-title-size: 48px;
   }
 
@@ -30504,7 +30504,7 @@ body.newsletter-success-open {
   }
 
   /* Header: logo + actions auto; nav fills middle and centres links
-     → logo↔Home gap === Contact↔Donate gap (always) */
+     ? logo?Home gap === Contact?Donate gap (always) */
   .home-page .site-header__inner,
   .about-page .site-header__inner {
     display: flex !important;
@@ -31173,7 +31173,7 @@ body #main-content > section.page-hero.faq-hero {
   padding-bottom: var(--page-hero-banner-pad-bottom, var(--page-header-hero-gap)) !important;
 }
 
-/* Contact: right banner image — 60px space under the image */
+/* Contact: right banner image ? 60px space under the image */
 @media (min-width: 1024px) {
   body.contact-page #main-content > section.page-hero.contact-hero,
   body.contact-page #main-content > section.contact-hero.page-hero {
@@ -31203,7 +31203,7 @@ body #main-content > section.page-hero.faq-hero {
   }
 }
 
-/* About: right banner image — 75px space under the image */
+/* About: right banner image ? 75px space under the image */
 @media (min-width: 1024px) {
   body.about-page #main-content > section.page-hero.about-hero,
   body.about-page #main-content > section.about-hero.page-hero {
@@ -31233,7 +31233,7 @@ body #main-content > section.page-hero.faq-hero {
   }
 }
 
-/* For Parents: right banner image — 60px space under the image */
+/* For Parents: right banner image ? 60px space under the image */
 @media (min-width: 1024px) {
   body.for-parents-page #main-content > section.page-hero.for-parents-hero,
   body.for-parents-page #main-content > section.for-parents-hero.page-hero,
@@ -31276,7 +31276,7 @@ body #main-content > section.page-hero.faq-hero {
   }
 }
 
-/* Get Involved: right banner image — 60px space under the image */
+/* Get Involved: right banner image ? 60px space under the image */
 @media (min-width: 1024px) {
   body.get-involved-page #main-content > section.page-hero.get-involved-hero,
   body.get-involved-page #main-content > section.get-involved-hero.page-hero,
@@ -31319,7 +31319,7 @@ body #main-content > section.page-hero.faq-hero {
   }
 }
 
-/* Our Vision: right banner image — 60px space under the image */
+/* Our Vision: right banner image ? 60px space under the image */
 @media (min-width: 1024px) {
   body.our-vision-page #main-content > section.page-hero.vision-hero,
   body.our-vision-page #main-content > section.vision-hero.page-hero,
@@ -31394,7 +31394,7 @@ body #main-content > section.page-hero.faq-hero {
 
 /* ==========================================================================
    Hero text column: still on first paint + per-page margin lock
-   (Removed forced aspect-ratio — it was shifting the tuned margins.)
+   (Removed forced aspect-ratio ? it was shifting the tuned margins.)
    ========================================================================== */
 .page-hero .page-hero__content {
   animation: none !important;
@@ -31571,7 +31571,7 @@ body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-ct
   }
 }
 
-/* Partners hero text pull � force -120px */
+/* Partners hero text pull ? force -120px */
 @media (min-width: 1024px) {
   body.partners-page #main-content > section.page-hero.partners-hero .page-hero__content,
   body.partners-page .page-hero.partners-hero .page-hero__content {
@@ -31605,9 +31605,9 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   background-color: #ffffff !important;
 }
 
-/* Explore dream: title ? girls photo gap = 10px (desktop) */
+/* Explore dream: title / girls photo gap = 0 */
 @media (min-width: 1024px) {
   .explore-page .explore-dream__lead {
-    gap: 10px !important;
+    gap: 0 !important;
   }
 }
