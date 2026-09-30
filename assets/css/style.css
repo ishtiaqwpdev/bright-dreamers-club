@@ -236,7 +236,7 @@
   --contact-cta-bg: var(--panel-cream);
   --contact-cta-radius: 20px;
   --contact-cta-pad-y: 0;
-  --contact-cta-door-width: clamp(130px, 14vw, 185px);
+  --contact-cta-door-width: clamp(150px, 16vw, 220px);
   --contact-cta-text-size: 25px;
   --contact-cta-text-max-w: 461px;
   --creative-makers-hero-content-col: 0.34fr;
@@ -7510,7 +7510,7 @@ img.lazy-img.loaded {
   transform: rotate(-8deg);
 }
 
-/* ??? Contact CTA banner ??? */
+/* Contact CTA */
 .contact-cta {
   background-color: #fff;
 }
@@ -7520,31 +7520,83 @@ img.lazy-img.loaded {
   padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.contact-cta__banner-link {
-  display: block;
-  width: 100%;
-  line-height: 0;
-  border-radius: var(--contact-cta-radius);
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.contact-cta__banner-link:focus-visible {
-  outline: 3px solid var(--color-pink);
-  outline-offset: 3px;
-}
-
-.contact-cta__banner {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--contact-cta-radius);
-}
-
-/* Legacy card pieces kept inert if referenced elsewhere */
 .contact-cta__card {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.2vw, 2rem);
+  padding: clamp(1.15rem, 2.2vw, 1.75rem) clamp(1.35rem, 2.8vw, 2.5rem);
+  background-color: var(--contact-cta-bg);
+  border-radius: var(--contact-cta-radius);
+}
+
+.contact-cta__door {
+  flex: 0 0 auto;
+  width: var(--contact-cta-door-width);
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-cta__content {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.55rem, 1.2vw, 1rem);
+  min-width: 0;
+}
+
+.contact-cta__text {
+  flex: 0 1 auto;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--contact-cta-text-size);
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+  margin: 0;
+  max-width: var(--contact-cta-text-max-w);
+}
+
+.contact-cta__text-pink {
+  color: var(--color-pink);
+}
+
+.contact-cta__text-navy {
+  color: var(--color-navy);
+}
+
+.contact-cta__text-orange {
+  color: var(--color-yellow);
+}
+
+.contact-cta__deco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.contact-cta__heart,
+.contact-cta__star {
+  flex-shrink: 0;
+}
+
+.contact-cta__btn {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+  background-color: var(--color-pink);
+  border-color: var(--color-pink);
+  color: #fff;
+}
+
+.contact-cta__btn:hover,
+.contact-cta__btn:focus-visible {
+  background-color: var(--color-pink);
+  border-color: var(--color-pink);
+  color: #fff;
 }
 
 /* ??? Creative Makers (program page) ??? */
@@ -31617,18 +31669,8 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   }
 }
 
-/* Contact last CTA: full design banner */
-.contact-cta__banner-link,
-.contact-cta__banner {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
+/* Contact CTA: bottom spacing on smaller screens */
 @media (max-width: 1023px) {
-  .contact-cta__card {
-    display: none !important;
-  }
-
   .contact-cta__inner {
     padding-bottom: 1.5rem !important;
   }
