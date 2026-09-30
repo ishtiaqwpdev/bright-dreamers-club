@@ -35,9 +35,13 @@ $contact_hero_title_line_2 = bdc_get_acf_text(
 );
 $contact_hero_title_line_3 = bdc_get_acf_text(
 	'contact_hero_title_line_3',
-	'Tomorrow.',
+	'Tomorrow',
 	$contact_page_id
 );
+/* Remove trailing periods on hero title lines. */
+$contact_hero_title_line_1 = rtrim( (string) $contact_hero_title_line_1, ". \t" );
+$contact_hero_title_line_2 = rtrim( (string) $contact_hero_title_line_2, ". \t" );
+$contact_hero_title_line_3 = rtrim( (string) $contact_hero_title_line_3, ". \t" );
 $contact_hero_text = bdc_get_acf_text(
 	'contact_hero_text',
 	'We\'d love to hear from you! Whether you have a question, an idea, or want to learn more about Bright Dreamers, please reach out. Your message helps us build a brighter future for kids with ideas.',
