@@ -105,10 +105,10 @@ $contact_form_aside_aria_label = bdc_get_acf_text(
 );
 $contact_form_aside_plane_url = bdc_get_acf_image_url(
 	'contact_form_aside_plane',
-	bdc_theme_asset_url( 'assets/images/contact-form-envelope.jpeg' ),
+	bdc_theme_asset_url( 'assets/images/contact-form-envelope.png' ),
 	$contact_page_id
 );
-$contact_form_aside_plane_ver = bdc_asset_version( 'assets/images/contact-form-envelope.jpeg' );
+$contact_form_aside_plane_ver = bdc_asset_version( 'assets/images/contact-form-envelope.png' );
 if ( $contact_form_aside_plane_ver && false !== strpos( (string) $contact_form_aside_plane_url, 'contact-form-envelope' ) ) {
 	$contact_form_aside_plane_url = add_query_arg( 'v', $contact_form_aside_plane_ver, $contact_form_aside_plane_url );
 }
