@@ -5442,6 +5442,7 @@ img.lazy-img.loaded {
   flex-direction: column;
   gap: clamp(0.75rem, 1.2vw, 1rem);
   min-width: 0;
+  margin-left: 100px;
 }
 
 .get-involved-timeline__step {
@@ -11577,6 +11578,10 @@ img.lazy-img.loaded {
   .get-involved-impact__visual {
     grid-template-columns: 1fr;
     gap: clamp(0.85rem, 2vw, 1.1rem);
+  }
+
+  .get-involved-timeline {
+    margin-left: 0;
   }
 
   .get-involved-impact__illustration {
