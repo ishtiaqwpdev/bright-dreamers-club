@@ -7028,8 +7028,8 @@ img.lazy-img.loaded {
 .explore-dream__lead {
   display: flex;
   align-items: center;
-  /* Equal left/right gap around title?girls (= card pad) */
-  gap: var(--explore-dream-pad);
+  /* Title ? girls photo gap */
+  gap: 10px;
   min-width: 0;
   justify-self: start;
 }
@@ -31603,4 +31603,11 @@ body.community-adventures-page .page-hero.community-adventures-hero .creative-ma
 body.community-adventures-page .page-hero.community-adventures-hero picture img.creative-makers-hero__banner {
   background: #ffffff !important;
   background-color: #ffffff !important;
+}
+
+/* Explore dream: title ? girls photo gap = 10px (desktop) */
+@media (min-width: 1024px) {
+  .explore-page .explore-dream__lead {
+    gap: 10px !important;
+  }
 }
