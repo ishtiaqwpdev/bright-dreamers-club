@@ -48,7 +48,7 @@
   --panel-bg-position: right center;
   --panel-journey-content-max: 54%;
   --panel-council-figure-width: 185px;
-  --panel-council-figure-scale: 1.55;
+  --panel-council-figure-scale: 1.9;
   --font-heading: 'Bitter', serif;
   --font-body: 'Outfit', sans-serif;
   --believe-icon-height: clamp(48px, 4.8vw, 58px);
@@ -9388,6 +9388,9 @@ img.lazy-img.loaded {
   background-color: var(--panel-lavender);
   overflow: visible;
   z-index: 0;
+  padding-right: clamp(0.55rem, 1vw, 0.85rem);
+  padding-left: 0;
+  justify-content: flex-end;
 }
 
 .panel-card__figure-img {
@@ -9405,7 +9408,7 @@ img.lazy-img.loaded {
 
 /* Enlarge council art into the mid gap only; text layout stays unchanged */
 .panel-card--council .panel-card__figure-img {
-  transform: scale(var(--panel-council-figure-scale, 1.55));
+  transform: scale(var(--panel-council-figure-scale, 1.9));
   transform-origin: right center;
 }
 
