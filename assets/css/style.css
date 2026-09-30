@@ -31845,3 +31845,23 @@ body.community-adventures-page .page-hero.community-adventures-hero .hero-image-
 #main-content > section.page-hero.community-adventures-hero .hero-image-wrap {
   margin-bottom: 70px !important;
 }
+
+/* Create for Cause hero: image bottom 70px, text block margin-top -250px */
+@media (min-width: 1024px) {
+  .create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__media,
+  .create-for-cause-page .page-hero.create-for-cause-hero .hero-image-wrap,
+  body.create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__media,
+  body.create-for-cause-page .page-hero.create-for-cause-hero .hero-image-wrap,
+  #main-content > section.page-hero.create-for-cause-hero .creative-makers-hero__media,
+  #main-content > section.page-hero.create-for-cause-hero .hero-image-wrap,
+  .create-for-cause-page .page-hero.create-for-cause-hero .creative-makers-hero__banner,
+  .create-for-cause-page .page-hero.create-for-cause-hero picture img.creative-makers-hero__banner {
+    margin-bottom: 70px !important;
+  }
+
+  .create-for-cause-page .page-hero.create-for-cause-hero .page-hero__content,
+  body.create-for-cause-page .page-hero.create-for-cause-hero .page-hero__content,
+  #main-content > section.page-hero.create-for-cause-hero .page-hero__content {
+    margin-top: -250px !important;
+  }
+}
