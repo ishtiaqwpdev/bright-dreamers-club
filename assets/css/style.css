@@ -4239,64 +4239,34 @@ img.lazy-img.loaded {
 .vision-moments__feature {
   margin: 0;
   min-width: 0;
-  display: flex;
-  align-items: center;
-  gap: clamp(0.35rem, 0.7vw, 0.65rem);
-  padding: clamp(0.55rem, 1vw, 0.85rem);
+  min-height: 0;
   height: var(--vision-moments-gallery-h);
-  border-radius: var(--home-pillar-radius);
-  background-color: var(--vision-moments-bg);
   align-self: end;
-  box-sizing: border-box;
+  border-radius: var(--home-pillar-radius);
   overflow: hidden;
+  background-color: #fff;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
 }
 
-.vision-moments__balloon {
-  margin: 0;
-  flex: 0 1 48%;
-  min-width: 0;
+.vision-moments__feature > .lazy-img-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 100%;
-  max-height: calc(var(--vision-moments-gallery-h) * 1.15);
-  overflow: visible;
+  background-color: #fff;
 }
 
-.vision-moments__balloon-img {
+.vision-moments__feature > .lazy-img-wrap .vision-moments__feature-img,
+.vision-moments__feature-img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center center;
-}
-
-.vision-moments__story {
-  flex: 1 1 52%;
-  min-width: 0;
-  padding: 0;
-  background: transparent;
-  text-align: center;
-}
-
-.vision-moments__feature-title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--vision-moments-feature-title-size);
-  line-height: 1.2;
-  color: var(--color-pink);
-  margin: 0 0 0.45rem;
-}
-
-.vision-moments__feature-text {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: var(--vision-moments-feature-text-size);
-  line-height: 1.35;
-  color: var(--color-navy);
-  margin: 0;
-  overflow-wrap: break-word;
+  border-radius: var(--home-pillar-radius);
 }
 
 .vision-partner {
@@ -26076,38 +26046,32 @@ body.newsletter-success-open {
   }
 
   .our-vision-page .vision-moments__feature.bdc-mobile-carousel__item {
-    aspect-ratio: 4 / 3 !important;
+    aspect-ratio: 16 / 10 !important;
     height: auto !important;
     position: relative !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: clamp(0.45rem, 2vw, 0.75rem) !important;
-    padding: clamp(0.65rem, 3vw, 0.95rem) !important;
-    background-color: var(--vision-moments-bg) !important;
+    display: block !important;
+    padding: 0 !important;
+    background-color: #fff !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
-  .our-vision-page .vision-moments__feature .vision-moments__balloon {
-    flex: 0 1 45% !important;
+  .our-vision-page .vision-moments__feature > .lazy-img-wrap {
+    width: 100% !important;
     height: 100% !important;
-    max-height: none !important;
-    min-height: 0 !important;
-    margin: 0 !important;
+    min-height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #fff !important;
   }
 
-  .our-vision-page .vision-moments__feature .vision-moments__balloon-img {
+  .our-vision-page .vision-moments__feature-img {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     object-position: center center !important;
-  }
-
-  .our-vision-page .vision-moments__feature .vision-moments__story {
-    flex: 1 1 55% !important;
-    padding: 0 !important;
-    background: transparent !important;
-    text-align: center !important;
+    background-color: #fff !important;
   }
 
   .our-vision-page .vision-moments__feature-inner {
@@ -31772,13 +31736,8 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
 
   .vision-moments__feature {
     grid-column: 1 / -1;
-    min-height: clamp(180px, 42vw, 240px) !important;
-  }
-
-  .vision-moments__balloon {
     height: auto !important;
-    min-height: clamp(140px, 36vw, 200px) !important;
-    max-height: none !important;
+    min-height: clamp(180px, 42vw, 240px) !important;
   }
 
   .vision-moments__photo-wrap {
@@ -31789,11 +31748,6 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
 @media (max-width: 767px) {
   .vision-moments__gallery {
     grid-template-columns: 1fr !important;
-  }
-
-  .vision-moments__feature {
-    flex-direction: column;
-    text-align: center;
   }
 }
 
