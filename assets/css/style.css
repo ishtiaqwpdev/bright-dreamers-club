@@ -327,10 +327,9 @@
   --vision-moments-bg: var(--believe-card-peach);
   --vision-moments-card-col: 0.24fr;
   --vision-moments-gallery-col: 0.76fr;
-  --vision-moments-photo-col: 0.16fr;
-  --vision-moments-balloon-col: 0.2fr;
-  --vision-moments-story-col: 0.22fr;
-  --vision-moments-gallery-h: clamp(180px, 18vw, 240px);
+  --vision-moments-photo-col: 0.2fr;
+  --vision-moments-feature-col: 0.4fr;
+  --vision-moments-gallery-h: clamp(200px, 20vw, 260px);
   --vision-moments-feature-title-size: clamp(0.95rem, 1.15vw, 1.2rem);
   --vision-moments-feature-text-size: clamp(0.68rem, 0.78vw, 0.82rem);
   --vision-partner-bg: var(--believe-card-peach);
@@ -4196,12 +4195,11 @@ img.lazy-img.loaded {
   display: grid;
   grid-template-columns:
     minmax(0, var(--vision-moments-photo-col))
-    minmax(0, var(--vision-moments-balloon-col))
-    minmax(0, var(--vision-moments-story-col))
+    minmax(0, var(--vision-moments-feature-col))
     minmax(0, var(--vision-moments-photo-col))
     minmax(0, var(--vision-moments-photo-col));
   gap: clamp(0.35rem, 0.65vw, 0.55rem);
-  align-items: end;
+  align-items: stretch;
   min-width: 0;
   max-width: 100%;
   width: 100%;
@@ -4213,15 +4211,19 @@ img.lazy-img.loaded {
   min-width: 0;
   min-height: 0;
   height: var(--vision-moments-gallery-h);
+  align-self: end;
   border-radius: var(--home-pillar-radius);
   overflow: hidden;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 .vision-moments__photo-wrap > .lazy-img-wrap {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
 
 .vision-moments__photo-wrap > .lazy-img-wrap .vision-moments__photo,
@@ -4229,18 +4231,35 @@ img.lazy-img.loaded {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   border-radius: var(--home-pillar-radius);
 }
 
-.vision-moments__balloon {
+.vision-moments__feature {
   margin: 0;
   min-width: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  gap: clamp(0.35rem, 0.7vw, 0.65rem);
+  padding: clamp(0.55rem, 1vw, 0.85rem);
+  height: var(--vision-moments-gallery-h);
+  border-radius: var(--home-pillar-radius);
+  background-color: var(--vision-moments-bg);
+  align-self: end;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.vision-moments__balloon {
+  margin: 0;
+  flex: 0 1 48%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height: calc(var(--vision-moments-gallery-h) * 1.38);
+  height: 100%;
+  max-height: calc(var(--vision-moments-gallery-h) * 1.15);
   overflow: visible;
 }
 
@@ -4250,15 +4269,14 @@ img.lazy-img.loaded {
   max-width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center center;
 }
 
 .vision-moments__story {
-  align-self: center;
+  flex: 1 1 52%;
   min-width: 0;
-  padding: clamp(0.75rem, 1.2vw, 1.05rem) clamp(0.7rem, 1.1vw, 0.95rem);
-  border-radius: var(--home-pillar-radius);
-  background-color: var(--vision-moments-bg);
+  padding: 0;
+  background: transparent;
   text-align: center;
 }
 
@@ -9921,9 +9939,8 @@ img.lazy-img.loaded {
 @media (max-width: 1400px) {
   :root {
     --vision-moments-card-col: 0.26fr;
-    --vision-moments-photo-col: 0.12fr;
-    --vision-moments-feature-col: 0.56fr;
-    --vision-moments-duo-col: 0.32fr;
+    --vision-moments-photo-col: 0.18fr;
+    --vision-moments-feature-col: 0.46fr;
   }
 }
 
@@ -9935,45 +9952,27 @@ img.lazy-img.loaded {
 
   .vision-moments__gallery {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas:
-      "feature feature"
-      "photo-left duo";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(0.5rem, 1vw, 0.75rem);
     overflow: visible;
     width: 100%;
     max-width: 100%;
-  }
-
-  .vision-moments__gallery > .vision-moments__photo-wrap:first-of-type {
-    grid-area: photo-left;
+    align-items: stretch;
   }
 
   .vision-moments__feature {
-    grid-area: feature;
+    grid-column: 1 / -1;
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 900 / 400;
-  }
-
-  .vision-moments__photo-duo {
-    grid-area: duo;
-    width: 100%;
-    max-width: 100%;
+    min-height: clamp(180px, 28vw, 240px);
     aspect-ratio: auto;
-    overflow: visible;
   }
 
   .vision-moments__photo-wrap {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 3 / 4;
-    height: auto;
-  }
-
-  .vision-moments__photo-duo .vision-moments__photo-wrap {
-    aspect-ratio: 3 / 4;
-    height: auto;
+    height: clamp(180px, 32vw, 240px);
+    aspect-ratio: auto;
   }
 }
 
@@ -11811,10 +11810,7 @@ img.lazy-img.loaded {
 
   .vision-moments__gallery {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas:
-      "feature feature"
-      "photo-left duo";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(0.5rem, 1vw, 0.75rem);
     overflow: visible;
     overscroll-behavior: auto;
@@ -11828,14 +11824,13 @@ img.lazy-img.loaded {
     align-items: stretch;
   }
 
-  .vision-moments__gallery > .vision-moments__photo-wrap:first-of-type {
-    grid-area: photo-left;
+  .vision-moments__photo-wrap {
     flex: none;
     width: 100%;
     max-width: 100%;
     scroll-snap-align: none;
-    height: auto;
-    aspect-ratio: 3 / 4;
+    height: clamp(180px, 36vw, 240px);
+    aspect-ratio: auto;
   }
 
   .vision-moments__photo {
@@ -11844,38 +11839,14 @@ img.lazy-img.loaded {
   }
 
   .vision-moments__feature {
-    grid-area: feature;
+    grid-column: 1 / -1;
     flex: none;
     width: 100%;
     max-width: 100%;
     scroll-snap-align: none;
     height: auto;
-    aspect-ratio: 900 / 400;
-  }
-
-  .vision-moments__photo-duo {
-    grid-area: duo;
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-    scroll-snap-align: none;
-    height: auto;
+    min-height: clamp(180px, 36vw, 240px);
     aspect-ratio: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow: visible;
-  }
-
-  .vision-moments__photo-duo .vision-moments__photo-wrap {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
-
-  .vision-moments__feature-copy {
-    --vision-moments-feature-copy-width: min(54%, 9.75rem);
   }
 
   .vision-moments__feature-title {
@@ -26108,6 +26079,72 @@ body.newsletter-success-open {
     aspect-ratio: 4 / 3 !important;
     height: auto !important;
     position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: clamp(0.45rem, 2vw, 0.75rem) !important;
+    padding: clamp(0.65rem, 3vw, 0.95rem) !important;
+    background-color: var(--vision-moments-bg) !important;
+    box-sizing: border-box !important;
+  }
+
+  .our-vision-page .vision-moments__feature .vision-moments__balloon {
+    flex: 0 1 45% !important;
+    height: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  .our-vision-page .vision-moments__feature .vision-moments__balloon-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .our-vision-page .vision-moments__feature .vision-moments__story {
+    flex: 1 1 55% !important;
+    padding: 0 !important;
+    background: transparent !important;
+    text-align: center !important;
+  }
+
+  .our-vision-page .vision-moments__feature-inner {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  .our-vision-page .vision-moments__feature-inner > .lazy-img-wrap {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  .our-vision-page .vision-moments__feature-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background-color: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  .our-vision-page .vision-moments__feature-copy {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
   }
 
   .our-vision-page .vision-moments__list-slide.bdc-mobile-carousel__item {
@@ -31726,30 +31763,37 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   }
 }
 
-/* Vision moments: new gallery (photo | balloon | story | photo | photo) */
+/* Vision moments: photo | feature | photo | photo */
 @media (max-width: 1023px) {
   .vision-moments__gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     align-items: stretch !important;
   }
 
+  .vision-moments__feature {
+    grid-column: 1 / -1;
+    min-height: clamp(180px, 42vw, 240px) !important;
+  }
+
   .vision-moments__balloon {
     height: auto !important;
-    min-height: clamp(160px, 40vw, 220px) !important;
+    min-height: clamp(140px, 36vw, 200px) !important;
+    max-height: none !important;
   }
 
   .vision-moments__photo-wrap {
     height: clamp(160px, 40vw, 220px) !important;
-  }
-
-  .vision-moments__story {
-    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 767px) {
   .vision-moments__gallery {
     grid-template-columns: 1fr !important;
+  }
+
+  .vision-moments__feature {
+    flex-direction: column;
+    text-align: center;
   }
 }
 

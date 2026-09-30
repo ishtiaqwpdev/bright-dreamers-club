@@ -816,29 +816,30 @@ $vision_together_support_btn_link = bdc_get_acf_link(
               </div>
             </figure>
 
-            <figure class="vision-moments__balloon">
-              <img
-                class="vision-moments__balloon-img"
-                src="<?php echo esc_url( $vision_moments_balloon_url ); ?>"
-                alt=""
-                width="280"
-                height="320"
-                loading="lazy"
-                decoding="async"
-                aria-hidden="true"
-              />
-            </figure>
-
-            <aside class="vision-moments__story">
-              <?php if ( '' !== trim( $vision_moments_feature_title ) ) : ?>
-              <p class="vision-moments__feature-title"><?php echo esc_html( $vision_moments_feature_title ); ?></p>
-              <?php endif; ?>
-              <?php if ( '' !== trim( $vision_moments_feature_text ) ) : ?>
-              <p class="vision-moments__feature-text">
-                <?php echo esc_html( $vision_moments_feature_text ); ?>
-              </p>
-              <?php endif; ?>
-            </aside>
+            <article class="vision-moments__feature">
+              <figure class="vision-moments__balloon">
+                <img
+                  class="vision-moments__balloon-img"
+                  src="<?php echo esc_url( $vision_moments_balloon_url ); ?>"
+                  alt=""
+                  width="280"
+                  height="320"
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="vision-moments__story">
+                <?php if ( '' !== trim( $vision_moments_feature_title ) ) : ?>
+                <p class="vision-moments__feature-title"><?php echo esc_html( $vision_moments_feature_title ); ?></p>
+                <?php endif; ?>
+                <?php if ( '' !== trim( $vision_moments_feature_text ) ) : ?>
+                <p class="vision-moments__feature-text">
+                  <?php echo esc_html( $vision_moments_feature_text ); ?>
+                </p>
+                <?php endif; ?>
+              </div>
+            </article>
 
             <figure class="vision-moments__photo-wrap">
               <div class="lazy-img-wrap">
