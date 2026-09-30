@@ -31630,3 +31630,20 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
     padding-left: 0 !important;
   }
 }
+
+/* Get Involved + Contact: force hero heading 48px (desktop) */
+@media (min-width: 1024px) {
+  body.get-involved-page .page-hero.get-involved-hero .hero-headline,
+  body.get-involved-page .page-hero.get-involved-hero .get-involved-hero__title,
+  body.get-involved-page .page-hero.get-involved-hero .hero-headline .get-involved-hero__title-line,
+  body.get-involved-page .page-hero.get-involved-hero .get-involved-hero__title-line,
+  body.get-involved-page #main-content > section.page-hero.get-involved-hero .hero-headline,
+  body.contact-page .page-hero.contact-hero .hero-headline,
+  body.contact-page .page-hero.contact-hero .contact-hero__title,
+  body.contact-page .page-hero.contact-hero .hero-headline .contact-hero__title-line,
+  body.contact-page .page-hero.contact-hero .contact-hero__title-line,
+  body.contact-page #main-content > section.page-hero.contact-hero .hero-headline {
+    font-size: 48px !important;
+    line-height: 1.08 !important;
+  }
+}
