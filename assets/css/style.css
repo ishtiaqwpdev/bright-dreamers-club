@@ -4508,6 +4508,7 @@ img.lazy-img.loaded {
   letter-spacing: -0.02em;
   color: var(--color-navy);
   margin: 0 0 clamp(0.65rem, 1vw, 0.85rem);
+  margin-left: -20px;
 }
 
 .vision-together__title-icon {
