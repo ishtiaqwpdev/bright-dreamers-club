@@ -20,12 +20,12 @@ $get_involved_hero_eyebrow = bdc_get_acf_text(
 );
 $get_involved_hero_title_line_1 = bdc_get_acf_text(
 	'get_involved_hero_title_line_1',
-	'Get Involved.',
+	'Get Involved',
 	$get_involved_page_id
 );
 $get_involved_hero_title_line_2 = bdc_get_acf_text(
 	'get_involved_hero_title_line_2',
-	'Make a Brighter Tomorrow.',
+	'Make a Brighter Tomorrow',
 	$get_involved_page_id
 );
 $get_involved_hero_text = bdc_get_acf_text(
@@ -35,9 +35,12 @@ $get_involved_hero_text = bdc_get_acf_text(
 );
 /* Prefer the new hero copy when ACF still has the old split title/body fields. */
 if ( 'Get' === trim( (string) $get_involved_hero_title_line_1 ) || 'Involved' === trim( (string) $get_involved_hero_title_line_2 ) ) {
-	$get_involved_hero_title_line_1 = 'Get Involved.';
-	$get_involved_hero_title_line_2 = 'Make a Brighter Tomorrow.';
+	$get_involved_hero_title_line_1 = 'Get Involved';
+	$get_involved_hero_title_line_2 = 'Make a Brighter Tomorrow';
 }
+/* Remove trailing periods on hero title lines. */
+$get_involved_hero_title_line_1 = rtrim( (string) $get_involved_hero_title_line_1, ". \t" );
+$get_involved_hero_title_line_2 = rtrim( (string) $get_involved_hero_title_line_2, ". \t" );
 $get_involved_hero_text_legacy_intro = bdc_get_acf_text(
 	'get_involved_hero_text_intro',
 	'',
