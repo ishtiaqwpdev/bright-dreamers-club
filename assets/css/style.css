@@ -7004,11 +7004,10 @@ img.lazy-img.loaded {
   background-color: var(--explore-dream-bg);
   border-radius: var(--explore-dream-radius);
   padding: var(--explore-dream-pad);
-  padding-bottom: 0;
 }
 
 .explore-dream.section-padding {
-  padding-bottom: 0;
+  padding-bottom: var(--explore-section-pad-bottom);
 }
 
 .explore-dream__grid {
