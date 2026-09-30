@@ -31943,3 +31943,29 @@ body.community-adventures-page .page-hero.community-adventures-hero .hero-image-
     margin-top: -130px !important;
   }
 }
+
+/* Our Vision together: hide dots, pull title closer to tree */
+@media (min-width: 1024px) {
+  .our-vision-page .vision-together__stars,
+  .vision-together__stars {
+    display: none !important;
+  }
+
+  .our-vision-page .vision-together__grid,
+  .vision-together__grid {
+    grid-template-columns: auto minmax(0, 1.05fr) minmax(0, 0.78fr) minmax(0, 0.95fr) !important;
+    column-gap: var(--vision-together-card-pad-left) !important;
+    gap: clamp(0.55rem, 1vw, 0.9rem) var(--vision-together-card-pad-left) !important;
+  }
+
+  .our-vision-page .vision-together__jar-wrap,
+  .vision-together__jar-wrap {
+    width: auto !important;
+    max-width: var(--vision-together-jar-max) !important;
+  }
+
+  .our-vision-page .vision-together__title,
+  .vision-together__title {
+    margin-left: 0 !important;
+  }
+}
