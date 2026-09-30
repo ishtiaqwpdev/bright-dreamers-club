@@ -167,7 +167,7 @@ $contact_cta_aria_label = bdc_get_acf_text(
 	'See our vision',
 	$contact_page_id
 );
-$contact_cta_door_theme_path = 'assets/images/contact-cta-door.jpeg';
+$contact_cta_door_theme_path = 'assets/images/contact-cta-door.png';
 $contact_cta_door_url        = bdc_get_acf_image_url(
 	'contact_cta_door',
 	bdc_theme_asset_url( $contact_cta_door_theme_path ),
