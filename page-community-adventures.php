@@ -89,11 +89,12 @@ $community_adventures_hero_back_link = bdc_get_acf_link(
 	),
 	$community_adventures_page_id
 );
-$community_adventures_hero_banner_url = bdc_get_acf_image_url(
-	'community_adventures_hero_banner',
-	bdc_theme_asset_url( 'assets/images/community-adventures-hero-banner.jpeg' ),
-	$community_adventures_page_id
-);
+$community_adventures_hero_banner_theme_path = 'assets/images/community-adventures-hero-banner.jpeg';
+$community_adventures_hero_banner_url        = bdc_theme_asset_url( $community_adventures_hero_banner_theme_path );
+$community_adventures_hero_banner_ver        = bdc_asset_version( $community_adventures_hero_banner_theme_path );
+if ( $community_adventures_hero_banner_ver ) {
+	$community_adventures_hero_banner_url = add_query_arg( 'v', $community_adventures_hero_banner_ver, $community_adventures_hero_banner_url );
+}
 $community_adventures_hero_banner_mobile_url = bdc_theme_asset_url( 'assets/images/community-adventures-hero-banner-mobile.jpg' );
 $community_adventures_hero_banner_mobile_ver = bdc_asset_version( 'assets/images/community-adventures-hero-banner-mobile.jpg' );
 if ( $community_adventures_hero_banner_mobile_ver ) {

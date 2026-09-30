@@ -31591,3 +31591,16 @@ body.for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner
   background: #ffffff !important;
   background-color: #ffffff !important;
 }
+
+/* Community Adventures: pure white behind hero banner */
+body.community-adventures-page .page-hero.community-adventures-hero,
+body.community-adventures-page .page-hero.community-adventures-hero .page-hero__inner,
+body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+body.community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero .lazy-img-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero picture,
+body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__banner,
+body.community-adventures-page .page-hero.community-adventures-hero picture img.creative-makers-hero__banner {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
