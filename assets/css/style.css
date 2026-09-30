@@ -47,7 +47,7 @@
   --panel-bg-size: clamp(160px, 20vw, 200px) auto;
   --panel-bg-position: right center;
   --panel-journey-content-max: 54%;
-  --panel-council-figure-width: 185px;
+  --panel-council-figure-width: clamp(280px, 32vw, 360px);
   --font-heading: 'Bitter', serif;
   --font-body: 'Outfit', sans-serif;
   --believe-icon-height: clamp(48px, 4.8vw, 58px);
@@ -9408,19 +9408,18 @@ img.lazy-img.loaded {
 
 .panel-card--council .panel-card__figure {
   background-color: var(--panel-lavender);
+  justify-content: flex-end;
+  padding-left: clamp(0.25rem, 0.6vw, 0.5rem);
 }
 
-.panel-card__figure-img {
+.panel-card--council .panel-card__figure-img,
+.panel-card--council .panel-card__figure .lazy-img-wrap {
   display: block;
   width: var(--panel-council-figure-width);
   max-width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.panel-card__figure .lazy-img-wrap {
-  width: var(--panel-council-figure-width);
-  max-width: 100%;
+  object-position: center center;
 }
 
 .panel-card--role,
