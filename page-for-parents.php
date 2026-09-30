@@ -96,7 +96,7 @@ if ( $for_parents_hero_banner_mobile_ver ) {
 }
 $for_parents_hero_banner_alt = bdc_get_acf_text(
 	'for_parents_hero_banner_alt',
-	'A mother and daughter drawing together at a table with colored pencils',
+	'A mother and son learning together at a desk with books and colored pencils',
 	$for_parents_page_id
 );
 
