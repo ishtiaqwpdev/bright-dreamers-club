@@ -327,9 +327,10 @@
   --vision-moments-bg: var(--believe-card-peach);
   --vision-moments-card-col: 0.24fr;
   --vision-moments-gallery-col: 0.76fr;
-  --vision-moments-photo-col: 0.2fr;
-  --vision-moments-feature-col: 0.4fr;
+  --vision-moments-photo-col: 0.17fr;
+  --vision-moments-feature-col: 0.49fr;
   --vision-moments-gallery-h: clamp(200px, 20vw, 260px);
+  --vision-moments-feature-h: clamp(280px, 28vw, 360px);
   --vision-moments-feature-title-size: clamp(0.95rem, 1.15vw, 1.2rem);
   --vision-moments-feature-text-size: clamp(0.68rem, 0.78vw, 0.82rem);
   --vision-partner-bg: var(--believe-card-peach);
@@ -4199,11 +4200,11 @@ img.lazy-img.loaded {
     minmax(0, var(--vision-moments-photo-col))
     minmax(0, var(--vision-moments-photo-col));
   gap: clamp(0.35rem, 0.65vw, 0.55rem);
-  align-items: stretch;
+  align-items: end;
   min-width: 0;
   max-width: 100%;
   width: 100%;
-  min-height: var(--vision-moments-gallery-h);
+  min-height: var(--vision-moments-feature-h);
 }
 
 .vision-moments__photo-wrap {
@@ -4240,10 +4241,10 @@ img.lazy-img.loaded {
   margin: 0;
   min-width: 0;
   min-height: 0;
-  height: var(--vision-moments-gallery-h);
+  height: var(--vision-moments-feature-h);
   align-self: end;
   border-radius: var(--home-pillar-radius);
-  overflow: hidden;
+  overflow: visible;
   background-color: #fff;
   padding: 0;
   display: block;
@@ -9909,8 +9910,9 @@ img.lazy-img.loaded {
 @media (max-width: 1400px) {
   :root {
     --vision-moments-card-col: 0.26fr;
-    --vision-moments-photo-col: 0.18fr;
-    --vision-moments-feature-col: 0.46fr;
+    --vision-moments-photo-col: 0.15fr;
+    --vision-moments-feature-col: 0.55fr;
+    --vision-moments-feature-h: clamp(260px, 30vw, 340px);
   }
 }
 
