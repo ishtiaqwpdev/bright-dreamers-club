@@ -31611,3 +31611,21 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
     gap: 0 !important;
   }
 }
+
+/* Explore dream: jar (plane) ? CTA buttons gap = 0 */
+@media (min-width: 1024px) {
+  .explore-page .explore-dream__grid {
+    /* Keep gaps between lead / checklist / jar; cancel only before actions */
+    column-gap: clamp(1.75rem, 3.5vw, 3.25rem);
+  }
+
+  .explore-page .explore-dream__jar-wrap {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .explore-page .explore-dream__actions {
+    margin-left: calc(-1 * clamp(1.75rem, 3.5vw, 3.25rem)) !important;
+    padding-left: 0 !important;
+  }
+}
