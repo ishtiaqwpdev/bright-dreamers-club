@@ -31824,4 +31824,24 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
     gap: 20px !important;
     column-gap: 20px !important;
   }
+
+  .community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+  .community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
+  .page-hero.community-adventures-hero .creative-makers-hero__media,
+  .page-hero.community-adventures-hero .hero-image-wrap,
+  body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__banner,
+  .community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__banner,
+  .community-adventures-page .page-hero.community-adventures-hero picture img.creative-makers-hero__banner {
+    margin-bottom: 70px !important;
+  }
+}
+
+/* Community Adventures hero image: 70px bottom margin */
+.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+.community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
+body.community-adventures-page .page-hero.community-adventures-hero .creative-makers-hero__media,
+body.community-adventures-page .page-hero.community-adventures-hero .hero-image-wrap,
+#main-content > section.page-hero.community-adventures-hero .creative-makers-hero__media,
+#main-content > section.page-hero.community-adventures-hero .hero-image-wrap {
+  margin-bottom: 70px !important;
 }
