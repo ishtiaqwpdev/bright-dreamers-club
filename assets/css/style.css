@@ -9625,6 +9625,25 @@ img.lazy-img.loaded {
   margin: 0 0 0.85rem;
 }
 
+.panel-card__title--council {
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.panel-card__title-lines {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.panel-card__title-line {
+  display: block;
+}
+
+.panel-card__title--council .panel-card__title-icon {
+  margin-top: 0.15em;
+}
+
 .panel-card__title-icon {
   flex-shrink: 0;
 }

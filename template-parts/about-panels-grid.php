@@ -78,8 +78,26 @@ $about_approach_last_key  = end( $about_approach_step_keys );
 
             <article class="panel-card panel-card--council">
               <div class="panel-card__content">
-                <h3 class="panel-card__title">
-                  <?php echo esc_html( (string) $about_panel_council['title'] ); ?>
+                <?php
+                $about_council_title       = trim( (string) $about_panel_council['title'] );
+                $about_council_title_line1 = $about_council_title;
+                $about_council_title_line2 = '';
+                if ( preg_match( '/^(Young Dreamers)\s+(Council)$/i', $about_council_title, $about_council_title_parts ) ) {
+                  $about_council_title_line1 = $about_council_title_parts[1];
+                  $about_council_title_line2 = $about_council_title_parts[2];
+                } elseif ( false !== strpos( $about_council_title, ' ' ) ) {
+                  $about_council_title_bits  = preg_split( '/\s+/', $about_council_title );
+                  $about_council_title_line2 = (string) array_pop( $about_council_title_bits );
+                  $about_council_title_line1 = implode( ' ', $about_council_title_bits );
+                }
+                ?>
+                <h3 class="panel-card__title panel-card__title--council">
+                  <span class="panel-card__title-lines">
+                    <span class="panel-card__title-line"><?php echo esc_html( $about_council_title_line1 ); ?></span>
+                    <?php if ( '' !== $about_council_title_line2 ) : ?>
+                    <span class="panel-card__title-line"><?php echo esc_html( $about_council_title_line2 ); ?></span>
+                    <?php endif; ?>
+                  </span>
                   <svg
                     class="panel-card__title-icon panel-card__title-icon--star"
                     viewBox="0 0 24 24"
