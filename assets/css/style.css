@@ -9407,19 +9407,27 @@ img.lazy-img.loaded {
 }
 
 .panel-card--council .panel-card__figure {
+  align-self: stretch;
+  width: var(--panel-council-figure-width);
+  max-width: 42%;
   background-color: var(--panel-lavender);
   justify-content: flex-end;
-  padding-left: clamp(0.25rem, 0.6vw, 0.5rem);
+  align-items: center;
+  padding: clamp(0.45rem, 0.9vw, 0.75rem);
+  padding-left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .panel-card--council .panel-card__figure-img,
 .panel-card--council .panel-card__figure .lazy-img-wrap {
   display: block;
-  width: var(--panel-council-figure-width);
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 100%;
   object-fit: contain;
-  object-position: center center;
+  object-position: right center;
 }
 
 .panel-card--role,
