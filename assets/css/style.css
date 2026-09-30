@@ -5417,7 +5417,7 @@ img.lazy-img.loaded {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   align-items: center;
-  gap: clamp(0.55rem, 1vw, 0.85rem);
+  gap: 0;
   min-width: 0;
 }
 
@@ -5434,6 +5434,7 @@ img.lazy-img.loaded {
   justify-self: end;
   width: 100%;
   max-width: var(--get-involved-impact-illustration-max);
+  margin-left: -20px;
 }
 
 .get-involved-timeline {
