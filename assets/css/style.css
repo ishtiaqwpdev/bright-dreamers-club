@@ -7614,6 +7614,10 @@ img.lazy-img.loaded {
   gap: clamp(1rem, 2.2vw, 2rem);
   padding: clamp(1.15rem, 2.2vw, 1.75rem) clamp(1.35rem, 2.8vw, 2.5rem);
   background-color: var(--contact-cta-bg);
+  background-image: url('../images/contact-cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: var(--contact-cta-radius);
 }
 

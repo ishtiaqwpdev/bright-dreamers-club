@@ -177,6 +177,12 @@ $contact_cta_door_ver = bdc_asset_version( $contact_cta_door_theme_path );
 if ( $contact_cta_door_ver && false !== strpos( (string) $contact_cta_door_url, 'contact-cta-door' ) ) {
 	$contact_cta_door_url = add_query_arg( 'v', $contact_cta_door_ver, $contact_cta_door_url );
 }
+$contact_cta_bg_theme_path = 'assets/images/contact-cta-bg.jpg';
+$contact_cta_bg_url        = bdc_theme_asset_url( $contact_cta_bg_theme_path );
+$contact_cta_bg_ver        = bdc_asset_version( $contact_cta_bg_theme_path );
+if ( $contact_cta_bg_ver ) {
+	$contact_cta_bg_url = add_query_arg( 'v', $contact_cta_bg_ver, $contact_cta_bg_url );
+}
 $contact_cta_btn_text = bdc_get_acf_text(
 	'contact_cta_btn_text',
 	'See Our Vision',
@@ -477,7 +483,10 @@ $contact_cta_btn_link = bdc_get_acf_link(
 
       <section class="contact-cta" aria-label="<?php echo esc_attr( $contact_cta_aria_label ); ?>">
         <div class="site-container contact-cta__inner">
-          <div class="contact-cta__card">
+          <div
+            class="contact-cta__card"
+            style="background-image: url('<?php echo esc_url( $contact_cta_bg_url ); ?>');"
+          >
             <?php if ( '' !== trim( (string) $contact_cta_door_url ) ) : ?>
             <img
               class="contact-cta__door"
