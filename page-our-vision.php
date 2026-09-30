@@ -481,6 +481,10 @@ $vision_together_jar_url = bdc_get_acf_image_url(
 	bdc_theme_asset_url( 'assets/images/vision-together-jar.png' ),
 	$vision_page_id
 );
+$vision_together_jar_ver = bdc_asset_version( 'assets/images/vision-together-jar.png' );
+if ( $vision_together_jar_ver && false !== strpos( (string) $vision_together_jar_url, 'vision-together-jar' ) ) {
+	$vision_together_jar_url = add_query_arg( 'v', $vision_together_jar_ver, $vision_together_jar_url );
+}
 $vision_together_stars_url = bdc_get_acf_image_url(
 	'vision_together_stars',
 	bdc_theme_asset_url( 'assets/images/for-parents-expect-stars.png' ),
