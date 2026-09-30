@@ -552,12 +552,15 @@ $contact_cta_btn_link = bdc_get_acf_link(
               <?php echo esc_html( $contact_cta_btn_text ); ?>
               <svg
                 class="btn__icon"
-                viewBox="0 0 24 24"
+                viewBox="-1 -1 26 26"
                 width="18"
                 height="18"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                overflow="visible"
                 aria-hidden="true"
               >
                 <path
