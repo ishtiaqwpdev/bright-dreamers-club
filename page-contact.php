@@ -163,14 +163,15 @@ $contact_cta_aria_label = bdc_get_acf_text(
 	'See our vision',
 	$contact_page_id
 );
-$contact_cta_door_url = bdc_get_acf_image_url(
-	'contact_cta_door',
-	bdc_theme_asset_url( 'assets/images/contact-cta-door.jpeg' ),
-	$contact_page_id
-);
-$contact_cta_text = bdc_get_acf_text(
-	'contact_cta_text',
-	'Together, we can open doors for young ideas and create lasting change.',
+$contact_cta_banner_theme_path = 'assets/images/contact-cta-banner.jpg';
+$contact_cta_banner_url        = bdc_theme_asset_url( $contact_cta_banner_theme_path );
+$contact_cta_banner_ver        = bdc_asset_version( $contact_cta_banner_theme_path );
+if ( $contact_cta_banner_ver ) {
+	$contact_cta_banner_url = add_query_arg( 'v', $contact_cta_banner_ver, $contact_cta_banner_url );
+}
+$contact_cta_banner_alt = bdc_get_acf_text(
+	'contact_cta_banner_alt',
+	'Together, we can open doors for young ideas and create lasting change. See Our Vision.',
 	$contact_page_id
 );
 $contact_cta_btn_text = bdc_get_acf_text(
@@ -473,83 +474,34 @@ $contact_cta_btn_link = bdc_get_acf_link(
 
       <section class="contact-cta" aria-label="<?php echo esc_attr( $contact_cta_aria_label ); ?>">
         <div class="site-container contact-cta__inner">
-          <div class="contact-cta__card">
-            <?php if ( '' !== trim( $contact_cta_door_url ) ) : ?>
+          <?php if ( ! empty( $contact_cta_btn_link['url'] ) ) : ?>
+          <a
+            class="contact-cta__banner-link"
+            href="<?php echo esc_url( $contact_cta_btn_link['url'] ); ?>"
+            <?php echo bdc_acf_link_target_attr( $contact_cta_btn_link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+          >
             <img
-              class="contact-cta__door"
-              src="<?php echo esc_url( $contact_cta_door_url ); ?>"
-              alt=""
-              width="167"
-              height="107"
+              class="contact-cta__banner"
+              src="<?php echo esc_url( $contact_cta_banner_url ); ?>"
+              alt="<?php echo esc_attr( $contact_cta_banner_alt ); ?>"
+              width="1600"
+              height="533"
               loading="lazy"
               decoding="async"
             />
-            <?php endif; ?>
-
-            <div class="contact-cta__content">
-              <?php if ( '' !== trim( $contact_cta_text ) ) : ?>
-              <h2 class="contact-cta__text">
-                <?php echo esc_html( $contact_cta_text ); ?>
-              </h2>
-              <?php endif; ?>
-
-              <div class="contact-cta__deco" aria-hidden="true">
-                <svg
-                  class="contact-cta__heart"
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="none"
-                  stroke="var(--color-pink)"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                  />
-                </svg>
-                <svg
-                  class="contact-cta__star"
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="none"
-                  stroke="var(--color-yellow)"
-                  stroke-width="1.8"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M12 2.8l2.55 5.35 5.85.7-4.35 3.95 1.2 5.75L12 15.7l-5.25 2.85 1.2-5.75-4.35-3.95 5.85-.7L12 2.8z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <?php if ( ! empty( $contact_cta_btn_link['url'] ) && '' !== trim( $contact_cta_btn_text ) ) : ?>
-            <a
-              class="btn btn--outline btn--lg btn-hover contact-cta__btn"
-              href="<?php echo esc_url( $contact_cta_btn_link['url'] ); ?>"
-              <?php echo bdc_acf_link_target_attr( $contact_cta_btn_link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-            >
-              <?php echo esc_html( $contact_cta_btn_text ); ?>
-              <svg
-                class="btn__icon"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                />
-              </svg>
-            </a>
-            <?php endif; ?>
-          </div>
+            <span class="visually-hidden"><?php echo esc_html( $contact_cta_btn_text ); ?></span>
+          </a>
+          <?php else : ?>
+          <img
+            class="contact-cta__banner"
+            src="<?php echo esc_url( $contact_cta_banner_url ); ?>"
+            alt="<?php echo esc_attr( $contact_cta_banner_alt ); ?>"
+            width="1600"
+            height="533"
+            loading="lazy"
+            decoding="async"
+          />
+          <?php endif; ?>
         </div>
       </section>
     </main>

@@ -7517,65 +7517,34 @@ img.lazy-img.loaded {
 
 .contact-cta__inner {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.contact-cta__card {
-  display: flex;
-  align-items: center;
-  gap: clamp(1rem, 2.2vw, 2rem);
-  padding: clamp(1.15rem, 2.2vw, 1.75rem) clamp(1.35rem, 2.8vw, 2.5rem);
-  background-color: var(--contact-cta-bg);
+.contact-cta__banner-link {
+  display: block;
+  width: 100%;
+  line-height: 0;
   border-radius: var(--contact-cta-radius);
-  animation: rise-in 0.65s ease both;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.contact-cta__door {
-  flex: 0 0 auto;
-  width: var(--contact-cta-door-width);
-  max-width: none;
+.contact-cta__banner-link:focus-visible {
+  outline: 3px solid var(--color-pink);
+  outline-offset: 3px;
+}
+
+.contact-cta__banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: contain;
+  border-radius: var(--contact-cta-radius);
 }
 
-.contact-cta__content {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  gap: clamp(0.55rem, 1.2vw, 1rem);
-  min-width: 0;
-}
-
-.contact-cta__text {
-  flex: 0 1 auto;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--contact-cta-text-size);
-  line-height: 1.38;
-  letter-spacing: -0.01em;
-  color: var(--color-navy);
-  margin: 0;
-  max-width: var(--contact-cta-text-max-w);
-}
-
-.contact-cta__deco {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  flex-shrink: 0;
-  padding-top: 0.15rem;
-}
-
-.contact-cta__heart,
-.contact-cta__star {
-  flex-shrink: 0;
-}
-
-.contact-cta__btn {
-  flex: 0 0 auto;
-  margin-left: auto;
-  white-space: nowrap;
+/* Legacy card pieces kept inert if referenced elsewhere */
+.contact-cta__card {
+  display: none;
 }
 
 /* ??? Creative Makers (program page) ??? */
@@ -31645,5 +31614,22 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   body.contact-page #main-content > section.page-hero.contact-hero .hero-headline {
     font-size: 48px !important;
     line-height: 1.08 !important;
+  }
+}
+
+/* Contact last CTA: full design banner */
+.contact-cta__banner-link,
+.contact-cta__banner {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 1023px) {
+  .contact-cta__card {
+    display: none !important;
+  }
+
+  .contact-cta__inner {
+    padding-bottom: 1.5rem !important;
   }
 }
