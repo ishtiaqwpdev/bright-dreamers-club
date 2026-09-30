@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                   <?php continue; ?>
                 <?php endif; ?>
               <article class="partners-impact-card">
-                <div class="lazy-img-wrap lazy-img-wrap--cover">
+                <div class="lazy-img-wrap">
                   <img
                     class="partners-impact-card__photo lazy-img"
                     src="<?php echo esc_attr( $partners_hero_lazy_placeholder ); ?>"

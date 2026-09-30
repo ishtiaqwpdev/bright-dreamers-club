@@ -5005,21 +5005,28 @@ img.lazy-img.loaded {
 .partners-impact-card__photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
   border-radius: var(--experience-photo-radius);
-  margin-bottom: clamp(0.7rem, 1vw, 0.9rem);
 }
 
-.partners-impact-card > .lazy-img-wrap--cover {
+.partners-impact-card > .lazy-img-wrap {
   margin-bottom: clamp(0.7rem, 1vw, 0.9rem);
   width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--experience-photo-radius);
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.partners-impact-card > .lazy-img-wrap--cover .partners-impact-card__photo {
+.partners-impact-card > .lazy-img-wrap .partners-impact-card__photo {
   aspect-ratio: auto;
-  border-radius: 0;
   margin-bottom: 0;
+  border-radius: 0;
 }
 
 .partners-impact-card__title {
@@ -31744,4 +31751,30 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   .vision-moments__gallery {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Partners impact cards: equal size, no image crop */
+.partners-impact__grid {
+  align-items: stretch !important;
+}
+
+.partners-impact-card {
+  flex: 1 1 0 !important;
+  max-width: none !important;
+}
+
+.partners-impact-card > .lazy-img-wrap,
+.partners-impact-card > .lazy-img-wrap--cover {
+  aspect-ratio: 4 / 3 !important;
+  height: auto !important;
+  background-color: #fff !important;
+}
+
+.partners-impact-card__photo,
+.partners-impact-card > .lazy-img-wrap .partners-impact-card__photo,
+.partners-impact-card > .lazy-img-wrap--cover .partners-impact-card__photo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
 }
