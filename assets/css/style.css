@@ -31578,3 +31578,16 @@ body.get-involved-page .page-hero.get-involved-hero .page-hero__content .hero-ct
     margin-top: -120px !important;
   }
 }
+
+/* For Parents: pure white behind hero banner (no grey panel) */
+body.for-parents-page .page-hero.for-parents-hero,
+body.for-parents-page .page-hero.for-parents-hero .page-hero__inner,
+body.for-parents-page .page-hero.for-parents-hero .about-hero__media,
+body.for-parents-page .page-hero.for-parents-hero .hero-image-wrap,
+body.for-parents-page .page-hero.for-parents-hero .lazy-img-wrap,
+body.for-parents-page .page-hero.for-parents-hero picture,
+body.for-parents-page .page-hero.for-parents-hero .about-hero__banner,
+body.for-parents-page .page-hero.for-parents-hero picture img.about-hero__banner {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}

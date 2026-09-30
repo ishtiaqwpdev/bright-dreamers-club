@@ -82,7 +82,7 @@ $for_parents_hero_secondary_btn_link = bdc_get_acf_link(
 	),
 	$for_parents_page_id
 );
-$for_parents_hero_banner_theme_path = 'assets/images/for-parents-hero-banner.jpg';
+$for_parents_hero_banner_theme_path = 'assets/images/for-parents-hero-banner.png';
 $for_parents_hero_banner_url        = bdc_theme_asset_url( $for_parents_hero_banner_theme_path );
 $for_parents_hero_banner_ver        = bdc_asset_version( $for_parents_hero_banner_theme_path );
 if ( $for_parents_hero_banner_ver ) {
