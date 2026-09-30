@@ -404,9 +404,9 @@ $get_involved_partner_cta_deco_url = bdc_get_acf_image_url(
 
       <section class="get-involved-impact section-padding" aria-labelledby="get-involved-impact-title">
         <div class="site-container">
-          <div class="get-involved-impact__card">
-            <div class="get-involved-impact__inner">
-              <div class="get-involved-impact__copy">
+          <div class="get-involved-impact__card bdc-balance-banner">
+            <div class="get-involved-impact__inner bdc-balance-banner__row">
+              <div class="get-involved-impact__copy bdc-balance-banner__copy">
                 <h2 class="get-involved-impact__title" id="get-involved-impact-title">
                   <?php if ( '' !== trim( $get_involved_impact_title_line_1 ) ) : ?>
                   <span class="get-involved-impact__title-line get-involved-impact__title-line--navy"><?php echo esc_html( $get_involved_impact_title_line_1 ); ?></span>

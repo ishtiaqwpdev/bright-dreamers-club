@@ -203,11 +203,16 @@
   --partners-founding-icon-size: clamp(68px, 6.5vw, 84px);
   --partners-founding-card-title-size: clamp(0.92rem, 1vw, 1.08rem);
   --partners-founding-card-text-size: clamp(0.9rem, 0.98vw, 1.02rem);
-  --get-involved-impact-copy-col: 0.32fr;
-  --get-involved-impact-visual-col: 0.68fr;
-  --get-involved-timeline-icon-size: clamp(46px, 4.4vw, 58px);
-  --get-involved-timeline-rail-width: clamp(16px, 1.5vw, 22px);
-  --get-involved-impact-illustration-max: clamp(190px, 22vw, 290px);
+  --get-involved-impact-copy-col: minmax(0, 0.3fr);
+  --get-involved-impact-mid-col: minmax(0, 0.4fr);
+  --get-involved-impact-visual-col: minmax(0, 0.3fr);
+  --get-involved-timeline-icon-size: 48px;
+  --get-involved-timeline-rail-width: 14px;
+  --get-involved-impact-illustration-max: min(100%, 290px);
+  --bdc-balance-banner-pad-y: 40px;
+  --bdc-balance-banner-pad-x: 48px;
+  --bdc-balance-banner-gap: 32px;
+  --bdc-balance-banner-step-gap: 14px;
   --get-involved-partner-cta-envelope-width: clamp(120px, 13vw, 175px);
   --get-involved-partner-cta-deco-width: clamp(88px, 9vw, 118px);
   --get-involved-partner-cta-pad-y: clamp(1rem, 1.85vw, 1.55rem);
@@ -5345,18 +5350,52 @@ img.lazy-img.loaded {
   background-color: #fff;
 }
 
-.get-involved-impact__card {
+.get-involved-impact__card,
+.bdc-balance-banner {
   background-color: var(--believe-card-peach);
   border-radius: var(--home-pillar-radius);
-  padding: clamp(1rem, 1.65vw, 1.45rem);
+  padding: var(--bdc-balance-banner-pad-y) var(--bdc-balance-banner-pad-x);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.get-involved-impact__inner {
-  display: grid;
-  grid-template-columns: minmax(0, var(--get-involved-impact-copy-col))
-    minmax(0, var(--get-involved-impact-visual-col));
+.get-involved-impact__inner,
+.bdc-balance-banner__row {
+  display: flex;
   align-items: center;
-  gap: clamp(0.85rem, 1.55vw, 1.35rem);
+  justify-content: space-between;
+  gap: var(--bdc-balance-banner-gap);
+  min-width: 0;
+  width: 100%;
+}
+
+.get-involved-impact__copy,
+.bdc-balance-banner__copy {
+  flex: 0 1 30%;
+  min-width: 0;
+  max-width: 30%;
+}
+
+.get-involved-timeline,
+.bdc-balance-banner__mid {
+  flex: 1 1 40%;
+  min-width: 0;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.2vw, 1rem);
+  margin: 0;
+}
+
+.bdc-balance-banner__media,
+.get-involved-impact__inner > .lazy-img-wrap {
+  flex: 0 1 30%;
+  min-width: 0;
+  max-width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
 }
 
 .get-involved-impact__title {
@@ -5386,7 +5425,7 @@ img.lazy-img.loaded {
   line-height: 1.55;
   color: var(--color-navy);
   margin: 0 0 clamp(0.85rem, 1.25vw, 1.05rem);
-  max-width: 24rem;
+  max-width: none;
 }
 
 .get-involved-impact__note {
@@ -5396,7 +5435,7 @@ img.lazy-img.loaded {
   background-color: var(--believe-card-yellow);
   border-radius: var(--experience-card-radius);
   padding: clamp(0.65rem, 1vw, 0.85rem) clamp(0.7rem, 1.05vw, 0.9rem);
-  max-width: 24rem;
+  max-width: none;
 }
 
 .get-involved-impact__note-star {
@@ -5413,12 +5452,9 @@ img.lazy-img.loaded {
   margin: 0;
 }
 
+/* Legacy visual wrapper (if still present elsewhere) */
 .get-involved-impact__visual {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  align-items: center;
-  gap: 0;
-  min-width: 0;
+  display: contents;
 }
 
 .get-involved-impact__illustration {
@@ -5427,37 +5463,21 @@ img.lazy-img.loaded {
   max-width: var(--get-involved-impact-illustration-max);
   height: auto;
   object-fit: contain;
-  justify-self: end;
 }
 
-.get-involved-impact__visual > .lazy-img-wrap {
-  justify-self: end;
-  width: 100%;
-  max-width: var(--get-involved-impact-illustration-max);
-  margin-left: -20px;
-}
-
-.get-involved-timeline {
+.get-involved-timeline__step,
+.bdc-balance-banner__step {
   display: flex;
-  flex-direction: column;
-  gap: clamp(0.75rem, 1.2vw, 1rem);
+  align-items: flex-start;
+  gap: var(--bdc-balance-banner-step-gap);
   min-width: 0;
-  margin-left: 100px;
-}
-
-.get-involved-timeline__step {
-  display: grid;
-  grid-template-columns: var(--get-involved-timeline-icon-size)
-    var(--get-involved-timeline-rail-width) minmax(0, 1fr);
-  column-gap: clamp(0.35rem, 0.65vw, 0.55rem);
-  align-items: start;
 }
 
 .get-involved-timeline__icon,
 .get-involved-timeline__icon-wrap {
   width: var(--get-involved-timeline-icon-size);
   height: var(--get-involved-timeline-icon-size);
-  flex-shrink: 0;
+  flex: 0 0 var(--get-involved-timeline-icon-size);
 }
 
 .get-involved-timeline__icon {
@@ -5487,6 +5507,8 @@ img.lazy-img.loaded {
   display: flex;
   justify-content: center;
   align-self: stretch;
+  flex: 0 0 var(--get-involved-timeline-rail-width);
+  width: var(--get-involved-timeline-rail-width);
   min-height: 100%;
   padding-top: calc(var(--get-involved-timeline-icon-size) * 0.4);
 }
@@ -5526,6 +5548,7 @@ img.lazy-img.loaded {
 }
 
 .get-involved-timeline__content {
+  flex: 1 1 auto;
   min-width: 0;
   padding-top: calc(var(--get-involved-timeline-icon-size) * 0.08);
 }
@@ -5556,6 +5579,70 @@ img.lazy-img.loaded {
   line-height: 1.45;
   color: var(--color-navy);
   margin: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  :root {
+    --bdc-balance-banner-pad-y: 28px;
+    --bdc-balance-banner-pad-x: 28px;
+    --bdc-balance-banner-gap: 20px;
+    --bdc-balance-banner-step-gap: 12px;
+  }
+
+  .get-involved-impact__copy,
+  .bdc-balance-banner__copy {
+    flex-basis: 28%;
+    max-width: 28%;
+  }
+
+  .get-involved-timeline,
+  .bdc-balance-banner__mid {
+    flex-basis: 42%;
+    max-width: 42%;
+  }
+
+  .bdc-balance-banner__media,
+  .get-involved-impact__inner > .lazy-img-wrap {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --bdc-balance-banner-pad-y: 24px;
+    --bdc-balance-banner-pad-x: 20px;
+    --bdc-balance-banner-gap: 20px;
+    --bdc-balance-banner-step-gap: 12px;
+  }
+
+  .get-involved-impact__inner,
+  .bdc-balance-banner__row {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .get-involved-impact__copy,
+  .bdc-balance-banner__copy,
+  .get-involved-timeline,
+  .bdc-balance-banner__mid,
+  .bdc-balance-banner__media,
+  .get-involved-impact__inner > .lazy-img-wrap {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .bdc-balance-banner__media,
+  .get-involved-impact__inner > .lazy-img-wrap {
+    justify-content: center;
+  }
+
+  .get-involved-impact__illustration {
+    max-width: min(100%, 320px);
+    margin-inline: auto;
+  }
 }
 
 /* ??? Get Involved partner CTA ??? */
@@ -11566,7 +11653,7 @@ img.lazy-img.loaded {
   }
 
   .get-involved-impact__inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: clamp(1rem, 2vw, 1.25rem);
   }
 
@@ -11575,18 +11662,8 @@ img.lazy-img.loaded {
     max-width: none;
   }
 
-  .get-involved-impact__visual {
-    grid-template-columns: 1fr;
-    gap: clamp(0.85rem, 2vw, 1.1rem);
-  }
-
-  .get-involved-timeline {
-    margin-left: 0;
-  }
-
   .get-involved-impact__illustration {
     max-width: min(100%, 320px);
-    justify-self: center;
   }
 
   .get-involved-partner-cta__card {
@@ -26894,22 +26971,15 @@ body.newsletter-success-open {
 
 /* Get Involved page ? Help Us Make: center bottom illustration on mobile */
 @media (max-width: 991px) {
-  .get-involved-page .get-involved-impact__visual {
-    justify-items: center !important;
-  }
-
-  .get-involved-page .get-involved-impact__visual > .lazy-img-wrap {
-    justify-self: center !important;
-    display: flex !important;
+  .get-involved-page .get-involved-impact__inner > .lazy-img-wrap,
+  .get-involved-page .bdc-balance-banner__media {
     justify-content: center !important;
-    align-items: center !important;
     width: 100% !important;
-    max-width: min(100%, 320px) !important;
-    margin-inline: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
   .get-involved-page .get-involved-impact__illustration {
-    justify-self: center !important;
     display: block !important;
     width: 100% !important;
     max-width: min(100%, 320px) !important;
