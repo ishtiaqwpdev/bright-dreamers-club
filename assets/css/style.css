@@ -245,7 +245,7 @@
   --contact-cta-radius: 20px;
   --contact-cta-pad-y: 0;
   --contact-cta-door-width: clamp(150px, 16vw, 220px);
-  --contact-cta-text-size: 25px;
+  --contact-cta-text-size: 30px;
   --contact-cta-text-max-w: 461px;
   --creative-makers-hero-content-col: 0.34fr;
   --creative-makers-hero-media-col: 0.66fr;
