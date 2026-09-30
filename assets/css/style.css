@@ -7071,15 +7071,15 @@ img.lazy-img.loaded {
 
 .explore-dream__grid {
   display: grid;
-  /* Lead (title+girls) | checklist | jar | actions ? lead is one block */
+  /* Lead (title+girls) | flexible spacer+checklist | jar | actions */
   grid-template-columns:
     auto
+    minmax(0, 1fr)
     auto
-    auto
-    minmax(0, 1.1fr);
+    auto;
   align-items: center;
   /* Larger gap separates title+girls from checklist block */
-  column-gap: clamp(1.75rem, 3.5vw, 3.25rem);
+  column-gap: clamp(1.25rem, 2.5vw, 2rem);
   row-gap: clamp(0.65rem, 1.15vw, 1.1rem);
 }
 
@@ -7155,7 +7155,7 @@ img.lazy-img.loaded {
   display: flex;
   flex-direction: column;
   gap: var(--explore-dream-list-gap);
-  justify-self: start;
+  justify-self: end;
   width: max-content;
   max-width: 100%;
 }
@@ -7188,6 +7188,10 @@ img.lazy-img.loaded {
   align-items: stretch;
   gap: 5px;
   min-width: 0;
+  /* Match "Where Will Your Child's Dream Begin?" title width */
+  width: 12.5em;
+  max-width: 12.5em;
+  justify-self: end;
 }
 
 .explore-dream__actions .btn {
@@ -31734,22 +31738,36 @@ body.community-adventures-page .page-hero.community-adventures-hero picture img.
   }
 }
 
-/* Explore dream: checklist ? jar ? CTA gaps = 0 */
+/* Explore dream: checklist closer to plane; buttons match title width */
 @media (min-width: 1024px) {
   .explore-page .explore-dream__grid {
-    column-gap: clamp(1.75rem, 3.5vw, 3.25rem);
+    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+    column-gap: clamp(1rem, 2vw, 1.5rem) !important;
+  }
+
+  .explore-page .explore-dream__list {
+    justify-self: end !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .explore-page .explore-dream__jar-wrap {
-    margin-left: calc(-1 * clamp(1.75rem, 3.5vw, 3.25rem)) !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
   .explore-page .explore-dream__actions {
-    margin-left: calc(-1 * clamp(1.75rem, 3.5vw, 3.25rem)) !important;
+    margin-left: 0 !important;
     padding-left: 0 !important;
+    width: 12.5em !important;
+    max-width: 12.5em !important;
+    justify-self: end !important;
+  }
+
+  .explore-page .explore-dream__actions .btn {
+    width: 100% !important;
   }
 }
 
